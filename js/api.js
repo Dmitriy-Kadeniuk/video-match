@@ -1,27 +1,57 @@
-fetch('https://api.themoviedb.org/3/trending/movie/day?id=640146&api_key=19cc2d55ec287216302aaf07144d9835')
-.then(function (resp) {return resp.json()})
-.then(function(data){
-  console.log(data);
-  document.querySelector('.name-film1').textContent = data.results[0]['title'];
-  document.querySelector('.name-film2').textContent = data.results[1]['title'];
-  document.querySelector('.name-film3').innerHTML = data.results[2]['title'];
-  document.querySelector('.name-film4').textContent = data.results[3]['title'];
-  document.querySelector('.name-film5').textContent = data.results[4]['title'];
-  document.querySelector('.name-film6').textContent = data.results[5]['title'];
-  document.querySelector('.name-film7').textContent = data.results[6]['title'];
-  document.querySelector('.name-film8').textContent = data.results[7]['title'];
-  document.querySelector('.name-film9').textContent = data.results[8]['title'];
-  document.querySelector('.name-film10').textContent = data.results[9]['title'];
-  document.querySelector('.name-film11').textContent = data.results[10]['title'];
-  document.querySelector('.name-film12').textContent = data.results[11]['title'];
-  document.querySelector('.name-film13').textContent = data.results[12]['title'];
-  document.querySelector('.name-film14').textContent = data.results[13]['title'];
-  document.querySelector('.name-film15').textContent = data.results[14]['title'];
-  document.querySelector('.name-film16').textContent = data.results[15]['title'];
-  document.querySelector('.name-film17').textContent = data.results[16]['title'];
-  document.querySelector('.name-film18').textContent = data.results[17]['title'];
+fetch(
+  "https://api.themoviedb.org/3/trending/movie/day?id=640146&api_key=19cc2d55ec287216302aaf07144d9835"
+)
+  .then(function (resp) {
+    return resp.json();
+  })
+  .then(function (data) {
+    console.log(data);
 
-})
-.catch(function(){
+    // контейнер, в котором будем отображать фильмы
+    var filmContainer = document.querySelector(".film-container");
 
-})
+    // Проходимся по результатам и создаем элементы для каждого фильма
+    data.results.forEach(function (film) {
+      // элемент для фильма
+      var filmDiv = document.createElement("div");
+      filmDiv.classList.add("tv-block");
+
+      // дополнительный div для изображения и описания
+      var filmContentDiv = document.createElement("div");
+      filmContentDiv.classList.add("film-content");
+
+      // изображение для фильма
+      var filmImg = document.createElement("img");
+      filmImg.classList.add("film-image");
+      filmImg.src = "https://image.tmdb.org/t/p/w500" + film.poster_path;
+
+      // обработчик события click к изображению
+      filmImg.addEventListener("click", function () {
+        filmImg.classList.toggle("rotated");
+      });
+
+      // элемент для описания фильма
+      var filmOverview = document.createElement("p");
+      filmOverview.textContent = film.overview;
+
+      // Добавляем изображение и описание в дополнительный div
+      filmContentDiv.appendChild(filmImg);
+      filmContentDiv.appendChild(filmOverview);
+
+      // Добавляем дополнительный div к элементу фильма
+      filmDiv.appendChild(filmContentDiv);
+
+      // заголовок для фильма
+      var filmName = document.createElement("h1");
+      filmName.textContent = film.title;
+
+      // Добавляем заголовок к элементу фильма
+      filmDiv.appendChild(filmName);
+
+      // элемент фильма к контейнеру
+      filmContainer.appendChild(filmDiv);
+    });
+  })
+  .catch(function (error) {
+    console.error("Произошла ошибка:", error);
+  });
