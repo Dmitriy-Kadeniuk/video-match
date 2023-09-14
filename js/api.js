@@ -8,22 +8,22 @@ fetch(
     console.log(data);
 
     // контейнер, в котором будем отображать фильмы
-    var filmContainer = document.querySelector(".film-container");
+    const filmContainer = document.querySelector(".film-container");
 
     // Проходимся по результатам и создаем элементы для каждого фильма
     data.results.forEach(function (film) {
       // элемент для фильма
-      var filmDiv = document.createElement("div");
+      const filmDiv = document.createElement("div");
       filmDiv.classList.add("tv-block");
 
       // дополнительный div для изображения и описания
-      var filmContentDiv = document.createElement("div");
+      const filmContentDiv = document.createElement("div");
       filmContentDiv.classList.add("film-content");
 
       // изображение для фильма
-      var filmImg = document.createElement("img");
+      const filmImg = document.createElement("img");
       filmImg.classList.add("film-image");
-      filmImg.src = "https://image.tmdb.org/t/p/w500" + film.poster_path;
+      filmImg.src = `https://image.tmdb.org/t/p/w500${film.poster_path}`;
 
       // обработчик события click к изображению
       filmImg.addEventListener("click", function () {
@@ -31,7 +31,7 @@ fetch(
       });
 
       // элемент для описания фильма
-      var filmOverview = document.createElement("p");
+      const filmOverview = document.createElement("p");
       filmOverview.textContent = film.overview;
 
       // Добавляем изображение и описание в дополнительный div
@@ -42,7 +42,7 @@ fetch(
       filmDiv.appendChild(filmContentDiv);
 
       // заголовок для фильма
-      var filmName = document.createElement("h1");
+      const filmName = document.createElement("h1");
       filmName.textContent = film.title;
 
       // Добавляем заголовок к элементу фильма
