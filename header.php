@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <?php
 /**
  * The header for our theme
@@ -31,6 +33,19 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			
+			<?php
+			// Проверяем, залогинен ли пользователь (в зависимости от вашей логики)
+			if (isset($_SESSION['user_name'])) {
+    		$user_name = $_SESSION['user_name']; // Получаем имя пользователя из сессии
+    		// Теперь $user_name содержит имя залогиненного пользователя
+			}
+
+			// Проверяем, есть ли кука с именем пользователя
+			if (isset($_COOKIE['user_name'])) {
+    		$user_name = $_COOKIE['user_name']; // Получаем имя пользователя из куки
+    		// Теперь $user_name содержит имя пользователя, если кука установлена
+			}
+			echo $user_name;
+			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
