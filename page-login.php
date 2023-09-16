@@ -57,7 +57,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Ваш код для проверки имени пользователя и пароля
 
-
+if ($login_successful) {
+    $_SESSION['user_name'] = $user_name; // Сохраняем имя пользователя в сессии
+}
 
 // Закрытие соединения с базой данных
 $mysql->close();
