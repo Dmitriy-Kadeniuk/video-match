@@ -70,4 +70,28 @@ h6 {
 #page #primary {
   flex-grow: 1;
   padding: 20px;
-}/*# sourceMappingURL=variables.css.map */
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.tab-link {
+  cursor: pointer;
+  background-color: rgb(179, 175, 175);
+  color: black;
+}
+
+.tab-content {
+  display: none;
+  background-color: rgb(179, 175, 175);
+}
+
+.tab-content.active {
+  display: block;
+}/*# sourceMappingURL=login.css.map */
