@@ -78,20 +78,44 @@ h6 {
   flex-wrap: nowrap;
   align-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+.tabs .active {
+  background-color: rgb(179, 175, 175);
 }
 
 .tab-link {
   cursor: pointer;
-  background-color: rgb(179, 175, 175);
+  background-color: rgb(153, 151, 151);
   color: black;
+  padding: 1rem;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.tab-link:hover {
+  background-color: rgb(197, 194, 194);
 }
 
 .tab-content {
   display: none;
   background-color: rgb(179, 175, 175);
+  padding: 1rem;
+  border-radius: 0px 5px 5px 5px;
 }
 
 .tab-content.active {
   display: block;
+}
+.tab-content.active form {
+  display: flex;
+  flex-direction: column;
+}
+.tab-content.active form input {
+  padding: 1rem 1rem;
+  border-radius: 2rem;
+  margin: 0.5rem 0rem;
+  text-align: center;
+}
+.tab-content.active form input[type=submit] {
+  cursor: pointer;
 }/*# sourceMappingURL=login.css.map */
