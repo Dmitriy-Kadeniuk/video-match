@@ -1,5 +1,4 @@
 @import "variables";
-
 h1 {
     color: $first-color;
 }
@@ -10,31 +9,32 @@ h1 {
         flex-wrap: wrap;
         justify-content: center;
         gap: 5rem;
-        .tv-block {
-            width: 25%;
-            position: relative;
-            .film-image {
-                transition: transform 0.5s ease;
-                width: 100%;
-                cursor: pointer;
-                z-index: 99999;
-            }
-            .film-image.rotated {
-                transform: rotateY(180deg);
-                filter: brightness(0);
-                z-index: -1;
-            }
-            p {
-                position: absolute;
-                top: 0;
-                color: #fff;
-                z-index: 1;
-                opacity: 0;
-                transition: opacity 2.5s ease;
-            }
-            .film-image.rotated + p {
-                opacity: 1;
-            }
+    }
+    .tv-block,
+    .movie-card {
+        width: 25%;
+        position: relative;
+        .film-image {
+            width: 100%;
+        }
+        i {
+            position: absolute;
+            right: 15px;
+            top: 20px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 28px;
+        }
+        p {
+            position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translate(-13%, -50%);
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            border-radius: 25% 10%;
         }
     }
 }

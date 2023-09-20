@@ -59,4 +59,18 @@ h6 {
 .page .main {
   flex: 1 1 auto;
 }
+
+#page {
+  display: flex;
+}
+
+#page #sidebar {
+  width: 250px;
+  padding: 20px;
+}
+
+#page #primary {
+  flex-grow: 1;
+  padding: 20px;
+}
 /*# sourceMappingURL=variables.css.map */
