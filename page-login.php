@@ -27,8 +27,8 @@
             // Проверка, была ли отправлена форма
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Получаем данные, введенные пользователем
-                $user_name = $_POST["user_name"];
-                $user_password = $_POST["user_password"];
+                $user_name = $_POST["user_name"] ?? "null";
+                $user_password = $_POST["user_password"] ?? "null";
 
                 // Запрос к базе данных для проверки учетных данных
                 $query = "SELECT * FROM users WHERE name = '$user_name' AND password = '$user_password'";
@@ -69,9 +69,9 @@
             $error_message = ""; // Инициализация переменной для сообщения об ошибке
 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $user_name = $_POST["register_name"];
-                $user_email = $_POST["register_email"];
-                $user_password = $_POST["register_password"];
+                $user_name = $_POST["register_name"] ?? false;
+                $user_email = $_POST["register_email"] ?? false;
+                $user_password = $_POST["register_password"] ?? false;
 
                 // Создаем соединение с базой данных и выполняем запрос на вставку данных
                 $mysql = new mysqli("localhost", "root", "root", "local");
@@ -109,6 +109,7 @@
         });
     });
 });
+
 </script>
 
 
