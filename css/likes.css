@@ -59,4 +59,15 @@ h6 {
 .page .main {
   flex: 1 1 auto;
 }
-/*# sourceMappingURL=variables.css.map */
+
+#movie-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#movie-container .movie-card {
+  width: 30%;
+}
+/*# sourceMappingURL=likes.css.map */

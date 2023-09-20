@@ -1,2 +1,12 @@
 @import "variables";
 
+.menu{
+    ul{
+        li{
+            a{
+                color: $first-color;
+                font-size: 22px;
+            }
+        }
+    }
+}

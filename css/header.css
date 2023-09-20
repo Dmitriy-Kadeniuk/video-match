@@ -31,6 +31,7 @@ ol {
 
 img {
   vertical-align: top;
+  width: 100%;
 }
 
 h1,
@@ -57,5 +58,10 @@ h6 {
 
 .page .main {
   flex: 1 1 auto;
+}
+
+.menu ul li a {
+  color: #fff;
+  font-size: 22px;
 }
 /*# sourceMappingURL=header.css.map */
