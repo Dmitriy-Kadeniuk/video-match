@@ -56,4 +56,21 @@ h6 {
 .page .main {
     flex: 1 1 auto;
 }
-$first-color: #fff;
+
+#page {
+    display: flex; 
+    #sidebar {
+        width: 250px; 
+        padding: 20px; 
+      }
+      
+      #primary {
+        flex-grow: 1; 
+        padding: 20px; 
+      }
+  }
+  
+  
+
+
+  $first-color: #fff;

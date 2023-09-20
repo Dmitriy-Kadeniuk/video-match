@@ -72,34 +72,37 @@ h1 {
   gap: 5rem;
 }
 
-#primary .film-container .tv-block {
+#primary .tv-block,
+#primary .movie-card {
   width: 25%;
   position: relative;
 }
 
-#primary .film-container .tv-block .film-image {
-  transition: transform 0.5s ease;
+#primary .tv-block .film-image,
+#primary .movie-card .film-image {
   width: 100%;
-  cursor: pointer;
-  z-index: 99999;
 }
 
-#primary .film-container .tv-block .film-image.rotated {
-  transform: rotateY(180deg);
-  filter: brightness(0);
-  z-index: -1;
-}
-
-#primary .film-container .tv-block p {
+#primary .tv-block i,
+#primary .movie-card i {
   position: absolute;
-  top: 0;
+  right: 15px;
+  top: 20px;
   color: #fff;
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 2.5s ease;
+  cursor: pointer;
+  font-size: 28px;
 }
 
-#primary .film-container .tv-block .film-image.rotated + p {
-  opacity: 1;
+#primary .tv-block p,
+#primary .movie-card p {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-13%, -50%);
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  border-radius: 25% 10%;
 }
 /*# sourceMappingURL=home.css.map */

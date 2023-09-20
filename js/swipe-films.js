@@ -4,7 +4,8 @@ const prevButton = document.getElementById('close-button');
 const nextButton = document.getElementById('like-button');
 const moviePoster = document.getElementById('movie-poster');
 const movieTitle = document.getElementById('movie-title');
-const movieOverview = document.getElementById('movie-overview');
+const filmOverview = document.getElementById('movie-overview');
+const infoIcon = document.querySelector(".fas.fa-info-circle");
 
 let currentPage = 0;
 let movies = [];
@@ -28,12 +29,12 @@ function showMovie(index) {
   if (movie) {
     moviePoster.src = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
     movieTitle.textContent = movie.title;
-    movieOverview.textContent = movie.overview;
+    filmOverview.textContent = movie.overview;
   } else {
     // Якщо досягнута кінцева карточка фільму
     moviePoster.src = '';
     movieTitle.textContent = 'Кінець фільмів';
-    movieOverview.textContent = '';
+    filmOverview.textContent = '';
   }
 }
 
@@ -84,3 +85,31 @@ nextButton.addEventListener('click', function () {
 fetchMovies();
 
 
+let isInfoVisible = false;
+      //  появление инфо
+      filmOverview.style.transition = "opacity 0.5s ease";
+      filmOverview.style.opacity = 0;
+      filmOverview.style.display = "none";
+
+      infoIcon.addEventListener("click", function () {
+        if (filmOverview.style.opacity === "0") {
+          setTimeout(() => {
+            filmOverview.style.opacity = 1;
+          }, 10);
+
+          filmOverview.style.display = "block";
+          infoIcon.classList.remove("fa-info-circle"); // Видаляємо клас "fa-info-circle"
+          infoIcon.classList.add("fa-times"); // Додаємо клас "fa-times" (знак "закрити")
+          isInfoVisible = true;
+        } else {
+          // Якщо <p> відображається, ховаємо його
+          filmOverview.style.opacity = 0;
+
+          setTimeout(() => {
+            filmOverview.style.display = "none";
+          }, 500);
+          infoIcon.classList.remove("fa-times"); // Видаляємо клас "fa-times"
+          infoIcon.classList.add("fa-info-circle"); // Додаємо клас "fa-info-circle" (знак інформації)
+          isInfoVisible = false;
+        }
+      });
