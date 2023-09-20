@@ -60,8 +60,14 @@ h6 {
   flex: 1 1 auto;
 }
 
-.menu ul li a {
-  color: #fff;
-  font-size: 22px;
+#movie-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-/*# sourceMappingURL=header.css.map */
+
+#movie-container .movie-card {
+  width: 30%;
+}
+/*# sourceMappingURL=likes.css.map */
