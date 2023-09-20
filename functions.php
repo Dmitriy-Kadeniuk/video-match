@@ -150,6 +150,8 @@ function video_match_scripts() {
 	wp_enqueue_script('swipe-films', get_template_directory_uri() . '/js/swipe-films.js', array(), _S_VERSION, true);
 	wp_enqueue_script('rotate-img', get_template_directory_uri() . '/js/rotate-img.js', array(), _S_VERSION, true);
 
+	wp_enqueue_script( 'video-match-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

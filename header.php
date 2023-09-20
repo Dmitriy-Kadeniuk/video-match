@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <?php
 
 /**
@@ -43,16 +45,29 @@
 							<div class="menu-items">
 								<?php
 
-								wp_nav_menu(
-									array(
-										'theme_location' => 'menu',
-										'menu_id'        => 'primary-menu',
-									)
-								);
-								?>
-							</div>
-						</div>
-					</div>
-				</nav>
-			</header><!-- #masthead -->
-		</aside>
+	<header id="masthead" class="site-header">
+		<div class="site-branding">
+			
+		</div><!-- .site-branding -->
+
+		<nav id="site-navigation" class="main-navigation">
+			<?php
+			$user_name = ""; // Инициализация переменной
+
+			// Проверяем, залогинен ли пользователь (в зависимости от вашей логики)
+			if (isset($_SESSION['user_name'])) {
+				$user_name = $_SESSION['user_name']; // Получаем имя пользователя из сессии
+				// Теперь $user_name содержит имя залогиненного пользователя
+			}
+			
+			// Проверяем, есть ли кука с именем пользователя
+			if (isset($_COOKIE['user_name'])) {
+				$user_name = $_COOKIE['user_name']; // Получаем имя пользователя из куки
+				// Теперь $user_name содержит имя пользователя, если кука установлена
+			}
+			
+			echo $user_name;
+			
+			?>
+		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
