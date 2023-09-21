@@ -10,4 +10,26 @@
     // }
 }
 .navigation-swipe {
+    display: flex;
+    button{
+        font-size: 32px;
+        background-color: transparent;
+        cursor: pointer;
+        border: 2px solid rgb(248, 62, 62);
+        border-radius: 50%;
+        padding: 1rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        transition: 0.5s;
+        
+    }
+    button:hover{
+        border: 2px solid white;
+        img{
+            color: white;
+            background-color: white;
+        }
+    }
 }

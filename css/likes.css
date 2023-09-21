@@ -87,3 +87,27 @@ h6 {
   flex-direction: column;
 }
 /*# sourceMappingURL=likes.css.map */
+
+.navigation-swipe {
+  display: flex;
+}
+.navigation-swipe button {
+  font-size: 32px;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid rgb(248, 62, 62);
+  border-radius: 50%;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  transition: 0.5s;
+}
+.navigation-swipe button:hover {
+  border: 2px solid white;
+}
+.navigation-swipe button:hover img {
+  color: white;
+  background-color: white;
+}/*# sourceMappingURL=likes.css.map */
