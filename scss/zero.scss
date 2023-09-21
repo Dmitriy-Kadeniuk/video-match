@@ -1,0 +1,104 @@
+@import "variables";
+/*--------------------------------------------*/
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-size: 14px;
+    line-height: 1;
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #080808;
+    // color: #302e5b;
+}
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a {
+    color: $first-color;
+}
+h1{
+    font: $first-font;
+}
+h2{
+    font: $heading-font;
+}
+h3{
+    font: $fifth-font;
+}
+h4{
+    font: $fourth-font;
+}
+h5{
+    font: $third-font;
+}
+p {
+    font: $second-font;
+}
+#wrapper .main {
+    flex: 1 1 auto;
+}
+#page{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+#wrapper {
+    display: flex;
+    justify-content: space-between;
+    #sidebar {
+        width: 250px;
+    }
+
+    #primary {
+        flex-grow: 1;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 1440px) and (min-width: 768px) {
+    #page {
+        padding: 0 4rem;
+    }
+}
+@media (max-width: 767px) {
+    #page {
+        padding: 1.5rem;
+    }
+}

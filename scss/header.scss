@@ -1,84 +1,88 @@
 @import "variables";
+@import "zero";
 
 .menu {
     ul {
         li {
             a {
-                color: $first-color;
-                font-size: 22px;
+                font: $third-font;
+                line-height: 34px;
             }
         }
     }
 }
-// .hamburger-menu-button {
-//     display: none;
-// }
+.logo-users {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
+    .logo {
+        display: flex;
+        align-items: center;
+        h1 {
+            margin-left: -1.05rem;
+            z-index: -1;
+        }
+        &::before {
+            content: url("../img/flag-logo.svg");
+        }
+    }
+}
 
-// @media screen and (max-width: 767px) {
-//     .hamburger-menu-button {
-//         display: block;
-//     }
-
-//     .main-navigation {
-//         display: none;
-//     }
-//     .main-navigation.active {
-//         display: block;
-//     }
-// }
-@media(min-width: 768px){
-    .navbar{
-        .container{
-            input.checkbox{
+@media (min-width: 768px) {
+    .navbar {
+        .container {
+            input.checkbox {
                 display: none;
             }
         }
     }
 }
-@media(max-width: 767px){
+@media (max-width: 767px) {
     .navbar {
         width: 100%;
         .container {
             max-width: 1050px;
             width: 90%;
-        }    
+        }
     }
-    
+
     .nav-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 62px;
     }
-    
+
     .navbar {
         .menu-items {
             display: flex;
             padding-top: 120px;
-        box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
-        height: 100vh;
-        width: 100%;
-        transform: translate(-150%);
-        display: flex;
-        flex-direction: column;
-        margin-left: -40px;
-        padding-left: 50px;
-        transition: transform 0.5s ease-in-out;
-        text-align: center;
-        li {
-            margin-bottom: 1.2rem;
-            font-size: 1.5rem;
-            font-weight: 500;
+            box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+            height: 100vh;
+            width: 100%;
+            transform: translate(-150%);
+            display: flex;
+            flex-direction: column;
+            margin-left: -40px;
+            padding-left: 50px;
+            transition: transform 0.5s ease-in-out;
+            text-align: center;
+            li {
+                margin-bottom: 1.2rem;
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
         }
-        }    
-        .nav-container{
+        .nav-container {
             display: block;
             position: relative;
             height: 60px;
             li {
                 list-style: none;
             }
-            a{
+            a {
                 text-decoration: none;
                 color: #0e2431;
                 font-weight: 500;
@@ -129,37 +133,34 @@
                     transition: transform 0.4s ease-in-out;
                 }
             }
-        } 
+        }
     }
-    
-    
-    .logo {
-        position: absolute;
-        top: 5px;
-        right: 15px;
-        font-size: 1.2rem;
-        color: #0e2431;
-    }
-    
+
+    // .logo {
+    //     position: absolute;
+    //     top: 5px;
+    //     right: 15px;
+    //     font-size: 1.2rem;
+    //     color: #0e2431;
+    // }
+
     .nav-container input[type="checkbox"]:checked ~ .menu-items {
         transform: translateX(0);
     }
-    
+
     .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
         transform: rotate(45deg);
     }
-    
+
     .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
         transform: scaleY(0);
     }
-    
+
     .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
         transform: rotate(-45deg);
     }
-    
+
     .nav-container input[type="checkbox"]:checked ~ .logo {
         display: none;
     }
-    
 }
-

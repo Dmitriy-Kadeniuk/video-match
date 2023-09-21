@@ -1,3 +1,5 @@
+/*-----  FONTS & COLORS  -----*/
+/*-----  FONTS & COLORS  -----*/
 /*--------------------------------------------*/
 *,
 *::before,
@@ -17,7 +19,7 @@ body {
 }
 
 body {
-  background-color: #242731;
+  background-color: #080808;
 }
 
 a {
@@ -44,39 +46,74 @@ h6 {
   font-weight: inherit;
 }
 
-.wrapper {
-  overflow: hidden;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a {
+  color: #d3d3d3;
 }
 
-.page {
-  max-width: 1600px;
-  margin: 0 auto;
+h1 {
+  font: normal 400 30px/18px "Righteous", sans-serif;
 }
 
-.page .main {
+h2 {
+  font: normal 500 30px/18px "Nunito", sans-serif;
+}
+
+h3 {
+  font: normal 500 25px/18px "Nunito", sans-serif;
+}
+
+h4 {
+  font: normal 500 20px/18px "Nunito", sans-serif;
+}
+
+h5 {
+  font: normal 400 18px/18px "Open Sans", sans-serif;
+}
+
+p {
+  font: normal 400 13px/18px "Open Sans", sans-serif;
+}
+
+#wrapper .main {
   flex: 1 1 auto;
 }
 
 #page {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+#wrapper {
   display: flex;
+  justify-content: space-between;
 }
 
-#page #sidebar {
+#wrapper #sidebar {
   width: 250px;
-  padding: 20px;
 }
 
-#page #primary {
+#wrapper #primary {
   flex-grow: 1;
   padding: 20px;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1440px) and (min-width: 768px) {
   #page {
-    max-width: 1440px;
+    padding: 0 4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #page {
+    padding: 1.5rem;
   }
 }
 
@@ -135,4 +172,5 @@ h6 {
 .reg-name {
   color: white;
   display: block;
-}/*# sourceMappingURL=login.css.map */
+}
+/*# sourceMappingURL=login.css.map */

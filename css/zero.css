@@ -1,5 +1,4 @@
 /*-----  FONTS & COLORS  -----*/
-/*-----  FONTS & COLORS  -----*/
 /*--------------------------------------------*/
 *,
 *::before,
@@ -116,50 +115,4 @@ p {
     padding: 1.5rem;
   }
 }
-
-#primary .film-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5rem;
-}
-
-#primary .tv-block,
-#primary .movie-card {
-  width: 25%;
-  position: relative;
-}
-
-#primary .tv-block .film-image,
-#primary .movie-card .film-image {
-  width: 100%;
-}
-
-#primary .tv-block i,
-#primary .movie-card i {
-  position: absolute;
-  right: 15px;
-  top: 20px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 28px;
-}
-
-#primary .tv-block p,
-#primary .movie-card p {
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  transform: translate(-13%, -50%);
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-  border-radius: 25% 10%;
-}
-
-body {
-  background-color: purple;
-}
-/*# sourceMappingURL=home.css.map */
+/*# sourceMappingURL=zero.css.map */

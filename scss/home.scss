@@ -1,7 +1,6 @@
 @import "variables";
-h1 {
-    color: $first-color;
-}
+@import "zero";
+
 #primary {
     .film-container {
         display: flex;
