@@ -40,7 +40,7 @@
 								<span class="line line3"></span>
 							</div>
 							<div class="logo">
-								<h1>VideoMatch</h1>
+								<h1>VideoMatch-2</h1>
 								<?php 
 									if (isset($_SESSION['user_name'])) {
 										$user_name = $_SESSION['user_name'];
