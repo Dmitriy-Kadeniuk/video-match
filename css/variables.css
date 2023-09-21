@@ -63,14 +63,24 @@ h6 {
 #page {
   display: flex;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> Dimas
 #page #sidebar {
   width: 250px;
   padding: 20px;
 }
+<<<<<<< HEAD
 
 #page #primary {
   flex-grow: 1;
   padding: 20px;
 }
 /*# sourceMappingURL=variables.css.map */
+=======
+#page #primary {
+  flex-grow: 1;
+  padding: 20px;
+}/*# sourceMappingURL=variables.css.map */
+>>>>>>> Dimas

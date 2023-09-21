@@ -71,3 +71,16 @@
 			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+								wp_nav_menu(
+									array(
+										'theme_location' => 'menu',
+										'menu_id'        => 'primary-menu',
+									)
+								);
+								?>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</header><!-- #masthead -->
+		</aside>
