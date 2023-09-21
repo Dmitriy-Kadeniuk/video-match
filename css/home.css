@@ -63,13 +63,21 @@ h6 {
 #page {
   display: flex;
 }
+
 #page #sidebar {
   width: 250px;
   padding: 20px;
 }
+
 #page #primary {
   flex-grow: 1;
   padding: 20px;
+}
+
+@media (max-width: 1440px) {
+  #page {
+    max-width: 1440px;
+  }
 }
 
 h1 {
@@ -83,15 +91,18 @@ h1 {
   justify-content: center;
   gap: 5rem;
 }
+
 #primary .tv-block,
 #primary .movie-card {
   width: 25%;
   position: relative;
 }
+
 #primary .tv-block .film-image,
 #primary .movie-card .film-image {
   width: 100%;
 }
+
 #primary .tv-block i,
 #primary .movie-card i {
   position: absolute;
@@ -101,6 +112,7 @@ h1 {
   cursor: pointer;
   font-size: 28px;
 }
+
 #primary .tv-block p,
 #primary .movie-card p {
   position: absolute;
@@ -116,4 +128,5 @@ h1 {
 
 body {
   background-color: purple;
-}/*# sourceMappingURL=home.css.map */
+}
+/*# sourceMappingURL=home.css.map */

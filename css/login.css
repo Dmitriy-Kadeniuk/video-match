@@ -63,13 +63,21 @@ h6 {
 #page {
   display: flex;
 }
+
 #page #sidebar {
   width: 250px;
   padding: 20px;
 }
+
 #page #primary {
   flex-grow: 1;
   padding: 20px;
+}
+
+@media (max-width: 1440px) {
+  #page {
+    max-width: 1440px;
+  }
 }
 
 .tabs {
@@ -80,25 +88,26 @@ h6 {
   align-items: center;
   font-size: 1.5rem;
 }
+
 .tabs .active {
-  background-color: rgb(179, 175, 175);
+  background-color: #b3afaf;
 }
 
 .tab-link {
   cursor: pointer;
-  background-color: rgb(153, 151, 151);
+  background-color: #999797;
   color: black;
   padding: 1rem;
   border-radius: 5px 5px 0px 0px;
 }
 
 .tab-link:hover {
-  background-color: rgb(197, 194, 194);
+  background-color: #c5c2c2;
 }
 
 .tab-content {
   display: none;
-  background-color: rgb(179, 175, 175);
+  background-color: #b3afaf;
   padding: 1rem;
   border-radius: 0px 5px 5px 5px;
 }
@@ -106,16 +115,20 @@ h6 {
 .tab-content.active {
   display: block;
 }
+
 .tab-content.active form {
   display: flex;
   flex-direction: column;
 }
+
 .tab-content.active form input {
   padding: 1rem 1rem;
   border-radius: 2rem;
   margin: 0.5rem 0rem;
   text-align: center;
 }
-.tab-content.active form input[type=submit] {
+
+.tab-content.active form input[type="submit"] {
   cursor: pointer;
-}/*# sourceMappingURL=login.css.map */
+}
+/*# sourceMappingURL=login.css.map */

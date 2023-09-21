@@ -58,19 +58,24 @@ h6 {
 }
 
 #page {
-    display: flex; 
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
     #sidebar {
-        width: 250px; 
-        padding: 20px; 
-      }
-      
-      #primary {
-        flex-grow: 1; 
-        padding: 20px; 
-      }
-  }
-  
-  
+        width: 250px;
+        padding: 20px;
+    }
 
+    #primary {
+        flex-grow: 1;
+        padding: 20px;
+    }
+}
 
-  $first-color: #fff;
+@media (max-width: 1440px) {
+    #page {
+        padding: 1.5rem;
+    }
+}
+
+$first-color: #fff;
