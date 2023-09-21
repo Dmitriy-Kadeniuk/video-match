@@ -41,6 +41,14 @@
 							</div>
 							<div class="logo">
 								<h1>VideoMatch</h1>
+								<?php 
+									if (isset($_SESSION['user_name'])) {
+										$user_name = $_SESSION['user_name'];
+										// Теперь $user_name содержит имя пользователя
+										echo $user_name;
+									}
+									
+								?>
 							</div>
 							<div class="menu-items">
 								<?php
