@@ -118,4 +118,9 @@ h6 {
 }
 .tab-content.active form input[type=submit] {
   cursor: pointer;
+}
+
+.reg-name {
+  color: white;
+  display: block;
 }/*# sourceMappingURL=login.css.map */

@@ -11,12 +11,13 @@ get_header();
             <p id="movie-overview"></p>
         </div>
         <div class="navigation-swipe">
-            <button id="close-button">Хуйня</button>
-            <button id="like-button">Збс</button>
+            <button id="close-button">❌</button>
+            <button id="like-button">💓</button>
             
         </div>
     </div>
     
+    <?php get_template_part('function/likes'); ?>
 
 </main><!-- #main -->
 

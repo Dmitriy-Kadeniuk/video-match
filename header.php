@@ -40,15 +40,19 @@
 								<span class="line line3"></span>
 							</div>
 							<div class="logo">
-								<h1>VideoMatch-2</h1>
-								<?php 
+							<?php 
 									if (isset($_SESSION['user_name'])) {
 										$user_name = $_SESSION['user_name'];
 										// Теперь $user_name содержит имя пользователя
-										echo $user_name;
+									}
+									if (isset($_SESSION['user_id'])) {
+										$user_id = $_SESSION['user_id'];
 									}
 									
 								?>
+								<h1>VideoMatch</h1>
+								<span class="reg-name">Name:<?php echo $user_name ?></span>
+								<span class="reg-name">ID:<?php echo $user_id ?></span>
 							</div>
 							<div class="menu-items">
 								<?php
