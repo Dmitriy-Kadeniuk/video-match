@@ -13,15 +13,16 @@ get_header();
             <i class="fas fa-info-circle"></i>
             <p id="movie-overview"></p>
         </div>
-        <div class="navigation-swipe">
+        
+    </div>
+
+    </form>
+    <div class="navigation-swipe">
             <button id="close-button">❌</button>
             <button id="like-button" name="send-form" >💓</button>
             
         </div>
-    </div>
-
-    </form>
-    <?php  ?>
+    
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
