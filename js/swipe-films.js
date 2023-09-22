@@ -4,6 +4,7 @@ const prevButton = document.getElementById('close-button');
 const nextButton = document.getElementById('like-button');
 const moviePoster = document.getElementById('movie-poster');
 const movieTitle = document.getElementById('movie-title');
+const movieid = document.getElementById('movie_id');
 const filmOverview = document.getElementById('movie-overview');
 const infoIcon = document.querySelector(".fas.fa-info-circle");
 
@@ -29,6 +30,10 @@ function showMovie(index) {
   if (movie) {
     moviePoster.src = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
     movieTitle.textContent = movie.title;
+
+    document.getElementById('movie_id').value = movie.id;
+    movieid.textContent = movie.id;
+
     filmOverview.textContent = movie.overview;
   } else {
     // Якщо досягнута кінцева карточка фільму
@@ -37,6 +42,8 @@ function showMovie(index) {
     filmOverview.textContent = '';
   }
 }
+
+
 
 // prevButton.addEventListener('click', function () {
 //   if (currentPage > 0) {
@@ -113,3 +120,5 @@ let isInfoVisible = false;
           isInfoVisible = false;
         }
       });
+
+    

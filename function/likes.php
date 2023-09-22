@@ -1,28 +1,35 @@
 <?php
-// Проверка, была ли отправлена форма с кнопкой "Like"
-if (isset($_POST['like-button'])) {
-    // Получаем id фильма, который пользователь лайкнул
-    $movie_id = $_POST['movie_id'];
+session_start();
 
-    // Получаем id текущего пользователя (из сессии или откуда-либо еще)
+if (isset($_SESSION['user_id'])) {
+    // Получаем user_id текущего авторизованного пользователя
     $user_id = $_SESSION['user_id'];
 
-    // Подключение к базе данных
-    $mysql = new mysqli("localhost", "root", "root", "local");
-    $mysql->query("SET NAMES 'UTF8'");
+    // Получаем movie_id из POST-запроса
+    $movie_id = $_POST['movie_id'];
 
-    // Выполняем вставку в таблицу user_likes
-    $insert_query = "INSERT INTO user_likes (user_id, movie_id) VALUES ('$user_id', '$movie_id')";
+    // Создаем соединение с базой данных (если оно уже не создано)
+    $connection = mysqli_connect("localhost", "root", "root", "local");
 
-    if ($mysql->query($insert_query)) {
-        // Успешно добавили лайк, можно отправить какой-то ответ клиенту
-        echo "Фильм добавлен в избранное.";
-    } else {
-        // Обработка ошибки
-        echo "Ошибка: " . $mysql->error;
+    if (!$connection) {
+        die("Ошибка подключения к базе данных: " . mysqli_connect_error());
     }
 
-    // Закрытие соединения с базой данных
-    $mysql->close();
+    // Выполняем вставку данных в таблицу user_likes
+    $query = "INSERT INTO user_likes (user_id, movie_id) VALUES ('$user_id', '$movie_id')";
+
+    if (mysqli_query($connection, $query)) {
+        echo "Фильм добавлен в избранное.";
+    } else {
+        echo "Ошибка: " . mysqli_error($connection);
+    }
+
+    error_log("Movie ID received: " . $movie_id);
+
+    // Закрываем соединение с базой данных
+    mysqli_close($connection);
+} else {
+    echo "Ошибка: Пользователь не авторизован.";
 }
+
 ?>
