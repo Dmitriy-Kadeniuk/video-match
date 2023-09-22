@@ -101,4 +101,8 @@ h6 {
 .navigation-swipe button:hover img {
   color: white;
   background-color: white;
+}
+
+#movie_id {
+  display: none;
 }/*# sourceMappingURL=likes.css.map */

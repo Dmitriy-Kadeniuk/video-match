@@ -30,7 +30,10 @@ function showMovie(index) {
   if (movie) {
     moviePoster.src = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
     movieTitle.textContent = movie.title;
+
+    document.getElementById('movie_id').value = movie.id;
     movieid.textContent = movie.id;
+
     filmOverview.textContent = movie.overview;
   } else {
     // Якщо досягнута кінцева карточка фільму
@@ -39,6 +42,8 @@ function showMovie(index) {
     filmOverview.textContent = '';
   }
 }
+
+
 
 // prevButton.addEventListener('click', function () {
 //   if (currentPage > 0) {
@@ -115,3 +120,5 @@ let isInfoVisible = false;
           isInfoVisible = false;
         }
       });
+
+    
