@@ -12,6 +12,7 @@ $(document).ready(function() {
         };
 
         // Отправляем данные формы на сервер с использованием AJAX
+        // Тут делаеться Аякс запрос к серверу с передачей данных
         $.ajax({
             type: "POST",
             url: "/wp-content/themes/video-match/function/likes.php", // Полный путь к вашему обработчику PHP
