@@ -188,6 +188,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+=======
+<?php
 /**
  * video-match functions and definitions
  *
@@ -372,4 +374,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-?>
+>>>>>>> b5964a3070cc6c6b8bb2b0f4ad6ad9b2f0a1fa25
