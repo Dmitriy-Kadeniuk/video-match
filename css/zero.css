@@ -1,5 +1,4 @@
 /*-----  FONTS & COLORS  -----*/
-/*-----  FONTS & COLORS  -----*/
 /*--------------------------------------------*/
 *,
 *::before,
@@ -153,46 +152,4 @@ p {
     padding: 1.5rem;
   }
 }
-
-#movie-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.navigation-swipe {
-  display: flex;
-}
-
-.navigation-swipe button {
-  font-size: 32px;
-  background-color: transparent;
-  cursor: pointer;
-  border: 2px solid #f83e3e;
-  border-radius: 50%;
-  padding: 1rem;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  display: flex;
-  transition: 0.5s;
-}
-
-.navigation-swipe button:hover {
-  border: 2px solid white;
-}
-
-.navigation-swipe button:hover img {
-  color: white;
-  background-color: white;
-}
-/*# sourceMappingURL=likes.css.map */
-
-#movie_id {
-  display: none;
-}
-
-.navigation-swipe {
-  justify-content: center;
-}/*# sourceMappingURL=likes.css.map */
+/*# sourceMappingURL=zero.css.map */

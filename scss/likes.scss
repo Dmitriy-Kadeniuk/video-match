@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 @import "variables";
+@import "zero";
 
 #movie-container {
     display: flex;
@@ -40,18 +40,3 @@
 .navigation-swipe{
     justify-content: center;
 }
-=======
-@import "variables";
-
-#movie-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    // .movie-card {
-    //     width: 30%;
-    // }
-}
-.navigation-swipe {
-}
->>>>>>> b5964a3070cc6c6b8bb2b0f4ad6ad9b2f0a1fa25
