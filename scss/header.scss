@@ -23,6 +23,9 @@
         h1 {
             margin-left: -1.05rem;
             z-index: -1;
+            background: linear-gradient(to right, $second-color, $second-color, #54b3d6 50%, #54b3d6);
+            -webkit-background-clip: text;
+            color: transparent;
         }
         &::before {
             content: url("../img/flag-logo.svg");

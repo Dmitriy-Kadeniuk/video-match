@@ -24,66 +24,73 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Righteous&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
-		<div class="logo-users">
-			<div id="logo" class="logo">
-				<h1>VideoMatch</h1>
+		<header id="masthead" class="site-header">
+			<div class="logo-users">
+				<div id="logo" class="logo">
+					<h1>VideoMatch</h1>
+				</div>
+				<div class="user">
+					<?php
+					if (isset($_SESSION['user_name'])) {
+						$user_name = $_SESSION['user_name'];
+					?>
+						<h5>
+							<?php echo $user_name; ?>
+						</h5>
+					<?php
+					}
+					?>
+
+					<!-- <?php
+							if (isset($_SESSION['user_name'])) {
+
+								$user_name = $_SESSION['user_name'];
+							}
+							// if (isset($_SESSION['user_id'])) {
+							// 	$user_id = $_SESSION['user_id'];
+							// }
+
+							?> -->
+				</div>
 			</div>
-			<div class="user">
-				<?php
-				if (isset($_SESSION['user_name'])) {
-					$user_name = $_SESSION['user_name'];
-				?>
-					<h5>
-						<?php echo $user_name; ?>
-					</h5>
-				<?php
-				}
-				?>
-
-				<!-- <?php
-				if (isset($_SESSION['user_name'])) {
-
-					$user_name = $_SESSION['user_name'];
-				}
-				// if (isset($_SESSION['user_id'])) {
-				// 	$user_id = $_SESSION['user_id'];
-				// }
-
-				?> -->
-			</div>
-		</div>
+		</header><!-- #masthead -->
 		<div id="wrapper">
 			<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'video-match'); ?></a>
 			<aside id="sidebar">
-				<header id="masthead" class="site-header">
-					<nav>
-						<div class="navbar">
-							<div class="container nav-container">
-								<input class="checkbox" type="checkbox" name="" id="" />
-								<div class="hamburger-lines">
-									<span class="line line1"></span>
-									<span class="line line2"></span>
-									<span class="line line3"></span>
-								</div>
-								<div class="menu-items">
-									<?php
 
-									wp_nav_menu(
-										array(
-											'theme_location' => 'menu',
-											'menu_id'        => 'primary-menu',
-										)
-									);
-									?>
-								</div>
+				<nav>
+					<div class="navbar">
+						<div class="container nav-container">
+							<input class="checkbox" type="checkbox" name="" id="" />
+							<div class="hamburger-lines">
+								<span class="line line1"></span>
+								<span class="line line2"></span>
+								<span class="line line3"></span>
+							</div>
+							<div class="menu-items">
+								<?php
+
+								wp_nav_menu(
+									array(
+										'theme_location' => 'menu',
+										'menu_id'        => 'primary-menu',
+									)
+								);
+								?>
 							</div>
 						</div>
-					</nav>
-				</header><!-- #masthead -->
+					</div>
+				</nav>
+
 			</aside>
