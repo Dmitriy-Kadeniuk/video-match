@@ -26,10 +26,10 @@
         
     }
     button:hover{
-        border: 2px solid white;
+        border: 2px solid var($first-color);
         img{
-            color: white;
-            background-color: white;
+            color: var($first-color);
+            background-color: var($first-color);
         }
     }
 }
