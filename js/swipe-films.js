@@ -60,31 +60,31 @@ prevButton.addEventListener('click', function () {
   showMovie(randomIndex);
 });
 
-// nextButton.addEventListener('click', function () {
-//   if (currentPage < movies.length - 1) {
-//     currentPage++;
-//     showMovie(currentPage);
-//   }
-// });
-// Оголосіть змінну для збереження списку обраних фільмів
-let wishlist = [];
-
-// При кліку на кнопку "Вподобати"
 nextButton.addEventListener('click', function () {
   if (currentPage < movies.length - 1) {
-    const selectedMovie = movies[currentPage];
-
-    // Додаємо обраний фільм до списку обраного
-    wishlist.push(selectedMovie);
-
-    // Зберігаємо оновлений список обраного фільмів в localStorage
-    localStorage.setItem('wishlist', JSON.stringify(wishlist));
-
-    // Перемикаємо до наступного фільму
     currentPage++;
     showMovie(currentPage);
   }
 });
+// Оголосіть змінну для збереження списку обраних фільмів
+// let wishlist = [];
+
+// // При кліку на кнопку "Вподобати"
+// nextButton.addEventListener('click', function () {
+//   if (currentPage < movies.length - 1) {
+//     const selectedMovie = movies[currentPage];
+
+//     // Додаємо обраний фільм до списку обраного
+//     wishlist.push(selectedMovie);
+
+//     // Зберігаємо оновлений список обраного фільмів в localStorage
+//     localStorage.setItem('wishlist', JSON.stringify(wishlist));
+
+//     // Перемикаємо до наступного фільму
+//     currentPage++;
+//     showMovie(currentPage);
+//   }
+// });
 
 
 

@@ -1,3 +1,32 @@
+
+const API_KEY = "d416e56a-1401-449e-850d-d3e686c437a8";
+const BASE_URL = "https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_250_BEST_FILMS&page=";
+
+async function getAllMovies() {
+  const allMovies = [];
+
+  for (let page = 1; page <= 13; page++) { // 13 страниц по 20 фильмов на странице = 260 фильмов (чтобы учесть все 250)
+    const url = BASE_URL + page;
+
+    const resp = await fetch(url, {
+      headers: {
+        "Content_Type": "application/json",
+        "X-API-KEY": API_KEY,
+      },
+    });
+
+    const respData = await resp.json();
+    allMovies.push(...respData.films);
+  }
+
+  console.log(allMovies); // Все 250 фильмов
+}
+
+getAllMovies();
+
+
+
+
 fetch(
   "https://api.themoviedb.org/3/trending/movie/day?id=640146&api_key=19cc2d55ec287216302aaf07144d9835"
 )

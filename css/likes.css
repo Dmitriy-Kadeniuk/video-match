@@ -33,9 +33,8 @@ a {
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
 }
-
 a:before {
-  content: '';
+  content: "";
   background-image: linear-gradient(to right, #053BA3, #54b3d6 50%);
   display: block;
   position: absolute;
@@ -45,11 +44,9 @@ a:before {
   height: 3px;
   transition: all 0.3s ease-in-out;
 }
-
 a:hover {
   background-position: 0;
 }
-
 a:hover::before {
   width: 100%;
 }
@@ -124,19 +121,15 @@ p {
   display: flex;
   justify-content: space-between;
 }
-
 #wrapper #sidebar nav {
   width: max-content;
 }
-
 #wrapper #sidebar nav .navbar {
   padding: 0;
 }
-
 #wrapper #sidebar nav .navbar .container {
   padding: 0;
 }
-
 #wrapper #primary {
   flex-grow: 1;
   padding: 0 20px;
@@ -147,13 +140,11 @@ p {
     padding: 0 4rem;
   }
 }
-
 @media (max-width: 767px) {
   #page {
     padding: 1.5rem;
   }
 }
-
 #movie-container {
   display: flex;
   justify-content: center;
@@ -164,12 +155,11 @@ p {
 .navigation-swipe {
   display: flex;
 }
-
 .navigation-swipe button {
   font-size: 32px;
   background-color: transparent;
   cursor: pointer;
-  border: 2px solid #f83e3e;
+  border: 2px solid rgb(248, 62, 62);
   border-radius: 50%;
   padding: 1rem;
   justify-content: center;
@@ -178,16 +168,13 @@ p {
   display: flex;
   transition: 0.5s;
 }
-
 .navigation-swipe button:hover {
-  border: 2px solid var(#fff);
+  border: 2px solid var(#d3d3d3);
 }
-
 .navigation-swipe button:hover img {
-  color: var(#fff);
-  background-color: var(#fff);
+  color: var(#d3d3d3);
+  background-color: var(#d3d3d3);
 }
-/*# sourceMappingURL=likes.css.map */
 
 #movie_id {
   display: none;
@@ -195,4 +182,8 @@ p {
 
 .navigation-swipe {
   justify-content: center;
+}
+
+.wishlist {
+  color: #d3d3d3;
 }/*# sourceMappingURL=likes.css.map */
