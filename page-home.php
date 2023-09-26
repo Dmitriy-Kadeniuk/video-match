@@ -8,6 +8,7 @@ get_header();
             <!-- Слайди фільмів будуть тут -->
             <div class="carousel-inner">
                 <!-- Перший слайд буде тут -->
+
             </div>
             <ol class="carousel-indicators">
                 <li data-target="#filmCarousel" data-slide-to="0" class="active"></li>
@@ -36,9 +37,15 @@ get_header();
         <ol class="carousel-indicators" id="indicatorsList">
             <!-- Індикатори будуть додані за допомогою JavaScript -->
         </ol>
-        
+
     </div>
 </div>
+
+</div>
+</div>
+
+</main><!-- #main -->
+
 <?php
 get_sidebar();
 get_footer();

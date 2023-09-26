@@ -112,7 +112,12 @@ p {
     flex: 1 1 auto;
 }
 #page{
+<<<<<<< HEAD
     overflow: hidden;
+=======
+    max-width: 1440px;
+    margin: 0 auto;
+>>>>>>> Dimas
 }
 #wrapper {
     display: flex;
@@ -134,17 +139,27 @@ p {
         padding: 0 20px;
     }
 }
+<<<<<<< HEAD
 header, #wrapper{
     max-width: 1440px;
     margin: 0 auto;
 }
 @media (max-width: 1440px) and (min-width: 768px) {
     header, #wrapper {
+=======
+
+@media (max-width: 1440px) and (min-width: 768px) {
+    #page {
+>>>>>>> Dimas
         padding: 0 4rem;
     }
 }
 @media (max-width: 767px) {
+<<<<<<< HEAD
     header, #wrapper{
+=======
+    #page {
+>>>>>>> Dimas
         padding: 1.5rem;
     }
 }

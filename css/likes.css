@@ -33,9 +33,14 @@ a {
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
 }
+<<<<<<< HEAD
 
 a:before {
   content: '';
+=======
+a:before {
+  content: "";
+>>>>>>> Dimas
   background-image: linear-gradient(to right, #053BA3, #54b3d6 50%);
   display: block;
   position: absolute;
@@ -45,11 +50,17 @@ a:before {
   height: 3px;
   transition: all 0.3s ease-in-out;
 }
+<<<<<<< HEAD
 
 a:hover {
   background-position: 0;
 }
 
+=======
+a:hover {
+  background-position: 0;
+}
+>>>>>>> Dimas
 a:hover::before {
   width: 100%;
 }
@@ -116,6 +127,7 @@ p {
 }
 
 #page {
+<<<<<<< HEAD
   overflow: hidden;
 }
 
@@ -156,8 +168,40 @@ header, #wrapper {
   header, #wrapper {
     padding: 1.5rem;
   }
+=======
+  max-width: 1440px;
+  margin: 0 auto;
+>>>>>>> Dimas
 }
 
+#wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+#wrapper #sidebar nav {
+  width: max-content;
+}
+#wrapper #sidebar nav .navbar {
+  padding: 0;
+}
+#wrapper #sidebar nav .navbar .container {
+  padding: 0;
+}
+#wrapper #primary {
+  flex-grow: 1;
+  padding: 0 20px;
+}
+
+@media (max-width: 1440px) and (min-width: 768px) {
+  #page {
+    padding: 0 4rem;
+  }
+}
+@media (max-width: 767px) {
+  #page {
+    padding: 1.5rem;
+  }
+}
 #movie-container {
   display: flex;
   justify-content: center;
@@ -184,12 +228,12 @@ header, #wrapper {
 }
 
 .navigation-swipe button:hover {
-  border: 2px solid white;
+  border: 2px solid var(#d3d3d3);
 }
 
 .navigation-swipe button:hover img {
-  color: white;
-  background-color: white;
+  color: var(#d3d3d3);
+  background-color: var(#d3d3d3);
 }
 
 #movie_id {
@@ -199,4 +243,15 @@ header, #wrapper {
 .navigation-swipe {
   justify-content: center;
 }
+<<<<<<< HEAD
 /*# sourceMappingURL=likes.css.map */
+=======
+
+.wishlist {
+  color: #d3d3d3;
+}
+
+.wishlist-movie {
+  font-size: 1.2rem;
+}/*# sourceMappingURL=likes.css.map */
+>>>>>>> Dimas
