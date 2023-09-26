@@ -354,11 +354,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const descriptionContainer = document.createElement("div");
     descriptionContainer.classList.add("description");
 
-    const filmName = document.createElement("h3");
+    const filmName = document.createElement("h1");
     filmName.textContent = film.title;
     descriptionContainer.appendChild(filmName);
 
-    const releaseDate = document.createElement("p");
+    const releaseDate = document.createElement("h5");
     const releaseDateFormatted = new Date(film.release_date);
     releaseDate.textContent = `${releaseDateFormatted.getFullYear()}`;
     descriptionContainer.appendChild(releaseDate);

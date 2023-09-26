@@ -171,17 +171,22 @@
                             .description {
                                 position: absolute;
                                 z-index: 1;
-                                bottom: -100%; /* Описание изначально скрыто внизу */
+                                bottom: -100%;
                                 left: 0;
                                 width: 100%;
-                                background: rgba(16, 16, 16, 0.9);
+                                background: rgba(16, 16, 16, 0.29);
+                                backdrop-filter: blur(2px);
                                 color: white;
                                 padding: 0.6rem 1rem 2.5rem;
                                 border-radius: 0 0 10px 10px;
-                                transition: bottom 0.3s; /* Плавное появление описания */
+                                transition: bottom 0.3s;
+                                h1 {
+                                    font-size: 25px;
+                                    line-height: 30px;
+                                }
                             }
                             &:hover .description {
-                                bottom: 0; /* Описание появляется при наведении */
+                                bottom: 0;
                             }
                         }
                     }
