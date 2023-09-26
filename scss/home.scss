@@ -2,7 +2,6 @@
 @import "zero";
 
 #primary {
-<<<<<<< HEAD
     // .film-container {
     //     display: flex;
     //     flex-direction: row;
@@ -43,19 +42,19 @@
     //     animation: scrollToLeft 10s linear infinite;
     //     display: flex;
     //   }
-      
+
     //   .film-container:hover {
     //     animation-play-state: paused;
     //   }
     //   .film-container .tv-block {
-    //     flex: 0 0 auto; 
-    //     margin-right: 20px; 
+    //     flex: 0 0 auto;
+    //     margin-right: 20px;
     //   }
-      
+
     //   .film-container .tv-block:last-child {
-    //     margin-right: 0; 
+    //     margin-right: 0;
     //   }
-      
+
     //   @keyframes scrollToLeft {
     //     0% {
     //       transform: translateX(-20%);
@@ -64,8 +63,7 @@
     //       transform: translateX(-100%);
     //     }
     //   }
-      
-      
+
     .container {
         #filmCarousel {
             .carousel-inner {
@@ -136,37 +134,55 @@
 .all-film {
     padding-top: 7rem;
     padding-bottom: 3rem;
-    h2{
+    padding-left: 2rem;
+    h2 {
         max-width: 1440px;
         margin: 0 auto;
     }
     #allFilmCarousel {
-        padding-top: 1.2rem;
-        margin-right: -100px;
-        margin-left: -100px;
+        padding-top: 2rem;
+        margin-right: -60px;
+
         .carousel-inner {
             .carousel-item {
                 .view-films {
-                    display: flex;
+                    display: grid;
+                    grid-template-columns: repeat(6, 1fr);
                     gap: 1.5rem;
                     .all-film-container {
                         position: relative;
+                        display: inline-block;
+                        overflow: hidden;
+                        border-radius: 10px;
                         .img-film {
+                            position: relative;
                             height: 100%;
-                            img {
+                            .film-image {
+                                width: 100%;
+                                height: 100%;
                                 object-fit: cover;
                                 border-radius: 10px;
+                                transition: transform 0.3s;
+                                cursor: pointer;
                             }
-                        }
-                        .description {
-                            position: absolute;
-                            z-index: 1;
-                            bottom: 0;
-                            padding: 0.6rem 1rem 2.5rem;
-                            width: 100%;
-                            background: rgba(16, 16, 16, 0.29);
-                            backdrop-filter: blur(2px);
-                            border-radius: 0 0 10px 10px;
+                            &:hover .film-image {
+                                transform: scale(1.1);
+                            }
+                            .description {
+                                position: absolute;
+                                z-index: 1;
+                                bottom: -100%; /* Описание изначально скрыто внизу */
+                                left: 0;
+                                width: 100%;
+                                background: rgba(16, 16, 16, 0.9);
+                                color: white;
+                                padding: 0.6rem 1rem 2.5rem;
+                                border-radius: 0 0 10px 10px;
+                                transition: bottom 0.3s; /* Плавное появление описания */
+                            }
+                            &:hover .description {
+                                bottom: 0; /* Описание появляется при наведении */
+                            }
                         }
                     }
                 }
@@ -177,6 +193,8 @@
             align-items: center;
             right: initial;
             bottom: -4.5rem;
+            left: 0;
+            margin-left: 0;
             li {
                 background-color: $second-color;
                 width: 8px;
@@ -192,107 +210,6 @@
                     width: 30px;
                     height: 5px;
                     border-radius: 11.5px;
-                }
-            }
-=======
-    .film-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 5rem;
-        padding-top: 7rem;
-    }
-    .tv-block,
-    .movie-card {
-        width: 25%;
-        position: relative;
-        .film-image {
-            width: 100%;
-        }
-        i {
-            position: absolute;
-            right: 15px;
-            top: 20px;
-            color: #fff;
-            cursor: pointer;
-            font-size: 28px;
-        }
-        p {
-            position: absolute;
-            top: 50%;
-            left: 20%;
-            transform: translate(-13%, -50%);
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-            border-radius: 25% 10%;
->>>>>>> Dimas
-        }
-    }
-    .container {
-        #filmCarousel {
-            .carousel-inner {
-                padding-bottom: 4rem;
-                .carousel-item {
-                    .view-films {
-                        display: flex;
-                        gap: 2rem;
-                        .film-container-slide {
-                            position: relative;
-                            width: 50%;
-                            border-radius: 10px;
-                            .img-film {
-                                img {
-                                    object-fit: cover;
-                                    max-height: 350px;
-                                    border-radius: 10px;
-                                }
-                            }
-
-                            .description {
-                                position: absolute;
-                                z-index: 1;
-                                width: 260px;
-                                right: 0;
-                                padding: 20px 16px;
-                                border-radius: 0px 10px 10px 0px;
-                                background: rgba(16, 16, 16, 0.3);
-                                backdrop-filter: blur(2px);
-                                height: 100%;
-                                h1 {
-                                    line-height: 34px;
-                                }
-                                p {
-                                    font-weight: 600;
-                                }
-                                span {
-                                    font: $second-font;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            .carousel-indicators {
-                display: flex;
-                align-items: center;
-                li {
-                    background-color: transparent;
-                    width: 7px;
-                    height: 7px;
-                    border-radius: 50%;
-                    margin: 0 5px;
-                    cursor: pointer;
-                    transition: background-color 0.3s ease;
-                    border: 1px solid #fff;
-                    &.active {
-                        background-color: $second-color;
-                        border: none;
-                        width: 10px;
-                        height: 10px;
-                    }
                 }
             }
         }

@@ -33,14 +33,9 @@ a {
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
 }
-<<<<<<< HEAD
 
 a:before {
-  content: '';
-=======
-a:before {
   content: "";
->>>>>>> Dimas
   background-image: linear-gradient(to right, #053BA3, #54b3d6 50%);
   display: block;
   position: absolute;
@@ -50,17 +45,11 @@ a:before {
   height: 3px;
   transition: all 0.3s ease-in-out;
 }
-<<<<<<< HEAD
 
 a:hover {
   background-position: 0;
 }
 
-=======
-a:hover {
-  background-position: 0;
-}
->>>>>>> Dimas
 a:hover::before {
   width: 100%;
 }
@@ -127,8 +116,9 @@ p {
 }
 
 #page {
-<<<<<<< HEAD
   overflow: hidden;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 #wrapper {
@@ -153,55 +143,26 @@ p {
   padding: 0 20px;
 }
 
-header, #wrapper {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-@media (max-width: 1440px) and (min-width: 768px) {
-  header, #wrapper {
-    padding: 0 4rem;
-  }
-}
-
-@media (max-width: 767px) {
-  header, #wrapper {
-    padding: 1.5rem;
-  }
-=======
-  max-width: 1440px;
-  margin: 0 auto;
->>>>>>> Dimas
-}
-
+header,
 #wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-#wrapper #sidebar nav {
-  width: max-content;
-}
-#wrapper #sidebar nav .navbar {
-  padding: 0;
-}
-#wrapper #sidebar nav .navbar .container {
-  padding: 0;
-}
-#wrapper #primary {
-  flex-grow: 1;
-  padding: 0 20px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 @media (max-width: 1440px) and (min-width: 768px) {
-  #page {
+  header,
+  #wrapper {
     padding: 0 4rem;
   }
 }
+
 @media (max-width: 767px) {
-  #page {
+  header,
+  #wrapper {
     padding: 1.5rem;
   }
 }
+
 .menu ul li a {
   font: normal 400 18px/18px "Open Sans", sans-serif;
   line-height: 34px;
@@ -330,11 +291,7 @@ header, #wrapper {
     transform-origin: 0% 100%;
     transition: transform 0.4s ease-in-out;
   }
-<<<<<<< HEAD
   .nav-container input[type="checkbox"]:checked ~ .menu-items {
-=======
-  .nav-container input[type=checkbox]:checked ~ .menu-items {
->>>>>>> Dimas
     transform: translateX(0);
   }
   .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {

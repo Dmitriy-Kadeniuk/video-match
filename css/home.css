@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*-----  FONTS & COLORS  -----*/
 /*-----  FONTS & COLORS  -----*/
 /*--------------------------------------------*/
@@ -33,14 +34,9 @@ a {
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
 }
-<<<<<<< HEAD
 
 a:before {
-  content: '';
-=======
-a:before {
   content: "";
->>>>>>> Dimas
   background-image: linear-gradient(to right, #053BA3, #54b3d6 50%);
   display: block;
   position: absolute;
@@ -50,17 +46,11 @@ a:before {
   height: 3px;
   transition: all 0.3s ease-in-out;
 }
-<<<<<<< HEAD
 
 a:hover {
   background-position: 0;
 }
 
-=======
-a:hover {
-  background-position: 0;
-}
->>>>>>> Dimas
 a:hover::before {
   width: 100%;
 }
@@ -127,19 +117,15 @@ p {
 }
 
 #page {
-<<<<<<< HEAD
   overflow: hidden;
-=======
   max-width: 1440px;
   margin: 0 auto;
->>>>>>> Dimas
 }
 
 #wrapper {
   display: flex;
   justify-content: space-between;
 }
-<<<<<<< HEAD
 
 #wrapper #sidebar nav {
   width: max-content;
@@ -153,36 +139,27 @@ p {
   padding: 0;
 }
 
-=======
-#wrapper #sidebar nav {
-  width: max-content;
-}
-#wrapper #sidebar nav .navbar {
-  padding: 0;
-}
-#wrapper #sidebar nav .navbar .container {
-  padding: 0;
-}
->>>>>>> Dimas
 #wrapper #primary {
   flex-grow: 1;
   padding: 0 20px;
 }
 
-<<<<<<< HEAD
-header, #wrapper {
+header,
+#wrapper {
   max-width: 1440px;
   margin: 0 auto;
 }
 
 @media (max-width: 1440px) and (min-width: 768px) {
-  header, #wrapper {
+  header,
+  #wrapper {
     padding: 0 4rem;
   }
 }
 
 @media (max-width: 767px) {
-  header, #wrapper {
+  header,
+  #wrapper {
     padding: 1.5rem;
   }
 }
@@ -194,25 +171,6 @@ header, #wrapper {
 #primary .container #filmCarousel .carousel-inner .carousel-item .view-films {
   display: flex;
   gap: 2rem;
-=======
-@media (max-width: 1440px) and (min-width: 768px) {
-  #page {
-    padding: 0 4rem;
-  }
-}
-@media (max-width: 767px) {
-  #page {
-    padding: 1.5rem;
-  }
-}
-#primary .film-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5rem;
-  padding-top: 7rem;
->>>>>>> Dimas
 }
 
 #primary .container #filmCarousel .carousel-inner .carousel-item .view-films .film-container-slide {
@@ -277,6 +235,7 @@ header, #wrapper {
 .all-film {
   padding-top: 7rem;
   padding-bottom: 3rem;
+  padding-left: 2rem;
 }
 
 .all-film h2 {
@@ -285,39 +244,59 @@ header, #wrapper {
 }
 
 .all-film #allFilmCarousel {
-  padding-top: 1.2rem;
-  margin-right: -100px;
-  margin-left: -100px;
+  padding-top: 2rem;
+  margin-right: -60px;
 }
 
 .all-film #allFilmCarousel .carousel-inner .carousel-item .view-films {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
   gap: 1.5rem;
 }
 
 .all-film #allFilmCarousel .carousel-inner .carousel-item .view-films .all-film-container {
   position: relative;
-}
-
-.all-film #allFilmCarousel .carousel-inner .carousel-item .view-films .all-film-container .img-film {
-  height: 100%;
-}
-<<<<<<< HEAD
-
-.all-film #allFilmCarousel .carousel-inner .carousel-item .view-films .all-film-container .img-film img {
-  object-fit: cover;
+  display: inline-block;
+  overflow: hidden;
   border-radius: 10px;
 }
 
-.all-film #allFilmCarousel .carousel-inner .carousel-item .view-films .all-film-container .description {
+.all-film #allFilmCarousel .carousel-inner .carousel-item .view-films .all-film-container .img-film {
+  position: relative;
+  height: 100%;
+}
+
+.all-film #allFilmCarousel .carousel-inner .carousel-item .view-films .all-film-container .img-film .film-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.all-film #allFilmCarousel .carousel-inner .carousel-item .view-films .all-film-container .img-film:hover .film-image {
+  transform: scale(1.1);
+}
+
+.all-film #allFilmCarousel .carousel-inner .carousel-item .view-films .all-film-container .img-film .description {
   position: absolute;
   z-index: 1;
-  bottom: 0;
-  padding: 0.6rem 1rem 2.5rem;
+  bottom: -100%;
+  /* Описание изначально скрыто внизу */
+  left: 0;
   width: 100%;
-  background: rgba(16, 16, 16, 0.29);
-  backdrop-filter: blur(2px);
+  background: rgba(16, 16, 16, 0.9);
+  color: white;
+  padding: 0.6rem 1rem 2.5rem;
   border-radius: 0 0 10px 10px;
+  transition: bottom 0.3s;
+  /* Плавное появление описания */
+}
+
+.all-film #allFilmCarousel .carousel-inner .carousel-item .view-films .all-film-container .img-film:hover .description {
+  bottom: 0;
+  /* Описание появляется при наведении */
 }
 
 .all-film #allFilmCarousel .carousel-indicators {
@@ -325,6 +304,8 @@ header, #wrapper {
   align-items: center;
   right: initial;
   bottom: -4.5rem;
+  left: 0;
+  margin-left: 0;
 }
 
 .all-film #allFilmCarousel .carousel-indicators li {
@@ -343,62 +324,3 @@ header, #wrapper {
   border-radius: 11.5px;
 }
 /*# sourceMappingURL=home.css.map */
-=======
-#primary .container #filmCarousel .carousel-inner {
-  padding-bottom: 4rem;
-}
-#primary .container #filmCarousel .carousel-inner .carousel-item .view-films {
-  display: flex;
-  gap: 2rem;
-}
-#primary .container #filmCarousel .carousel-inner .carousel-item .view-films .film-container-slide {
-  position: relative;
-  width: 50%;
-  border-radius: 10px;
-}
-#primary .container #filmCarousel .carousel-inner .carousel-item .view-films .film-container-slide .img-film img {
-  object-fit: cover;
-  max-height: 350px;
-  border-radius: 10px;
-}
-#primary .container #filmCarousel .carousel-inner .carousel-item .view-films .film-container-slide .description {
-  position: absolute;
-  z-index: 1;
-  width: 260px;
-  right: 0;
-  padding: 20px 16px;
-  border-radius: 0px 10px 10px 0px;
-  background: rgba(16, 16, 16, 0.3);
-  backdrop-filter: blur(2px);
-  height: 100%;
-}
-#primary .container #filmCarousel .carousel-inner .carousel-item .view-films .film-container-slide .description h1 {
-  line-height: 34px;
-}
-#primary .container #filmCarousel .carousel-inner .carousel-item .view-films .film-container-slide .description p {
-  font-weight: 600;
-}
-#primary .container #filmCarousel .carousel-inner .carousel-item .view-films .film-container-slide .description span {
-  font: normal 400 13px/18px "Open Sans", sans-serif;
-}
-#primary .container #filmCarousel .carousel-indicators {
-  display: flex;
-  align-items: center;
-}
-#primary .container #filmCarousel .carousel-indicators li {
-  background-color: transparent;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border: 1px solid #fff;
-}
-#primary .container #filmCarousel .carousel-indicators li.active {
-  background-color: #053BA3;
-  border: none;
-  width: 10px;
-  height: 10px;
-}/*# sourceMappingURL=home.css.map */
->>>>>>> Dimas

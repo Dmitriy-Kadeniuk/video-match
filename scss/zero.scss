@@ -22,41 +22,32 @@ body {
 }
 
 a {
-  background-image: linear-gradient(
-    to right,
-    $second-color,
-    #54b3d6 50%,
-    $first-color 50%
-  );
-  background-size: 200% 100%;
-  background-position: -100%;
-  display: inline-block;
-  padding: 5px 0;
-  position: relative;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease-in-out;
-  &:before{
-    content: '';
-    background-image: linear-gradient(
-      to right,
-      $second-color,
-      #54b3d6 50%
-    );
-    display: block;
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 3px;
+    background-image: linear-gradient(to right, $second-color, #54b3d6 50%, $first-color 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     transition: all 0.3s ease-in-out;
-  }
-  &:hover {
-    background-position: 0;
-    &::before{
-        width: 100%;
-      }
-   }
+    &:before {
+        content: "";
+        background-image: linear-gradient(to right, $second-color, #54b3d6 50%);
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+        background-position: 0;
+        &::before {
+            width: 100%;
+        }
+    }
 }
 
 ul,
@@ -90,19 +81,19 @@ span,
 a {
     color: $third-color;
 }
-h1{
+h1 {
     font: $first-font;
 }
-h2{
+h2 {
     font: $heading-font;
 }
-h3{
+h3 {
     font: $fifth-font;
 }
-h4{
+h4 {
     font: $fourth-font;
 }
-h5{
+h5 {
     font: $third-font;
 }
 p {
@@ -111,23 +102,20 @@ p {
 #wrapper .main {
     flex: 1 1 auto;
 }
-#page{
-<<<<<<< HEAD
+#page {
     overflow: hidden;
-=======
     max-width: 1440px;
     margin: 0 auto;
->>>>>>> Dimas
 }
 #wrapper {
     display: flex;
     justify-content: space-between;
     #sidebar {
-        nav{
+        nav {
             width: max-content;
-            .navbar{
+            .navbar {
                 padding: 0;
-                .container{
+                .container {
                     padding: 0;
                 }
             }
@@ -139,27 +127,20 @@ p {
         padding: 0 20px;
     }
 }
-<<<<<<< HEAD
-header, #wrapper{
+header,
+#wrapper {
     max-width: 1440px;
     margin: 0 auto;
 }
 @media (max-width: 1440px) and (min-width: 768px) {
-    header, #wrapper {
-=======
-
-@media (max-width: 1440px) and (min-width: 768px) {
-    #page {
->>>>>>> Dimas
+    header,
+    #wrapper {
         padding: 0 4rem;
     }
 }
 @media (max-width: 767px) {
-<<<<<<< HEAD
-    header, #wrapper{
-=======
-    #page {
->>>>>>> Dimas
+    header,
+    #wrapper {
         padding: 1.5rem;
     }
 }

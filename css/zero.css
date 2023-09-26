@@ -32,14 +32,9 @@ a {
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
 }
-<<<<<<< HEAD
 
 a:before {
-  content: '';
-=======
-a:before {
   content: "";
->>>>>>> Dimas
   background-image: linear-gradient(to right, #053BA3, #54b3d6 50%);
   display: block;
   position: absolute;
@@ -49,17 +44,11 @@ a:before {
   height: 3px;
   transition: all 0.3s ease-in-out;
 }
-<<<<<<< HEAD
 
 a:hover {
   background-position: 0;
 }
 
-=======
-a:hover {
-  background-position: 0;
-}
->>>>>>> Dimas
 a:hover::before {
   width: 100%;
 }
@@ -126,19 +115,15 @@ p {
 }
 
 #page {
-<<<<<<< HEAD
   overflow: hidden;
-=======
   max-width: 1440px;
   margin: 0 auto;
->>>>>>> Dimas
 }
 
 #wrapper {
   display: flex;
   justify-content: space-between;
 }
-<<<<<<< HEAD
 
 #wrapper #sidebar nav {
   width: max-content;
@@ -152,49 +137,28 @@ p {
   padding: 0;
 }
 
-=======
-#wrapper #sidebar nav {
-  width: max-content;
-}
-#wrapper #sidebar nav .navbar {
-  padding: 0;
-}
-#wrapper #sidebar nav .navbar .container {
-  padding: 0;
-}
->>>>>>> Dimas
 #wrapper #primary {
   flex-grow: 1;
   padding: 0 20px;
 }
 
-<<<<<<< HEAD
-header, #wrapper {
+header,
+#wrapper {
   max-width: 1440px;
   margin: 0 auto;
 }
 
 @media (max-width: 1440px) and (min-width: 768px) {
-  header, #wrapper {
+  header,
+  #wrapper {
     padding: 0 4rem;
   }
 }
 
 @media (max-width: 767px) {
-  header, #wrapper {
+  header,
+  #wrapper {
     padding: 1.5rem;
   }
 }
 /*# sourceMappingURL=zero.css.map */
-=======
-@media (max-width: 1440px) and (min-width: 768px) {
-  #page {
-    padding: 0 4rem;
-  }
-}
-@media (max-width: 767px) {
-  #page {
-    padding: 1.5rem;
-  }
-}/*# sourceMappingURL=zero.css.map */
->>>>>>> Dimas
