@@ -2,41 +2,69 @@
 @import "zero";
 
 #primary {
-    .film-container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 5rem;
-        padding-top: 7rem;
-    }
-    .tv-block,
-    .movie-card {
-        width: 25%;
-        position: relative;
-        .film-image {
-            width: 100%;
-        }
-        i {
-            position: absolute;
-            right: 15px;
-            top: 20px;
-            color: #fff;
-            cursor: pointer;
-            font-size: 28px;
-        }
-        p {
-            position: absolute;
-            top: 50%;
-            left: 20%;
-            transform: translate(-13%, -50%);
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-            border-radius: 25% 10%;
-        }
-    }
+    // .film-container {
+    //     display: flex;
+    //     flex-direction: row;
+    //     flex-wrap: wrap;
+    //     justify-content: center;
+    //     gap: 5rem;
+    //     padding-top: 7rem;
+    // }
+    // .tv-block,
+    // .movie-card {
+    //     width: 25%;
+    //     position: relative;
+    //     .film-image {
+    //         width: 100%;
+    //     }
+    //     i {
+    //         position: absolute;
+    //         right: 15px;
+    //         top: 20px;
+    //         color: #fff;
+    //         cursor: pointer;
+    //         font-size: 28px;
+    //     }
+    //     p {
+    //         position: absolute;
+    //         top: 50%;
+    //         left: 20%;
+    //         transform: translate(-13%, -50%);
+    //         padding: 20px;
+    //         background-color: rgba(255, 255, 255, 0.5);
+    //         backdrop-filter: blur(10px);
+    //         box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    //         border-radius: 25% 10%;
+    //     }
+    // }
+    // .film-container {
+    //     white-space: nowrap;
+    //     animation: scrollToLeft 10s linear infinite;
+    //     display: flex;
+    //   }
+      
+    //   .film-container:hover {
+    //     animation-play-state: paused;
+    //   }
+    //   .film-container .tv-block {
+    //     flex: 0 0 auto; 
+    //     margin-right: 20px; 
+    //   }
+      
+    //   .film-container .tv-block:last-child {
+    //     margin-right: 0; 
+    //   }
+      
+    //   @keyframes scrollToLeft {
+    //     0% {
+    //       transform: translateX(-20%);
+    //     }
+    //     100% {
+    //       transform: translateX(-100%);
+    //     }
+    //   }
+      
+      
     .container {
         #filmCarousel {
             .carousel-inner {
@@ -99,6 +127,70 @@
                         width: 10px;
                         height: 10px;
                     }
+                }
+            }
+        }
+    }
+}
+.all-film {
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+    h2{
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    #allFilmCarousel {
+        padding-top: 1.2rem;
+        margin-right: -100px;
+        margin-left: -100px;
+        .carousel-inner {
+            .carousel-item {
+                .view-films {
+                    display: flex;
+                    gap: 1.5rem;
+                    .all-film-container {
+                        position: relative;
+                        .img-film {
+                            height: 100%;
+                            img {
+                                object-fit: cover;
+                                border-radius: 10px;
+                            }
+                        }
+                        .description {
+                            position: absolute;
+                            z-index: 1;
+                            bottom: 0;
+                            padding: 0.6rem 1rem 2.5rem;
+                            width: 100%;
+                            background: rgba(16, 16, 16, 0.29);
+                            backdrop-filter: blur(2px);
+                            border-radius: 0 0 10px 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .carousel-indicators {
+            display: flex;
+            align-items: center;
+            right: initial;
+            bottom: -4.5rem;
+            li {
+                background-color: $second-color;
+                width: 8px;
+                height: 7px;
+                // border-radius: 43%;
+                margin: 0 5px;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                &.active {
+                    // width: 25px;
+                    // height: 5px;
+                    width: 30px;
+                    height: 5px;
+                    border-radius: 11.5px;
                 }
             }
         }

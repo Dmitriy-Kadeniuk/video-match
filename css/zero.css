@@ -115,8 +115,7 @@ p {
 }
 
 #page {
-  max-width: 1440px;
-  margin: 0 auto;
+  overflow: hidden;
 }
 
 #wrapper {
@@ -141,14 +140,19 @@ p {
   padding: 0 20px;
 }
 
+header, #wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 @media (max-width: 1440px) and (min-width: 768px) {
-  #page {
+  header, #wrapper {
     padding: 0 4rem;
   }
 }
 
 @media (max-width: 767px) {
-  #page {
+  header, #wrapper {
     padding: 1.5rem;
   }
 }

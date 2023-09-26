@@ -116,8 +116,7 @@ p {
 }
 
 #page {
-  max-width: 1440px;
-  margin: 0 auto;
+  overflow: hidden;
 }
 
 #wrapper {
@@ -142,59 +141,21 @@ p {
   padding: 0 20px;
 }
 
+header, #wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 @media (max-width: 1440px) and (min-width: 768px) {
-  #page {
+  header, #wrapper {
     padding: 0 4rem;
   }
 }
 
 @media (max-width: 767px) {
-  #page {
+  header, #wrapper {
     padding: 1.5rem;
   }
-}
-
-#primary .film-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5rem;
-  padding-top: 7rem;
-}
-
-#primary .tv-block,
-#primary .movie-card {
-  width: 25%;
-  position: relative;
-}
-
-#primary .tv-block .film-image,
-#primary .movie-card .film-image {
-  width: 100%;
-}
-
-#primary .tv-block i,
-#primary .movie-card i {
-  position: absolute;
-  right: 15px;
-  top: 20px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 28px;
-}
-
-#primary .tv-block p,
-#primary .movie-card p {
-  position: absolute;
-  top: 50%;
-  left: 20%;
-  transform: translate(-13%, -50%);
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-  border-radius: 25% 10%;
 }
 
 #primary .container #filmCarousel .carousel-inner {
@@ -263,5 +224,73 @@ p {
   border: none;
   width: 10px;
   height: 10px;
+}
+
+.all-film {
+  padding-top: 7rem;
+  padding-bottom: 3rem;
+}
+
+.all-film h2 {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.all-film #allFilmCarousel {
+  padding-top: 1.2rem;
+  margin-right: -100px;
+  margin-left: -100px;
+}
+
+.all-film #allFilmCarousel .carousel-inner .carousel-item .view-films {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.all-film #allFilmCarousel .carousel-inner .carousel-item .view-films .all-film-container {
+  position: relative;
+}
+
+.all-film #allFilmCarousel .carousel-inner .carousel-item .view-films .all-film-container .img-film {
+  height: 100%;
+}
+
+.all-film #allFilmCarousel .carousel-inner .carousel-item .view-films .all-film-container .img-film img {
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.all-film #allFilmCarousel .carousel-inner .carousel-item .view-films .all-film-container .description {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  padding: 0.6rem 1rem 2.5rem;
+  width: 100%;
+  background: rgba(16, 16, 16, 0.29);
+  backdrop-filter: blur(2px);
+  border-radius: 0 0 10px 10px;
+}
+
+.all-film #allFilmCarousel .carousel-indicators {
+  display: flex;
+  align-items: center;
+  right: initial;
+  bottom: -4.5rem;
+}
+
+.all-film #allFilmCarousel .carousel-indicators li {
+  background-color: #053BA3;
+  width: 8px;
+  height: 7px;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.all-film #allFilmCarousel .carousel-indicators li.active {
+  width: 30px;
+  height: 5px;
+  border-radius: 11.5px;
 }
 /*# sourceMappingURL=home.css.map */
