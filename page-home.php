@@ -45,17 +45,26 @@ get_header();
     <div id="wrapper-films">
         <div class="popular-film">
             <h2>
-            Popular Films
+                Popular Films
             </h2>
-            <div id="allFilmCarousel" class="carousel slide" data-ride="carousel">
+            <div id="popularFilmCarousel" class="carousel slide" data-ride="carousel">
                 <!-- Слайди фільмів будуть тут -->
                 <div class="carousel-inner">
                     <!-- Перший слайд буде тут -->
 
                 </div>
-                <ol class="carousel-indicators" id="indicatorsList">
-                    <!-- Індикатори будуть додані за допомогою JavaScript -->
-                </ol>
+
+                <!-- HTML-код для стрілок вперед та назад -->
+                <div class="carousel-controls">
+                    <a class="carousel-control-prev" href="#popularFilmCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#popularFilmCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
 
             </div>
         </div>

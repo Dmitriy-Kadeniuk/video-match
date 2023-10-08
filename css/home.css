@@ -247,7 +247,7 @@ header,
   padding-left: 2rem;
   overflow: hidden;
   position: relative;
-  min-height: 66%;
+  min-height: 67%;
 }
 
 .all-film h2 {
@@ -336,5 +336,86 @@ header,
 
 #wrapper-films .popular-film {
   padding: 7rem 1rem;
+}
+
+#wrapper-films .popular-film #popularFilmCarousel {
+  padding-top: 2rem;
+}
+
+#wrapper-films .popular-film #popularFilmCarousel .carousel-inner .carousel-item .view-films {
+  display: flex;
+  gap: 1.5rem;
+}
+
+#wrapper-films .popular-film #popularFilmCarousel .carousel-inner .carousel-item .view-films .popular-film-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#wrapper-films .popular-film #popularFilmCarousel .carousel-inner .carousel-item .view-films .popular-film-container .img-film {
+  position: relative;
+  height: 100%;
+}
+
+#wrapper-films .popular-film #popularFilmCarousel .carousel-inner .carousel-item .view-films .popular-film-container .img-film .film-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+#wrapper-films .popular-film #popularFilmCarousel .carousel-inner .carousel-item .view-films .popular-film-container .img-film:hover .film-image {
+  transform: scale(1.1);
+}
+
+#wrapper-films .popular-film #popularFilmCarousel .carousel-inner .carousel-item .view-films .popular-film-container .img-film .description {
+  position: absolute;
+  z-index: 1;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background: rgba(16, 16, 16, 0.29);
+  backdrop-filter: blur(2px);
+  color: white;
+  padding: 0.6rem 1rem 2.5rem;
+  border-radius: 0 0 10px 10px;
+  transition: bottom 0.3s;
+}
+
+#wrapper-films .popular-film #popularFilmCarousel .carousel-inner .carousel-item .view-films .popular-film-container .img-film .description h1 {
+  font-size: 25px;
+  line-height: 30px;
+}
+
+#wrapper-films .popular-film #popularFilmCarousel .carousel-inner .carousel-item .view-films .popular-film-container .img-film:hover .description {
+  bottom: 0;
+}
+
+#wrapper-films .popular-film #popularFilmCarousel .carousel-controls {
+  position: absolute;
+  z-index: 99999;
+  top: -10px;
+  width: 10%;
+  right: 0;
+}
+
+#wrapper-films .popular-film #popularFilmCarousel .carousel-controls a {
+  transition: all 0.3s ease-in-out;
+}
+
+#wrapper-films .popular-film #popularFilmCarousel .carousel-controls a::before {
+  display: none;
+}
+
+#wrapper-films .popular-film #popularFilmCarousel .carousel-controls .carousel-control-prev-icon {
+  background-image: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" fill="%23053BA3" width="8" height="8" viewBox="0 0 8 8"%3e%3cpath d="M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z" /%3e%3c/svg%3e');
+}
+
+#wrapper-films .popular-film #popularFilmCarousel .carousel-controls .carousel-control-next-icon {
+  background-image: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" fill="%23053BA3" width="8" height="8" viewBox="0 0 8 8"%3e%3cpath d="M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z" /%3e%3c/svg%3e');
 }
 /*# sourceMappingURL=home.css.map */
