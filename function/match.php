@@ -45,11 +45,34 @@ if ($result1 && $result2) {
     // Находим муви ID, которые совпадают у обоих пользователей
     $common_movies = array_intersect($user1_movies, $user2_movies);
 
-    // Выводим совпадающие муви ID
-    echo "Совпадающие муви ID у пользователей $user1_id и $user2_id: ";
-    foreach ($common_movies as $movie_id) {
-        echo "<li class='wishlist-movie'>$movie_id</li>";
+    // Виводимо заголовок
+    echo "Спільні фільми у користувачів $user1_id та $user2_id: ";
+    echo "<ul>";
+
+  // Проходження по кожному спільному ID фільму
+  foreach ($common_movies as $movie_id) {
+    // Виконуємо запит до API, щоб отримати інформацію про фільм за його ID
+    $api_key = "19cc2d55ec287216302aaf07144d9835";
+    $api_url = "https://api.themoviedb.org/3/movie/$movie_id?api_key=$api_key";
+
+    // Виконуємо запит до API
+    $api_response = file_get_contents($api_url);
+
+    // Парсимо відповідь API
+    $api_data = json_decode($api_response, true);
+
+    // Виводимо назву фільму, якщо вона доступна
+    if (isset($api_data['title'])) {
+        echo "<li class='wishlist-movie'>" . $api_data['title'] . "</li>";
     }
+}
+
+    echo "</ul>";
+    // // Выводим совпадающие муви ID
+    // echo "Совпадающие муви ID у пользователей $user1_id и $user2_id: ";
+    // foreach ($common_movies as $movie_id) {
+    //     echo "<li class='wishlist-movie'>$movie_id</li>";
+    // }
 } else {
     echo "Ошибка при выполнении запросов: " . mysqli_error($connection);
 }
