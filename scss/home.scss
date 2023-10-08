@@ -65,6 +65,7 @@
     //   }
 
     .container {
+        
         #filmCarousel {
             .carousel-inner {
                 padding-bottom: 4rem;
@@ -130,11 +131,16 @@
             }
         }
     }
+    
 }
+
 .all-film {
     padding-top: 7rem;
     padding-bottom: 3rem;
     padding-left: 2rem;
+    overflow: hidden;
+    position: relative;
+    min-height: 66%;
     h2 {
         max-width: 1440px;
         margin: 0 auto;
@@ -142,6 +148,7 @@
     #allFilmCarousel {
         padding-top: 2rem;
         margin-right: -60px;
+        position: absolute;
 
         .carousel-inner {
             .carousel-item {
@@ -198,7 +205,8 @@
             align-items: center;
             right: initial;
             bottom: -4.5rem;
-            left: 0;
+
+            left: 2rem;
             margin-left: 0;
             li {
                 background-color: $second-color;
@@ -209,14 +217,12 @@
                 border-radius: 50%;
                 cursor: pointer;
                 transition: background-color 0.3s ease;
-                &.active {
-                    // width: 25px;
-                    // height: 5px;
-                    width: 30px;
-                    height: 5px;
-                    border-radius: 11.5px;
-                }
             }
         }
     }
 }
+ #wrapper-films {
+    .popular-film{
+        padding: 7rem 1rem;
+    }
+ }

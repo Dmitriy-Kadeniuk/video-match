@@ -93,6 +93,14 @@ h1 {
 
 h2 {
   font: normal 500 30px/18px "Nunito", sans-serif;
+  position: relative;
+}
+
+h2::after {
+  content: url("../img/Ellipse-heading.svg");
+  position: absolute;
+  top: -25px;
+  margin-left: 8px;
 }
 
 h3 {
@@ -116,9 +124,8 @@ p {
 }
 
 #page {
-  overflow: hidden;
-  max-width: 1440px;
   margin: 0 auto;
+  height: 100%;
 }
 
 #wrapper {
@@ -144,21 +151,24 @@ p {
 }
 
 header,
-#wrapper {
+#wrapper,
+#wrapper-films {
   max-width: 1440px;
   margin: 0 auto;
 }
 
 @media (max-width: 1440px) and (min-width: 768px) {
   header,
-  #wrapper {
+  #wrapper,
+  #wrapper-films {
     padding: 0 4rem;
   }
 }
 
 @media (max-width: 767px) {
   header,
-  #wrapper {
+  #wrapper,
+  #wrapper-films {
     padding: 1.5rem;
   }
 }
@@ -235,6 +245,9 @@ header,
   padding-top: 7rem;
   padding-bottom: 3rem;
   padding-left: 2rem;
+  overflow: hidden;
+  position: relative;
+  min-height: 66%;
 }
 
 .all-film h2 {
@@ -245,6 +258,7 @@ header,
 .all-film #allFilmCarousel {
   padding-top: 2rem;
   margin-right: -60px;
+  position: absolute;
 }
 
 .all-film #allFilmCarousel .carousel-inner .carousel-item .view-films {
@@ -306,7 +320,7 @@ header,
   align-items: center;
   right: initial;
   bottom: -4.5rem;
-  left: 0;
+  left: 2rem;
   margin-left: 0;
 }
 
@@ -320,9 +334,7 @@ header,
   transition: background-color 0.3s ease;
 }
 
-.all-film #allFilmCarousel .carousel-indicators li.active {
-  width: 30px;
-  height: 5px;
-  border-radius: 11.5px;
+#wrapper-films .popular-film {
+  padding: 7rem 1rem;
 }
 /*# sourceMappingURL=home.css.map */

@@ -256,6 +256,15 @@
 //     return filmDiv;
 //   }
 // });
+
+
+
+
+
+
+
+
+// добре  працює. старе апі ALL FILM
 document.addEventListener("DOMContentLoaded", function () {
   const allFilmCarousel = document.getElementById("allFilmCarousel");
   const carouselInner = allFilmCarousel.querySelector(".carousel-inner");
@@ -363,9 +372,8 @@ document.addEventListener("DOMContentLoaded", function () {
     releaseDate.textContent = `${releaseDateFormatted.getFullYear()}`;
     descriptionContainer.appendChild(releaseDate);
 
-    imgFilmDiv.appendChild(descriptionContainer); // Поместите description в img-film
+    imgFilmDiv.appendChild(descriptionContainer); 
 
-    // Затем создайте блок all-film-container и добавьте в него imgFilmDiv
     const allFilmContainer = document.createElement("div");
     allFilmContainer.classList.add("all-film-container");
     allFilmContainer.appendChild(imgFilmDiv);
@@ -373,3 +381,69 @@ document.addEventListener("DOMContentLoaded", function () {
     return allFilmContainer;
   }
 });
+
+
+
+
+
+
+
+
+//працює. нове апі
+// const API_KEY = "d416e56a-1401-449e-850d-d3e686c437a8";
+// const BASE_URL = "https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_250_BEST_FILMS&page=";
+
+// async function getAllMovies() {
+//   const allMovies = [];
+
+//   for (let page = 1; page <= 13; page++) {
+//     const url = BASE_URL + page;
+
+//     const resp = await fetch(url, {
+//       headers: {
+//         "Content-Type": "application/json",
+//         "X-API-KEY": API_KEY,
+//       },
+//     });
+
+//     const respData = await resp.json();
+//     allMovies.push(...respData.films);
+//   }
+
+//   // Отримати контейнер для фільмів
+//   const moviesContainer = document.getElementById("movies-container");
+
+//   // Додати кожен фільм до контейнера
+//   allMovies.forEach((movie) => {
+//     const movieDiv = document.createElement("div");
+//     movieDiv.classList.add("movie");
+
+//     const movieName = document.createElement("h2");
+//     movieName.textContent = "Назва: " + movie.nameEn;
+
+//     const movieRating = document.createElement("p");
+//     movieRating.textContent = "Рейтинг: " + movie.rating;
+
+//     const movieCountries = document.createElement("p");
+//     const countriesArray = movie.countries.map(country => country.country);
+//     movieCountries.textContent = "Країни: " + countriesArray.join(", ");
+
+//     const movieGenres = document.createElement("p");
+//     movieGenres.textContent = "Жанри: " + movie.genres.map(genre => genre.genre).join(", ");
+
+//     const moviePoster = document.createElement("img");
+//     moviePoster.src = movie.posterUrl;
+
+//     movieDiv.appendChild(movieName);
+//     movieDiv.appendChild(movieRating);
+//     movieDiv.appendChild(movieCountries);
+//     movieDiv.appendChild(movieGenres);
+//     movieDiv.appendChild(moviePoster);
+
+//     moviesContainer.appendChild(movieDiv);
+//   });
+//   console.log(allMovies); // Все 250 фильмов
+// }
+
+// getAllMovies();
+
