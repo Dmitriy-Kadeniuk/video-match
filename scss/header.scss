@@ -1,11 +1,11 @@
 @import "variables";
 @import "zero";
 
-.menu {
+.menu-main-menu-container {
     ul {
         li {
             a {
-                font: $third-font;
+                font: normal 400 18px/18px "Nunito", sans-serif;
                 line-height: 34px;
             }
         }
@@ -17,6 +17,9 @@
     align-items: center;
     padding-top: 1rem;
     padding-bottom: 4rem;
+}
+.logo-users,
+.footer {
     .logo {
         display: flex;
         align-items: center;

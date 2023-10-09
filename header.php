@@ -50,6 +50,9 @@
 						</h5>
 					<?php
 					}
+					wp_nav_menu(
+						('menu=Sign in/Sign up')
+					);
 					?>
 
 					<!-- <?php
@@ -80,12 +83,8 @@
 							</div>
 							<div class="menu-items">
 								<?php
-
 								wp_nav_menu(
-									array(
-										'theme_location' => 'menu',
-										'menu_id'        => 'primary-menu',
-									)
+									('menu=Main Menu')
 								);
 								?>
 							</div>

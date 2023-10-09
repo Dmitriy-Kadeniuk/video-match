@@ -153,7 +153,8 @@ p {
 header,
 #wrapper,
 #wrapper-films,
-.everywhere-container {
+.everywhere-container,
+.site-info {
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -171,7 +172,8 @@ header,
   header,
   #wrapper,
   #wrapper-films,
-  .everywhere-container {
+  .everywhere-container,
+  .site-info {
     padding: 1.5rem;
   }
 }
@@ -499,7 +501,7 @@ header,
 }
 
 .everywhere .everywhere-container__watch .description .lets-start a {
-  background-image: linear-gradient(to right, #053BA3, #fff 180%);
+  background-image: linear-gradient(to right, #053BA3, #fff 200%);
   font-weight: 500;
 }
 

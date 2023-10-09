@@ -143,7 +143,8 @@ span {
 header,
 #wrapper,
 #wrapper-films,
-.everywhere-container {
+.everywhere-container,
+.site-info {
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -151,7 +152,7 @@ header,
     header,
     #wrapper,
     #wrapper-films,
-    .everywhere-container {
+    .everywhere-container{
         padding: 0 4rem;
     }
 }
@@ -159,7 +160,8 @@ header,
     header,
     #wrapper,
     #wrapper-films,
-    .everywhere-container {
+    .everywhere-container,
+    .site-info {
         padding: 1.5rem;
     }
 }

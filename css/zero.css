@@ -152,7 +152,8 @@ p {
 header,
 #wrapper,
 #wrapper-films,
-.everywhere-container {
+.everywhere-container,
+.site-info {
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -170,7 +171,8 @@ header,
   header,
   #wrapper,
   #wrapper-films,
-  .everywhere-container {
+  .everywhere-container,
+  .site-info {
     padding: 1.5rem;
   }
 }

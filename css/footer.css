@@ -178,60 +178,64 @@ header,
   }
 }
 
-.tabs {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: center;
-  align-items: center;
-  font-size: 1.5rem;
+footer {
+  box-shadow: 0px -5px 5px #000;
+  margin-top: 2px;
+  width: 100%;
 }
 
-.tabs .active {
-  background-color: #b3afaf;
+footer .site-info {
+  padding: 3rem 0 2rem 0;
 }
 
-.tab-link {
-  cursor: pointer;
-  background-color: #999797;
-  color: black;
-  padding: 1rem;
-  border-radius: 5px 5px 0px 0px;
+footer .site-info .footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  align-items: start;
 }
 
-.tab-link:hover {
-  background-color: #c5c2c2;
+footer .site-info .footer .main-menu ul li a, footer .site-info .footer .second-menu ul li a {
+  font: normal 500 20px/18px "Nunito", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
 }
 
-.tab-content {
+footer .site-info .footer .main-menu ul li a:hover::before, footer .site-info .footer .second-menu ul li a:hover::before {
+  bottom: 0;
+  height: 1px;
+}
+
+footer .site-info .footer .soc-icons h6 {
+  font: normal 500 20px/18px "Nunito", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding-bottom: 2rem;
+}
+
+footer .site-info .footer .soc-icons .icons a:hover::before {
   display: none;
-  background-color: #b3afaf;
-  padding: 1rem;
-  border-radius: 0px 5px 5px 5px;
 }
 
-.tab-content.active {
-  display: block;
+footer .site-info .footer .soc-icons .icons a img {
+  width: 50px;
+  height: 50px;
 }
 
-.tab-content.active form {
-  display: flex;
-  flex-direction: column;
+footer .site-info .copyright {
+  padding-top: 5rem;
 }
 
-.tab-content.active form input {
-  padding: 1rem 1rem;
-  border-radius: 2rem;
-  margin: 0.5rem 0rem;
-  text-align: center;
+footer .site-info .copyright span {
+  font: normal 500 20px/18px "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: #aeaeae;
 }
 
-.tab-content.active form input[type="submit"] {
-  cursor: pointer;
+@media (max-width: 1440px) and (min-width: 768px) {
+  .site-info {
+    padding: 3rem 4rem 2rem 4rem !important;
+  }
 }
-
-.reg-name {
-  color: white;
-  display: block;
-}
-/*# sourceMappingURL=login.css.map */
+/*# sourceMappingURL=footer.css.map */
