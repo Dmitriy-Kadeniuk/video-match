@@ -7,24 +7,34 @@
     flex-wrap: nowrap;
     align-content: center;
     align-items: center;
+    margin: 0;
 
     font-size: 1.5rem;
+    justify-content: center;
+    gap: 0.5rem;
     
     .active{
         background-color: rgb(179, 175, 175);
         
     }
+    h4{
+        color: $third-color;
+        font-size: 1rem;
+        font-style: normal;
+        line-height: normal;
+        margin: 0;
+        
+    }
 }
 .tab-link{
     cursor: pointer;
-    background-color: rgb(153, 151, 151);
-    color: black;
-    padding: 1rem;
+    color: $third-color;
+    font-size: 1rem;
+    text-align: center;
     border-radius: 5px 5px 0px 0px;
 }
 .tab-link:hover{
-    background-color: rgb(197, 194, 194);
- 
+    color: rgb(197, 194, 194);
 }
 .tab-content {
     display: none;
@@ -34,7 +44,8 @@
 }
 
 .tab-content.active {
-    display: block;
+    display: flex;
+    flex-direction: column;
     form{
         display: flex;
         flex-direction: column;
@@ -53,6 +64,109 @@
     color: white;
     display: block;
 }
-
-
-
+.register{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    padding-left:7rem;
+    section:nth-child(1){
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        h1{
+            color: $third-color;
+            font-size: 96px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+}
+#login,#register{
+    border-radius: 20px;
+    border: 1px solid var(--Glass1-Stroke-Carey, $border-block);
+    background: var(--Glass1-Fill-Carey, linear-gradient(321deg, rgba(191, 191, 191, 0.06) 5.98%, rgba(0, 0, 0, 0.00) 66.28%), rgba(0, 0, 0, 0.14));
+    box-shadow: -8px 4px 5px 0px rgba(0, 0, 0, 0.24);
+    backdrop-filter: blur(26.5px);
+    padding: 6.06rem 2.5rem 3rem 2.5rem;
+    gap: 0.7rem;
+    
+    h1{
+        color: $third-color;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+    span{
+        color: $third-color;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    input{
+        display: flex;
+        color: $third-color;
+        width: 100%;
+        text-align: start;
+        font-size: 20px;
+        font-style: normal;
+        line-height: normal;
+        background: transparent;
+        padding: 1rem;
+        align-items: center;
+        gap: 10px;
+        padding: 1rem 1rem;
+        border-radius: 12px;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+        border: 1px solid $third-color;
+}
+input::placeholder{
+    color: $third-color;
+    text-align: start;
+}
+input[type=submit]{
+    display: flex;
+    color: $third-color;
+    font-size: 20px;
+    font-style: normal;
+    line-height: normal;
+    width: 400px;
+    max-width: 400px;
+    padding: 14px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    background: linear-gradient(91deg, #628EFF 9.91%, #8740CD 53.29%, #580475 91.56%);
+}
+form{
+    gap: 0.7rem;
+}
+}
+.authorized{
+    display: block;
+    margin-bottom: 1rem;
+    width: 100%;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.5rem;
+    color: $third-color;
+    background-color: $successful-login;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}

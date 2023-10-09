@@ -36,24 +36,30 @@
             }
             }
 
-            // Проверка сессии
-            if (!isset($_SESSION['user_name'])) {
-                // Пользователь не аутентифицирован
-                echo "Вы не авторизованы";
-            }else{
-                echo $_SESSION['user_name'];
-                echo "<br>Вы авторизованы";
-            }
+            
 
             // Закрытие соединения с базой данных
             $mysql->close();
         ?>
-
+        <span class="authorized" <?php echo isset($_SESSION['user_name']) ? 'style="background-color: rgb(11, 145, 11);"' : 'style="background-color: rgb(172, 17, 6);"' ?>><?php // Проверка сессии
+            if (!isset($_SESSION['user_name'])) {
+                // Пользователь не аутентифицирован
+                echo "Вы не авторизованы";
+            }else{
+                
+                echo $_SESSION['user_name'];
+                echo "<br>Вы авторизованы";
+                
+            } ?></span>
         <h1>Login</h1>
+        <span>Glad you’re back!</span>
         <form method="POST" action="" name="login">
             <input id="user_name" type="text" name="user_name" placeholder="Имя пользователя" required>
             <input id="user_password" type="password" name="user_password" placeholder="Пароль" required>
-            <input type="submit" value="login" name="login">
+            <input type="submit" value="login" name="Login">
         </form>
-    
+        <ul class="tabs">
+        
+        <h4>Don’t have an account ?</h4><li class="tab-link" data-tab="register">Register</li>
+    </ul>
     </section>
