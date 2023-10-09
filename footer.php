@@ -10,7 +10,7 @@
  * @package video-match
  */
 
-?></div>
+?>
 <footer id="colophon" class="site-footer">
 	<div class="site-info">
 		<div class="footer">

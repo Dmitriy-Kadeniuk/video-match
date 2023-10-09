@@ -8,6 +8,7 @@
     </ul>
     <?php get_template_part('function/login'); ?>
     <?php get_template_part('function/register'); ?>
+</div>
 </main>
 
 <?php
