@@ -25,6 +25,7 @@
             }
             
         ?>
+
         <section id="register" class="tab-content">
         <h1>Register</h1>
         <span>Just some details to get you in!</span>
