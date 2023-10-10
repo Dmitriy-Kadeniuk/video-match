@@ -12,7 +12,7 @@
     </ul>
     <?php get_template_part('function/login'); ?>
     <?php get_template_part('function/register'); ?>
-    </section>
+</div>
 </main>
 
 <?php

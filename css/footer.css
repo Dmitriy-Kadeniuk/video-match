@@ -1,0 +1,241 @@
+/*-----  FONTS & COLORS  -----*/
+/*-----  FONTS & COLORS  -----*/
+/*--------------------------------------------*/
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 14px;
+  line-height: 1;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #080808;
+}
+
+a {
+  background-image: linear-gradient(to right, #053BA3, #54b3d6 50%, #d3d3d3 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+a:before {
+  content: "";
+  background-image: linear-gradient(to right, #053BA3, #54b3d6 50%);
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  background-position: 0;
+}
+
+a:hover::before {
+  width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a {
+  color: #fff;
+}
+
+h1 {
+  font: normal 400 30px/22px "Righteous", sans-serif;
+}
+
+h2 {
+  font: normal 500 30px/18px "Nunito", sans-serif;
+  position: relative;
+}
+
+h2::after {
+  content: url("../img/Ellipse-heading.svg");
+  position: absolute;
+  top: -25px;
+  margin-left: 8px;
+}
+
+h3 {
+  font: normal 500 25px/18px "Nunito", sans-serif;
+}
+
+h4 {
+  font: normal 500 20px/18px "Nunito", sans-serif;
+}
+
+h5 {
+  font: normal 400 18px/18px "Open Sans", sans-serif;
+}
+
+p {
+  font: normal 400 13px/18px "Open Sans", sans-serif;
+}
+
+#wrapper .main {
+  flex: 1 1 auto;
+}
+
+#page {
+  margin: 0 auto;
+  height: 100%;
+}
+
+#wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+#wrapper #sidebar nav {
+  width: max-content;
+}
+
+#wrapper #sidebar nav .navbar {
+  padding: 0;
+}
+
+#wrapper #sidebar nav .navbar .container {
+  padding: 0;
+}
+
+#wrapper #primary {
+  flex-grow: 1;
+  padding: 0 20px;
+}
+
+header,
+#wrapper,
+#wrapper-films,
+.everywhere-container,
+.site-info {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1440px) and (min-width: 768px) {
+  header,
+  #wrapper,
+  #wrapper-films,
+  .everywhere-container {
+    padding: 0 4rem;
+  }
+}
+
+@media (max-width: 767px) {
+  header,
+  #wrapper,
+  #wrapper-films,
+  .everywhere-container,
+  .site-info {
+    padding: 1.5rem;
+  }
+}
+
+footer {
+  box-shadow: 0px -5px 5px #000;
+  margin-top: 2px;
+  width: 100%;
+}
+
+footer .site-info {
+  padding: 3rem 0 2rem 0;
+}
+
+footer .site-info .footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  align-items: start;
+}
+
+footer .site-info .footer .main-menu ul li a, footer .site-info .footer .second-menu ul li a {
+  font: normal 500 20px/18px "Nunito", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+footer .site-info .footer .main-menu ul li a:hover::before, footer .site-info .footer .second-menu ul li a:hover::before {
+  bottom: 0;
+  height: 1px;
+}
+
+footer .site-info .footer .soc-icons h6 {
+  font: normal 500 20px/18px "Nunito", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding-bottom: 2rem;
+}
+
+footer .site-info .footer .soc-icons .icons a:hover::before {
+  display: none;
+}
+
+footer .site-info .footer .soc-icons .icons a img {
+  width: 50px;
+  height: 50px;
+}
+
+footer .site-info .copyright {
+  padding-top: 5rem;
+}
+
+footer .site-info .copyright span {
+  font: normal 500 20px/18px "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  color: #aeaeae;
+}
+
+@media (max-width: 1440px) and (min-width: 768px) {
+  .site-info {
+    padding: 3rem 4rem 2rem 4rem !important;
+  }
+}
+/*# sourceMappingURL=footer.css.map */
