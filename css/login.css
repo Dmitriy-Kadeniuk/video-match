@@ -33,6 +33,7 @@ a {
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
 }
+
 a:before {
   content: "";
   background-image: linear-gradient(to right, #053BA3, #54b3d6 50%);
@@ -44,9 +45,11 @@ a:before {
   height: 3px;
   transition: all 0.3s ease-in-out;
 }
+
 a:hover {
   background-position: 0;
 }
+
 a:hover::before {
   width: 100%;
 }
@@ -92,6 +95,7 @@ h2 {
   font: normal 500 30px/18px "Nunito", sans-serif;
   position: relative;
 }
+
 h2::after {
   content: url("../img/Ellipse-heading.svg");
   position: absolute;
@@ -128,15 +132,19 @@ p {
   display: flex;
   justify-content: space-between;
 }
+
 #wrapper #sidebar nav {
   width: max-content;
 }
+
 #wrapper #sidebar nav .navbar {
   padding: 0;
 }
+
 #wrapper #sidebar nav .navbar .container {
   padding: 0;
 }
+
 #wrapper #primary {
   flex-grow: 1;
   padding: 0 20px;
@@ -159,6 +167,7 @@ header,
     padding: 0 4rem;
   }
 }
+
 @media (max-width: 767px) {
   header,
   #wrapper,
@@ -168,6 +177,7 @@ header,
     padding: 1.5rem;
   }
 }
+
 .tabs {
   display: flex;
   flex-direction: row;
@@ -179,9 +189,11 @@ header,
   justify-content: center;
   gap: 0.5rem;
 }
+
 .tabs .active {
-  background-color: rgb(179, 175, 175);
+  background-color: #b3afaf;
 }
+
 .tabs h4 {
   color: #fff;
   font-size: 1rem;
@@ -199,12 +211,12 @@ header,
 }
 
 .tab-link:hover {
-  color: rgb(197, 194, 194);
+  color: #c5c2c2;
 }
 
 .tab-content {
   display: none;
-  background-color: rgb(179, 175, 175);
+  background-color: #b3afaf;
   padding: 1rem;
   border-radius: 0px 5px 5px 5px;
 }
@@ -213,17 +225,20 @@ header,
   display: flex;
   flex-direction: column;
 }
+
 .tab-content.active form {
   display: flex;
   flex-direction: column;
 }
+
 .tab-content.active form input {
   padding: 1rem 1rem;
   border-radius: 2rem;
   margin: 0.5rem 0rem;
   text-align: center;
 }
-.tab-content.active form input[type=submit] {
+
+.tab-content.active form input[type="submit"] {
   cursor: pointer;
 }
 
@@ -239,12 +254,14 @@ header,
   height: 100%;
   padding-left: 7rem;
 }
+
 .register section:nth-child(1) {
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
 }
+
 .register section:nth-child(1) h1 {
   color: #fff;
   font-size: 96px;
@@ -262,6 +279,7 @@ header,
   padding: 6.06rem 2.5rem 3rem 2.5rem;
   gap: 0.7rem;
 }
+
 #login h1, #register h1 {
   color: #fff;
   font-size: 36px;
@@ -269,6 +287,7 @@ header,
   font-weight: 600;
   line-height: normal;
 }
+
 #login span, #register span {
   color: #fff;
   font-size: 16px;
@@ -276,6 +295,7 @@ header,
   font-weight: 500;
   line-height: normal;
 }
+
 #login input, #register input {
   display: flex;
   color: #fff;
@@ -296,10 +316,12 @@ header,
   -o-border-radius: 12px;
   border: 1px solid #fff;
 }
+
 #login input::placeholder, #register input::placeholder {
   color: #fff;
   text-align: start;
 }
+
 #login input[type=submit], #register input[type=submit] {
   display: flex;
   color: #fff;
@@ -320,6 +342,7 @@ header,
   -o-border-radius: 12px;
   background: linear-gradient(91deg, #628EFF 9.91%, #8740CD 53.29%, #580475 91.56%);
 }
+
 #login form, #register form {
   gap: 0.7rem;
 }
@@ -333,9 +356,10 @@ header,
   font-size: 1rem;
   padding: 0.5rem;
   color: #fff;
-  background-color: rgb(11, 145, 11);
+  background-color: #0b910b;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
-}/*# sourceMappingURL=login.css.map */
+}
+/*# sourceMappingURL=login.css.map */

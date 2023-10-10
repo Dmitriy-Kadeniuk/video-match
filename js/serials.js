@@ -1,34 +1,46 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const serialsFilmCarousel = document.getElementById("serialsFilmCarousel");
-    const serialsCarouselInner = serialsFilmCarousel.querySelector(".carousel-inner");
-  
-    fetch(
-      "https://api.themoviedb.org/3/discover/movie?sort_by=vote_count.desc&api_key=19cc2d55ec287216302aaf07144d9835"
-    )
-    .then(function (resp) {
-        return resp.json();
-      })
-      .then(function (data) {
-        serialsCarouselInner.innerHTML = "";
-        const Serials = data.results;
-  
-        // Сортування фільмів за популярністю (від найпопулярніших до найменш популярних)
-        Serials.sort((a, b) => b.vote_count - a.vote_count);
-  
-        // Повторення фільмів для додавання до наступних слайдів
-        const totalSlides = 3; // Загальна кількість слайдів
-        const duplicatedFilms = Serials.slice(0, 5 * totalSlides);
-  
-        // Додавання фільмів до слайдів
-        addFilmsToCarousel(duplicatedFilms, serialsCarouselInner);
-        console.log(duplicatedFilms);
-        // Залишаю решту коду для індикаторів та подій миші такими ж, як у попередньому прикладі
-      })
-      .catch(function (error) {
-        console.error("Произошла ошибка:", error);
-      });
-  
-    // Функція для додавання фільмів до слайдів
+  const serialsFilmCarousel = document.getElementById("serialsFilmCarousel");
+  const serialsCarouselInner = serialsFilmCarousel.querySelector(".carousel-inner");
+
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkNmUwODg2NWMxMDZhMmQxNjczMjExNTU3YzAwZjJhOCIsInN1YiI6IjY1MjUwNzc4Y2Y0YjhiMDExYzU5ZDU2YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.HqnsyhV5Kgvy8nw5NbKDb_HIHQvqFnO8qtL_zU5qY4g'
+    }
+  };
+
+  const baseUrl = 'https://api.themoviedb.org/3/discover/movie?sort_by=vote_count.desc&language=en-US';
+  const totalPages = 3; // Замените на общее количество страниц, которое вам нужно получить
+
+  const fetchMovies = async () => {
+    let allMovies = [];
+
+    for (let page = 1; page <= totalPages; page++) {
+      const response = await fetch(`${baseUrl}&page=${page}`, options);
+      const data = await response.json();
+      allMovies = [...allMovies, ...data.results];
+    }
+
+    serialsCarouselInner.innerHTML = "";
+    const Serials = allMovies;
+
+    // Сортировка фильмов по количеству голосов (от наибольшего к наименьшему)
+    Serials.sort((a, b) => b.vote_count - a.vote_count);
+
+    // Повторение фильмов для добавления в следующие слайды
+    const filmsPerSlide = 5;
+    const duplicatedFilms = Serials.slice(0, filmsPerSlide * totalPages);
+console.log(Serials)
+    // Добавление фильмов в слайды
+    addFilmsToCarousel(duplicatedFilms, serialsCarouselInner);
+  };
+
+  fetchMovies().catch(function (error) {
+    console.error("Произошла ошибка:", error);
+  });
+
+  // Функция для добавления фильмов в слайды
   function addFilmsToCarousel(films, carouselInner) {
     let startIndex = 0;
     const filmsPerSlide = 5;
@@ -71,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
     filmImg.src = `https://image.tmdb.org/t/p/w500${film.poster_path}`;
     imgFilmDiv.appendChild(filmImg);
 
-    // Создайте блок description внутри img-film
+    // Создание блока description внутри img-film
     const descriptionContainer = document.createElement("div");
     descriptionContainer.classList.add("description");
 
@@ -84,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
     releaseDate.textContent = `${releaseDateFormatted.getFullYear()}`;
     descriptionContainer.appendChild(releaseDate);
 
-    imgFilmDiv.appendChild(descriptionContainer); 
+    imgFilmDiv.appendChild(descriptionContainer);
 
     const allFilmContainer = document.createElement("div");
     allFilmContainer.classList.add("popular-film-container");
@@ -92,5 +104,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     return allFilmContainer;
   }
-  });
-  
+});
