@@ -152,7 +152,9 @@ p {
 
 header,
 #wrapper,
-#wrapper-films {
+#wrapper-films,
+.everywhere-container,
+.site-info {
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -160,7 +162,8 @@ header,
 @media (max-width: 1440px) and (min-width: 768px) {
   header,
   #wrapper,
-  #wrapper-films {
+  #wrapper-films,
+  .everywhere-container {
     padding: 0 4rem;
   }
 }
@@ -168,13 +171,15 @@ header,
 @media (max-width: 767px) {
   header,
   #wrapper,
-  #wrapper-films {
+  #wrapper-films,
+  .everywhere-container,
+  .site-info {
     padding: 1.5rem;
   }
 }
 
-.menu ul li a {
-  font: normal 400 18px/18px "Open Sans", sans-serif;
+.menu-main-menu-container ul li a {
+  font: normal 400 18px/18px "Nunito", sans-serif;
   line-height: 34px;
 }
 
@@ -186,12 +191,14 @@ header,
   padding-bottom: 4rem;
 }
 
-.logo-users .logo {
+.logo-users .logo,
+.footer .logo {
   display: flex;
   align-items: center;
 }
 
-.logo-users .logo h1 {
+.logo-users .logo h1,
+.footer .logo h1 {
   margin-left: -1.05rem;
   z-index: -1;
   background: linear-gradient(to right, #053BA3, #053BA3, #54b3d6 50%, #54b3d6);
@@ -199,7 +206,8 @@ header,
   color: transparent;
 }
 
-.logo-users .logo::before {
+.logo-users .logo::before,
+.footer .logo::before {
   content: url("../img/flag-logo.svg");
 }
 
