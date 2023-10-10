@@ -40,26 +40,10 @@ get_header();
             <h2>
                 Popular Films
             </h2>
-            <div id="popularFilmCarousel" class="carousel slide" data-ride="carousel">
-                <!-- Слайди фільмів будуть тут -->
-                <div class="carousel-inner">
-                    <!-- Перший слайд буде тут -->
-
-                </div>
-
-                <!-- HTML-код для стрілок вперед та назад -->
-                <div class="carousel-controls">
-                    <a class="carousel-control-prev" href="#popularFilmCarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#popularFilmCarousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-
+            <div class="slider1">
+                <!-- Ваші слайди будуть тут -->
             </div>
+
         </div>
         <h1>
             ---------------------------------------<br>
@@ -70,25 +54,8 @@ get_header();
             <h2>
                 Popular TV series
             </h2>
-            <div id="serialsFilmCarousel" class="carousel slide" data-ride="carousel">
-                <!-- Слайди фільмів будуть тут -->
-                <div class="carousel-inner">
-                    <!-- Перший слайд буде тут -->
-
-                </div>
-
-                <!-- HTML-код для стрілок вперед та назад -->
-                <div class="carousel-controls">
-                    <a class="carousel-control-prev" href="#serialsFilmCarousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#serialsFilmCarousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-
+            <div class="slider2">
+                <!-- Ваші слайди будуть тут -->
             </div>
         </div>
 
@@ -111,7 +78,7 @@ get_header();
     <!-- Підключення бібліотеки Slick Carousel (після jQuery) -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- Ваш JavaScript-код -->
-  
+
 </main><!-- #main -->
 
 <?php
