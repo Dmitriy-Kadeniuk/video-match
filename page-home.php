@@ -30,18 +30,11 @@ get_header();
         <h2>
             The Most Trending Now
         </h2>
-        <div id="allFilmCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Слайди фільмів будуть тут -->
-            <div class="carousel-inner">
-                <!-- Перший слайд буде тут -->
-
-            </div>
-            <ol class="carousel-indicators" id="indicatorsList">
-                <!-- Індикатори будуть додані за допомогою JavaScript -->
-            </ol>
-
+        <div class="slider">
+            <!-- Ваші слайди будуть тут -->
         </div>
     </div>
+
     <div id="wrapper-films">
         <div class="popular-film">
             <h2>
@@ -106,7 +99,7 @@ get_header();
                 <h3>Watch everywhere</h3>
                 <div class="description">
                     <h5>You can find everything related to movies here. Be without limited. You can browse anywhere on your phone, tablet, laptop. You can be flexible. You can also use our app offline.<h5>
-                    <button class="lets-start btn"><a href="#∏">Let’s start</a></button>
+                            <button class="lets-start btn"><a href="#∏">Let’s start</a></button>
                 </div>
             </div>
             <div class="everywhere-container__img">
@@ -115,9 +108,11 @@ get_header();
         </div>
 
     </div>
-    
+    <!-- Підключення бібліотеки Slick Carousel (після jQuery) -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Ваш JavaScript-код -->
+  
 </main><!-- #main -->
-
 
 <?php
 get_sidebar();

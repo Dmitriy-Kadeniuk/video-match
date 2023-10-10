@@ -260,31 +260,25 @@ header,
   margin: 0 auto;
 }
 
-.all-film #allFilmCarousel {
+.all-film .slider {
   padding-top: 2rem;
   margin-right: -60px;
-  position: absolute;
 }
 
-.all-film #allFilmCarousel .carousel-inner .carousel-item .view-films {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+.all-film .slider .slick-list .slick-track {
+  display: flex;
   gap: 1.5rem;
+  border-radius: 10px;
 }
 
-.all-film #allFilmCarousel .carousel-inner .carousel-item .view-films .all-film-container {
+.all-film .slider .slick-list .slick-track .img-film {
   position: relative;
-  display: inline-block;
+  height: 100%;
   overflow: hidden;
   border-radius: 10px;
 }
 
-.all-film #allFilmCarousel .carousel-inner .carousel-item .view-films .all-film-container .img-film {
-  position: relative;
-  height: 100%;
-}
-
-.all-film #allFilmCarousel .carousel-inner .carousel-item .view-films .all-film-container .img-film .film-image {
+.all-film .slider .slick-list .slick-track .img-film .film-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -293,11 +287,11 @@ header,
   cursor: pointer;
 }
 
-.all-film #allFilmCarousel .carousel-inner .carousel-item .view-films .all-film-container .img-film:hover .film-image {
+.all-film .slider .slick-list .slick-track .img-film:hover .film-image {
   transform: scale(1.1);
 }
 
-.all-film #allFilmCarousel .carousel-inner .carousel-item .view-films .all-film-container .img-film .description {
+.all-film .slider .slick-list .slick-track .img-film .description {
   position: absolute;
   z-index: 1;
   bottom: -100%;
@@ -311,32 +305,13 @@ header,
   transition: bottom 0.3s;
 }
 
-.all-film #allFilmCarousel .carousel-inner .carousel-item .view-films .all-film-container .img-film .description h1 {
+.all-film .slider .slick-list .slick-track .img-film .description h1 {
   font-size: 25px;
   line-height: 30px;
 }
 
-.all-film #allFilmCarousel .carousel-inner .carousel-item .view-films .all-film-container .img-film:hover .description {
+.all-film .slider .slick-list .slick-track .img-film:hover .description {
   bottom: 0;
-}
-
-.all-film #allFilmCarousel .carousel-indicators {
-  display: flex;
-  align-items: center;
-  right: initial;
-  bottom: -4.5rem;
-  left: 2rem;
-  margin-left: 0;
-}
-
-.all-film #allFilmCarousel .carousel-indicators li {
-  background-color: #053BA3;
-  width: 8px;
-  height: 7px;
-  margin: 0 5px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 #wrapper-films .popular-film,
@@ -501,7 +476,7 @@ header,
 }
 
 .everywhere .everywhere-container__watch .description .lets-start a {
-  background-image: linear-gradient(to right, #053BA3, #fff 200%);
+  background-image: linear-gradient(to right, #053ba3, #fff 200%);
   font-weight: 500;
 }
 
