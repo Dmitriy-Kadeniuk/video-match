@@ -41,11 +41,14 @@
     background-color:  rgb(179, 175, 175);
     padding: 1rem;
     border-radius: 0px 5px 5px 5px;
+    z-index: 1;
 }
 
 .tab-content.active {
     display: flex;
     flex-direction: column;
+    z-index: 1;
+    position: relative;
     form{
         display: flex;
         flex-direction: column;
@@ -81,9 +84,26 @@
             font-style: normal;
             font-weight: 600;
             line-height: normal;
+            z-index: 1;
+        }
+        img{
+            position: absolute;
+            width: 30rem;
+        }
+    }
+    section:nth-child(2){
+        img{
+            position: absolute;
+            width: 30rem;
+            top: 0;
+            z-index: 0;
+            right: 8%;
+
         }
     }
 }
+
+
 #login,#register{
     border-radius: 20px;
     border: 1px solid var(--Glass1-Stroke-Carey, $border-block);
@@ -92,6 +112,7 @@
     backdrop-filter: blur(26.5px);
     padding: 6.06rem 2.5rem 3rem 2.5rem;
     gap: 0.7rem;
+
     
     h1{
         color: $third-color;
@@ -169,4 +190,7 @@ form{
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
+}
+#registration-message{
+    position: absolute;
 }

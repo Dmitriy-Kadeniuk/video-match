@@ -33,7 +33,6 @@ a {
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
 }
-
 a:before {
   content: "";
   background-image: linear-gradient(to right, #053BA3, #54b3d6 50%);
@@ -45,11 +44,9 @@ a:before {
   height: 3px;
   transition: all 0.3s ease-in-out;
 }
-
 a:hover {
   background-position: 0;
 }
-
 a:hover::before {
   width: 100%;
 }
@@ -95,7 +92,6 @@ h2 {
   font: normal 500 30px/18px "Nunito", sans-serif;
   position: relative;
 }
-
 h2::after {
   content: url("../img/Ellipse-heading.svg");
   position: absolute;
@@ -132,19 +128,15 @@ p {
   display: flex;
   justify-content: space-between;
 }
-
 #wrapper #sidebar nav {
   width: max-content;
 }
-
 #wrapper #sidebar nav .navbar {
   padding: 0;
 }
-
 #wrapper #sidebar nav .navbar .container {
   padding: 0;
 }
-
 #wrapper #primary {
   flex-grow: 1;
   padding: 0 20px;
@@ -167,7 +159,6 @@ header,
     padding: 0 4rem;
   }
 }
-
 @media (max-width: 767px) {
   header,
   #wrapper,
@@ -177,7 +168,6 @@ header,
     padding: 1.5rem;
   }
 }
-
 #movie-container {
   display: flex;
   justify-content: center;
@@ -188,12 +178,11 @@ header,
 .navigation-swipe {
   display: flex;
 }
-
 .navigation-swipe button {
   font-size: 32px;
   background-color: transparent;
   cursor: pointer;
-  border: 2px solid #f83e3e;
+  border: 2px solid rgb(248, 62, 62);
   border-radius: 50%;
   padding: 1rem;
   justify-content: center;
@@ -202,11 +191,9 @@ header,
   display: flex;
   transition: 0.5s;
 }
-
 .navigation-swipe button:hover {
   border: 2px solid var(#d3d3d3);
 }
-
 .navigation-swipe button:hover img {
   color: var(#d3d3d3);
   background-color: var(#d3d3d3);
@@ -226,5 +213,4 @@ header,
 
 .wishlist-movie {
   font-size: 1.2rem;
-}
-/*# sourceMappingURL=likes.css.map */
+}/*# sourceMappingURL=likes.css.map */
