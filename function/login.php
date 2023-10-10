@@ -56,7 +56,7 @@
         <form method="POST" action="" name="login">
             <input id="user_name" type="text" name="user_name" placeholder="Имя пользователя" required>
             <input id="user_password" type="password" name="user_password" placeholder="Пароль" required>
-            <input type="submit" value="login" name="Login">
+            <input type="submit" value="login" name="login">
         </form>
         <ul class="tabs">
         

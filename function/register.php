@@ -32,7 +32,7 @@
         <input id="register_email" type="email" name="register_email" placeholder="Email" required>
         <input id="register_password" type="password" name="register_password" placeholder="Password" required>
 
-            <input type="submit" value="register" name="Register">
+            <input type="submit" value="register" name="register">
         </form>
         <ul class="tabs">
         <h4>Already Registered?</h4><li class="tab-link active" data-tab="login">Login</li>
