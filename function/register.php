@@ -14,10 +14,11 @@
 
 
                 if ($mysql->query($insert_query)) {
-                    echo "Регистрация успешна.";
+                    $register_successful= "Регистрация успешна.";
+                    
                 } else {
                     $error_message = "Ошибка регистрации: " . $mysql->error;
-                    echo $error_message; // Выводим сообщение об ошибке
+                    
                 }
                 $mysql->close();
             }   
@@ -38,4 +39,5 @@
         <h4>Already Registered?</h4><li class="tab-link active" data-tab="login">Login</li>
         
     </ul>
+
     </section>
