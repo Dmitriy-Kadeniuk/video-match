@@ -174,6 +174,8 @@ document.addEventListener("DOMContentLoaded", function () {
       slidesToScroll: 5,
       prevArrow: $(".prev1"),
       nextArrow: $(".next1"),
+      autoplay: true,
+      autoplaySpeed: 5000,
     });
   }
 });

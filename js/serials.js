@@ -66,6 +66,8 @@ document.addEventListener("DOMContentLoaded", function () {
       slidesToScroll: 5,
       prevArrow: $(".prev2"),
       nextArrow: $(".next2"),
+      autoplay: true,
+      autoplaySpeed: 5000,
     });
   }
 });
