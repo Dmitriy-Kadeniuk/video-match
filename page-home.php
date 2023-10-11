@@ -73,9 +73,12 @@ get_header();
                     <h5>
                         Film genre in which the protagonist is thrust into a series of events that typically involve violence and physical feats. The genre tends to feature a mostly resourceful Hero struggling against incredible odds, which include life-threatening situations, a dangerous villain, or a pursuit which usually concludes in victory for the hero.
                     </h5>
-                    <div class="action-slider slider1">
-                        <!-- Ваші слайди будуть тут -->
+                    <div class="slider-content">
+                        <div class="action-slider slider1">
+                            <!-- Ваші слайди будуть тут -->
+                        </div>
                     </div>
+
                 </div>
             </div>
 
@@ -86,8 +89,11 @@ get_header();
                     <h5>
                         Comedy is a genre that aims to entertain and amuse the audience through humor, laughter, and light-hearted situations. Comedies often feature witty dialogue, funny characters, and humorous storylines. They provide a break from the serious and dramatic aspects of life, and their primary goal is to make people laugh and enjoy themselves.
                     </h5>
-                    <div class="comedy-slider slider2">
-                        <!-- Ваші слайди будуть тут -->
+                    <div class="slider-content">
+                        <div class="action-slider slider2">
+                            <!-- Ваші слайди будуть тут -->
+                        </div>
+                        <div class="loader"></div>
                     </div>
                 </div>
             </div>
@@ -99,8 +105,11 @@ get_header();
                     <h5>
                         Drama is a genre that delves into the complex and emotional aspects of human life. It often explores themes of love, conflict, personal growth, and moral dilemmas. Dramas aim to elicit a wide range of emotions from the audience, including sadness, empathy, and introspection. They offer a deeper and thought-provoking experience that can resonate with viewers on a personal level.
                     </h5>
-                    <div class="drama-slider slider3">
-                        <!-- Ваші слайди будуть тут -->
+                    <div class="slider-content">
+                        <div class="action-slider slider3">
+                            <!-- Ваші слайди будуть тут -->
+                        </div>
+                        <div class="loader"></div>
                     </div>
                 </div>
             </div>
@@ -112,8 +121,11 @@ get_header();
                     <h5>
                         Fantasy is a genre that transports viewers into magical and otherworldly realms where the laws of reality are suspended. These films often feature mythical creatures, epic quests, and enchanting landscapes. Fantasy movies invite us to escape into a world of imagination, where heroes battle dark forces, and the extraordinary becomes ordinary. They allow us to explore the limitless possibilities of the human imagination.
                     </h5>
-                    <div class="fantasy-slider slider4">
-                        <!-- Ваші слайди будуть тут -->
+                    <div class="slider-content">
+                        <div class="action-slider slider4">
+                            <!-- Ваші слайди будуть тут -->
+                        </div>
+                        <div class="loader"></div>
                     </div>
                 </div>
             </div>
@@ -125,8 +137,11 @@ get_header();
                     <h5>
                         Horror is a genre that aims to evoke fear, dread, and suspense in the audience. These films often feature supernatural elements, monsters, psychopaths, and terrifying situations. Horror movies are known for their ability to send chills down your spine and make your heart race. They play on our deepest fears and primal instincts, providing an adrenaline-pumping experience.
                     </h5>
-                    <div class="horror-slider slider5">
-                        <!-- Ваші слайди будуть тут -->
+                    <div class="slider-content">
+                        <div class="action-slider slider5">
+                            <!-- Ваші слайди будуть тут -->
+                        </div>
+                        <div class="loader"></div>
                     </div>
                 </div>
             </div>
@@ -183,7 +198,7 @@ get_header();
     </div>
     <!-- Підключення бібліотеки Slick Carousel -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    
+
 
 
 

@@ -4,6 +4,20 @@ tabs.forEach((tab) => {
   tab.querySelector(".tab-title").addEventListener("click", () => {
     tabs.forEach((t) => t.classList.remove("active"));
     tab.classList.add("active");
+
+    const sliderContent = tab.querySelector(".slider-content");
+    const loader = sliderContent.querySelector(".loader");
+    const slider = sliderContent.querySelector(".action-slider");
+
+    // Показуємо прелоадер
+    loader.style.display = "block";
+    slider.style.display = "none";
+
+    setTimeout(() => {
+      // Після 2 секунд приховуємо прелоадер і відображаємо слайдер
+      loader.style.display = "none";
+      slider.style.display = "block";
+    }, 1000);
   });
 });
 document.addEventListener("DOMContentLoaded", function () {
@@ -78,8 +92,9 @@ document.addEventListener("DOMContentLoaded", function () {
       prevArrow: `.${prevArrowClass}`,
       nextArrow: `.${nextArrowClass}`,
       autoplay: true,
-      autoplaySpeed: 1000,
+      autoplaySpeed: 5000,
     });
+    
   };
 
   // Виклик функції для кожного слайдера з відповідним genreId
