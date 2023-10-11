@@ -17,7 +17,7 @@ tabs.forEach((tab) => {
       // Після 2 секунд приховуємо прелоадер і відображаємо слайдер
       loader.style.display = "none";
       slider.style.display = "block";
-    }, 1000);
+    }, 500);
   });
 });
 document.addEventListener("DOMContentLoaded", function () {

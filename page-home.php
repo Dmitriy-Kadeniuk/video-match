@@ -77,6 +77,7 @@ get_header();
                         <div class="action-slider slider1">
                             <!-- Ваші слайди будуть тут -->
                         </div>
+                        <div class="loader"></div>
                     </div>
 
                 </div>
