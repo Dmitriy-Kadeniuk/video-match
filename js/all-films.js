@@ -130,7 +130,7 @@
 // });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const slider = document.querySelector(".slider");
+  const slider = document.querySelector(".all-films-slider");
 
   const options = {
     method: "GET",
@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   
     // Ініціалізація Slick Carousel
-    $(".slider").slick({
+    $(".all-films-slider").slick({
       slidesToShow: 6,
       slidesToScroll: 5,
       prevArrow: $(".prev"),

@@ -31,7 +31,7 @@ get_header();
             The Most Trending Now
         </h2>
         <div class="all-sliders">
-            <div class="slider">
+            <div class="all-films-slider">
                 <!-- Ваші слайди будуть тут -->
             </div>
 
@@ -44,7 +44,7 @@ get_header();
                 Popular Films
             </h2>
             <div class="all-sliders">
-                <div class="slider1">
+                <div class="popularity-films-slider">
                     <!-- Ваші слайди будуть тут -->
                 </div>
                 <div class="navigation">
@@ -65,17 +65,82 @@ get_header();
                 </div>
             </div>
         </div>
-        <h1>
-            ---------------------------------------<br>
-            ТУТ БУДЕ БЛОК Search movies by category<br>
-            ---------------------------------------
-        </h1>
+        <div class="tabs-category">
+            <div class="tab active">
+                <h4 class="tab-title">Action</h4>
+                <div class="tab-content">
+                    <h3>Action Films</h3>
+                    <h5>
+                        Film genre in which the protagonist is thrust into a series of events that typically involve violence and physical feats. The genre tends to feature a mostly resourceful Hero struggling against incredible odds, which include life-threatening situations, a dangerous villain, or a pursuit which usually concludes in victory for the hero.
+                    </h5>
+                    <div class="action-slider slider1">
+                        <!-- Ваші слайди будуть тут -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab">
+                <h4 class="tab-title">Comedy</h4>
+                <div class="tab-content">
+                    <h3>Comedy Films</h3>
+                    <h5>
+                        Comedy is a genre that aims to entertain and amuse the audience through humor, laughter, and light-hearted situations. Comedies often feature witty dialogue, funny characters, and humorous storylines. They provide a break from the serious and dramatic aspects of life, and their primary goal is to make people laugh and enjoy themselves.
+                    </h5>
+                    <div class="comedy-slider slider2">
+                        <!-- Ваші слайди будуть тут -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab">
+                <h4 class="tab-title">Drama</h4>
+                <div class="tab-content">
+                    <h3>Drama Films</h3>
+                    <h5>
+                        Drama is a genre that delves into the complex and emotional aspects of human life. It often explores themes of love, conflict, personal growth, and moral dilemmas. Dramas aim to elicit a wide range of emotions from the audience, including sadness, empathy, and introspection. They offer a deeper and thought-provoking experience that can resonate with viewers on a personal level.
+                    </h5>
+                    <div class="drama-slider slider3">
+                        <!-- Ваші слайди будуть тут -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab">
+                <h4 class="tab-title">Fantasy</h4>
+                <div class="tab-content">
+                    <h3>Fantasy Films</h3>
+                    <h5>
+                        Fantasy is a genre that transports viewers into magical and otherworldly realms where the laws of reality are suspended. These films often feature mythical creatures, epic quests, and enchanting landscapes. Fantasy movies invite us to escape into a world of imagination, where heroes battle dark forces, and the extraordinary becomes ordinary. They allow us to explore the limitless possibilities of the human imagination.
+                    </h5>
+                    <div class="fantasy-slider slider4">
+                        <!-- Ваші слайди будуть тут -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab">
+                <h4 class="tab-title">Horror</h4>
+                <div class="tab-content">
+                    <h3>Horror Films</h3>
+                    <h5>
+                        Horror is a genre that aims to evoke fear, dread, and suspense in the audience. These films often feature supernatural elements, monsters, psychopaths, and terrifying situations. Horror movies are known for their ability to send chills down your spine and make your heart race. They play on our deepest fears and primal instincts, providing an adrenaline-pumping experience.
+                    </h5>
+                    <div class="horror-slider slider5">
+                        <!-- Ваші слайди будуть тут -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
         <div class="serials">
             <h2>
                 Popular TV series
             </h2>
             <div class="all-sliders">
-                <div class="slider2">
+                <div class="serial-slider">
                     <!-- Ваші слайди будуть тут -->
                 </div>
                 <div class="navigation">
@@ -116,9 +181,101 @@ get_header();
         </div>
 
     </div>
-    <!-- Підключення бібліотеки Slick Carousel (після jQuery) -->
+    <!-- Підключення бібліотеки Slick Carousel -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!-- Ваш JavaScript-код -->
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+
+        tabs.forEach((tab) => {
+            tab.querySelector('.tab-title').addEventListener('click', () => {
+                tabs.forEach((t) => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+            // Функція для отримання даних з API та додавання їх до слайдера
+            const populateSlider = (sliderClass, genreId) => {
+                const slider = document.querySelector(`.${sliderClass}`);
+                const options = {
+                    method: "GET",
+                    headers: {
+                        accept: "application/json",
+                        Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkNmUwODg2NWMxMDZhMmQxNjczMjExNTU3YzAwZjJhOCIsInN1YiI6IjY1MjUwNzc4Y2Y0YjhiMDExYzU5ZDU2YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.HqnsyhV5Kgvy8nw5NbKDb_HIHQvqFnO8qtL_zU5qY4g",
+                    },
+                };
+                const baseUrl = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&language=en-US&with_genres=${genreId}`;
+                const totalPages = 1;
+
+                const fetchMovies = async () => {
+                    let allMovies = [];
+
+                    for (let page = 1; page <= totalPages; page++) {
+                        const response = await fetch(`${baseUrl}&page=${page}`, options);
+                        const data = await response.json();
+                        allMovies = [...allMovies, ...data.results];
+                    }
+                    // Відсортувати фільми за полем "popularity"
+                    allMovies.sort((a, b) => b.popularity - a.popularity);
+                    addFilmsToCarousel(allMovies, slider);
+                };
+
+                fetchMovies().catch(function(error) {
+                    console.error("Произошла ошибка:", error);
+                });
+            };
+
+            // Функція для додавання фільмів до каруселі
+            const addFilmsToCarousel = (films, slider) => {
+                films.forEach((film) => {
+                    const slide = document.createElement("div");
+                    slide.classList.add("img-film");
+
+                    const filmImg = document.createElement("img");
+                    filmImg.classList.add("film-image");
+                    filmImg.src = `https://image.tmdb.org/t/p/w500${film.poster_path}`;
+                    slide.appendChild(filmImg);
+
+                    const descriptionContainer = document.createElement("div");
+                    descriptionContainer.classList.add("description");
+
+                    const filmName = document.createElement("h1");
+                    filmName.textContent = film.title;
+                    descriptionContainer.appendChild(filmName);
+
+                    const releaseDate = document.createElement("h5");
+                    const releaseDateFormatted = new Date(film.release_date);
+                    releaseDate.textContent = `${releaseDateFormatted.getFullYear()}`;
+                    descriptionContainer.appendChild(releaseDate);
+
+                    slide.appendChild(descriptionContainer);
+
+                    slider.appendChild(slide);
+                });
+
+                // Отримання класів prev та next для каруселі на основі класу слайдера
+                const prevArrowClass = `prev-${slider.classList[1]}`;
+                const nextArrowClass = `next-${slider.classList[1]}`;
+
+                // Ініціалізація Slick Carousel для відповідного слайдера
+                $(slider).slick({
+                    slidesToShow: 6,
+                    slidesToScroll: 5,
+                    prevArrow: `.${prevArrowClass}`,
+                    nextArrow: `.${nextArrowClass}`,
+                });
+            };
+
+            // Виклик функції для кожного слайдера з відповідним genreId
+            populateSlider("slider1", 28); // Action
+            populateSlider("slider2", 35); // Comedy
+            populateSlider("slider3", 18); // Drama
+            populateSlider("slider4", 14); // Fantasy
+            populateSlider("slider5", 27); // Horror
+        });
+    </script>
+
+
+
 
 </main><!-- #main -->
 
