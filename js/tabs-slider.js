@@ -87,12 +87,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Ініціалізація Slick Carousel для відповідного слайдера
     $(slider).slick({
-      slidesToShow: 6,
-      slidesToScroll: 5,
+      slidesToShow: 5,
+      slidesToScroll: 4,
       prevArrow: `.${prevArrowClass}`,
       nextArrow: `.${nextArrowClass}`,
       autoplay: true,
-      autoplaySpeed: 5000,
+      autoplaySpeed: 2000,
     });
     
   };

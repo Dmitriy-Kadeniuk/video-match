@@ -119,6 +119,15 @@ p {
   font: normal 400 13px/18px "Open Sans", sans-serif;
 }
 
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
 #wrapper .main {
   flex: 1 1 auto;
 }
@@ -191,6 +200,22 @@ footer .site-info .footer {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   align-items: start;
+}
+
+footer .site-info .footer .logo a {
+  background-image: none !important;
+}
+
+footer .site-info .footer .logo a:hover::before {
+  display: none;
+}
+
+footer .site-info .footer .logo a:before {
+  display: none;
+}
+
+footer .site-info .footer .logo a:hover {
+  background-image: none !important;
 }
 
 footer .site-info .footer .main-menu ul li a, footer .site-info .footer .second-menu ul li a {

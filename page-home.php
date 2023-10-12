@@ -65,6 +65,7 @@ get_header();
                 </div>
             </div>
         </div>
+
         <div class="tabs-category">
             <div class="tab active">
                 <h4 class="tab-title">Action</h4>
@@ -77,9 +78,7 @@ get_header();
                         <div class="action-slider slider1">
                             <!-- Ваші слайди будуть тут -->
                         </div>
-                        <div class="loader"></div>
                     </div>
-
                 </div>
             </div>
 

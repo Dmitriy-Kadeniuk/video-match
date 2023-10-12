@@ -119,6 +119,15 @@ p {
   font: normal 400 13px/18px "Open Sans", sans-serif;
 }
 
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
 #wrapper .main {
   flex: 1 1 auto;
 }
@@ -189,6 +198,22 @@ header,
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 4rem;
+}
+
+.logo-users .logo a {
+  background-image: none !important;
+}
+
+.logo-users .logo a:hover::before {
+  display: none;
+}
+
+.logo-users .logo a:before {
+  display: none;
+}
+
+.logo-users .logo a:hover {
+  background-image: none !important;
 }
 
 .logo-users .user a:hover::before {

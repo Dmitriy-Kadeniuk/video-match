@@ -15,7 +15,9 @@
 	<div class="site-info">
 		<div class="footer">
 			<div id="logo" class="logo">
-				<h1>VideoMatch</h1>
+				<a href="/">
+					<h1>VideoMatch</h1>
+				</a>
 			</div>
 
 			<div class="second-menu">
@@ -34,7 +36,7 @@
 				);
 				?>
 			</div>
-			
+
 
 
 			<div class="soc-icons">

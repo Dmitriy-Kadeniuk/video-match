@@ -10,6 +10,21 @@ footer{
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr;
             align-items: start;
+            .logo{
+                a {
+                    background-image: none!important;
+                    &:hover::before {
+                        display: none;
+                    }
+               
+                    &:before{
+                        display: none;
+                    }
+                    &:hover{
+                        background-image: none!important;
+                    }
+                }
+            }
             .main-menu, .second-menu{
                 ul{
                     li{
