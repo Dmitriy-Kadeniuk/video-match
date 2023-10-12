@@ -33,7 +33,6 @@ a {
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
 }
-
 a:before {
   content: "";
   background-image: linear-gradient(to right, #053BA3, #54b3d6 50%);
@@ -45,11 +44,9 @@ a:before {
   height: 3px;
   transition: all 0.3s ease-in-out;
 }
-
 a:hover {
   background-position: 0;
 }
-
 a:hover::before {
   width: 100%;
 }
@@ -95,7 +92,6 @@ h2 {
   font: normal 500 30px/18px "Nunito", sans-serif;
   position: relative;
 }
-
 h2::after {
   content: url("../img/Ellipse-heading.svg");
   position: absolute;
@@ -132,19 +128,15 @@ p {
   display: flex;
   justify-content: space-between;
 }
-
 #wrapper #sidebar nav {
   width: max-content;
 }
-
 #wrapper #sidebar nav .navbar {
   padding: 0;
 }
-
 #wrapper #sidebar nav .navbar .container {
   padding: 0;
 }
-
 #wrapper #primary {
   flex-grow: 1;
   padding: 0 20px;
@@ -167,7 +159,6 @@ header,
     padding: 0 4rem;
   }
 }
-
 @media (max-width: 767px) {
   header,
   #wrapper,
@@ -177,33 +168,27 @@ header,
     padding: 1.5rem;
   }
 }
-
 footer {
   width: 100%;
   margin-top: 5rem;
 }
-
 footer .site-info {
   padding: 3rem 0 2rem 0;
 }
-
 footer .site-info .footer {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   align-items: start;
 }
-
 footer .site-info .footer .main-menu ul li a, footer .site-info .footer .second-menu ul li a {
   font: normal 500 20px/18px "Nunito", sans-serif;
   font-size: 16px;
   line-height: 22px;
 }
-
 footer .site-info .footer .main-menu ul li a:hover::before, footer .site-info .footer .second-menu ul li a:hover::before {
   bottom: 0;
   height: 1px;
 }
-
 footer .site-info .footer .soc-icons h6 {
   font: normal 500 20px/18px "Nunito", sans-serif;
   font-size: 18px;
@@ -211,25 +196,20 @@ footer .site-info .footer .soc-icons h6 {
   font-weight: 400;
   padding-bottom: 2rem;
 }
-
 footer .site-info .footer .soc-icons .icons a:hover::before {
   display: none;
 }
-
 footer .site-info .footer .soc-icons .icons a img {
   width: 50px;
   height: 50px;
   transition: all 0.3s ease-in-out;
 }
-
 footer .site-info .footer .soc-icons .icons a img:hover {
   transform: scale(1.1);
 }
-
 footer .site-info .copyright {
   padding-top: 5rem;
 }
-
 footer .site-info .copyright span {
   font: normal 500 20px/18px "Nunito", sans-serif;
   font-size: 14px;
@@ -241,5 +221,4 @@ footer .site-info .copyright span {
   .site-info {
     padding: 3rem 4rem 2rem 4rem !important;
   }
-}
-/*# sourceMappingURL=footer.css.map */
+}/*# sourceMappingURL=footer.css.map */

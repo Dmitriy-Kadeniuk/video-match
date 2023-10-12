@@ -141,6 +141,7 @@ function video_match_scripts() {
 	wp_enqueue_style( 'video-match-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'video-match-style', 'rtl', 'replace' );
 	wp_enqueue_style('likes-style', get_template_directory_uri() . '/css/likes.css');
+	wp_enqueue_style('seting', get_template_directory_uri() . '/css/seting.css');
 	wp_enqueue_style('home-style', get_template_directory_uri() . '/css/home.css');
 	wp_enqueue_style('header-style', get_template_directory_uri() . '/css/header.css');
 	wp_enqueue_style('footer-style', get_template_directory_uri() . '/css/footer.css');
