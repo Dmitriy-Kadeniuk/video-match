@@ -14,7 +14,6 @@ session_start();
         <input type="text" name="search_user" placeholder="Введите ID пользователя">
         <input type="submit" name="search_users">
         </form>
-        <span>Найденный пользователь:</span>
         <script>
              // Ждем, пока страница полностью загрузится
             $(document).ready(function() {
