@@ -19,6 +19,21 @@
     align-items: center;
     padding-top: 1rem;
     padding-bottom: 4rem;
+    .logo{
+        a {
+            background-image: none!important;
+            &:hover::before {
+                display: none;
+            }
+       
+            &:before{
+                display: none;
+            }
+            &:hover{
+                background-image: none!important;
+            }
+        }
+    }
     .user {
         a {
             &:hover::before {

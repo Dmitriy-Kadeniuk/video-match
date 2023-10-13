@@ -82,18 +82,19 @@
         margin: 0 auto;
     }
 }
-.all-sliders {
+.all-sliders,
+.tabs-category {
     position: relative;
     .slider {
         margin-right: -60px;
     }
-    .slider,
-    .slider1,
-    .slider2 {
+    .all-films-slider,
+    .popularity-films-slider,
+    .serial-slider,
+    .slider-content {
         padding-top: 2rem;
 
         .slick-list {
-           
             .slick-track {
                 display: flex;
                 gap: 1.5rem;
@@ -161,11 +162,104 @@
 }
 
 #wrapper-films {
-    .popular-film,
-    .serials {
+    .popular-film {
         padding: 7rem 1rem;
     }
+    .serials {
+        padding: 29rem 1rem 7rem 1rem;
+    }
+    .tabs-category {
+        position: relative;
+        .tab-content {
+            display: none;
+        }
+        .tab.active .tab-content {
+            display: block;
+            position: absolute;
+            top: 40px;
+            right: 0;
+            left: 150px;
+        }
+        .tab.active .tab-title {
+            background: linear-gradient(88deg, #053ba3 0%, #08080800 90%);
+        }
+        .tab {
+            .tab-title {
+                cursor: pointer;
+                padding: 13px 0 13px 16px;
+                width: 9%;
+                border-radius: 1px;
+                font-weight: 400;
+                font-size: 18px;
+                position: relative;
+                overflow: hidden;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(88deg, #053ba3 0%, #08080800 90%);
+                    transition: right 0.5s ease-in-out;
+                    z-index: -1;
+                }
+                &:hover::before {
+                    right: 0;
+                }
+            }
+
+            .tab-content {
+                background-color: transparent;
+
+                h5 {
+                    padding-top: 15px;
+                    line-height: normal;
+                    width: 80%;
+                    font-size: 16px;
+                }
+                .slider-content {
+                    .loader {
+                        width: 50px;
+                        height: 50px;
+                        position: relative;
+                        margin: 100px auto;
+                        &:before,
+                        &:after {
+                            content: "";
+                            width: 100%;
+                            height: 100%;
+                            border: 4px solid transparent;
+                            border-top-color: #3498db;
+                            border-radius: 50%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            animation: spin 2s linear infinite;
+                        }
+                        &:after {
+                            animation-delay: -1s;
+                        }
+                    }
+
+                    .slick-slider {
+                        .slick-list {
+                            .slick-track {
+                                display: flex;
+                                opacity: 1;
+                                min-width: 8832px;
+                                .img-film {
+                                    min-width: 205px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+
 .everywhere {
     padding-top: 5rem;
     background: linear-gradient(180deg, rgba(5, 59, 163, 0) 0%, #053ba3 100%);
@@ -188,14 +282,14 @@
                 gap: 3rem;
                 flex-direction: column;
                 align-items: flex-start;
-                h5{
-                    a{
-                        background-image: linear-gradient(to right, #FFF, #bc0e0e 160%);
+                h5 {
+                    a {
+                        background-image: linear-gradient(to right, #fff, #bc0e0e 160%);
                         font-weight: 400;
-                        &:hover{
+                        &:hover {
                             background-image: linear-gradient(to right, #053ba3, #fff 50%);
                         }
-                        &:hover::before{
+                        &:hover::before {
                             height: 2px;
                         }
                     }

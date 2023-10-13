@@ -41,7 +41,7 @@
 		<header id="masthead" class="site-header">
 			<div class="logo-users">
 				<div id="logo" class="logo">
-					<h1>VideoMatch</h1>
+					<a href="/"><h1>VideoMatch</h1></a>
 				</div>
 				<div class="user">
 					<?php

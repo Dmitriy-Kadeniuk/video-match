@@ -107,7 +107,7 @@
 // });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const slider = document.querySelector(".slider1");
+  const slider = document.querySelector(".popularity-films-slider");
 
   const options = {
     method: "GET",
@@ -169,11 +169,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Ініціалізація Slick Carousel
-    $(".slider1").slick({
+    $(".popularity-films-slider").slick({
       slidesToShow: 6,
       slidesToScroll: 5,
       prevArrow: $(".prev1"),
       nextArrow: $(".next1"),
+      autoplay: true,
+      autoplaySpeed: 5000,
     });
   }
 });
