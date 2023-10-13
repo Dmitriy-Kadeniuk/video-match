@@ -33,7 +33,6 @@ a {
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
 }
-
 a:before {
   content: "";
   background-image: linear-gradient(to right, #053BA3, #54b3d6 50%);
@@ -45,11 +44,9 @@ a:before {
   height: 3px;
   transition: all 0.3s ease-in-out;
 }
-
 a:hover {
   background-position: 0;
 }
-
 a:hover::before {
   width: 100%;
 }
@@ -95,7 +92,6 @@ h2 {
   font: normal 500 30px/18px "Nunito", sans-serif;
   position: relative;
 }
-
 h2::after {
   content: url("../img/Ellipse-heading.svg");
   position: absolute;
@@ -141,19 +137,15 @@ p {
   display: flex;
   justify-content: space-between;
 }
-
 #wrapper #sidebar nav {
   width: max-content;
 }
-
 #wrapper #sidebar nav .navbar {
   padding: 0;
 }
-
 #wrapper #sidebar nav .navbar .container {
   padding: 0;
 }
-
 #wrapper #primary {
   flex-grow: 1;
   padding: 0 20px;
@@ -176,7 +168,6 @@ header,
     padding: 0 4rem;
   }
 }
-
 @media (max-width: 767px) {
   header,
   #wrapper,
@@ -186,7 +177,6 @@ header,
     padding: 1.5rem;
   }
 }
-
 .menu-main-menu-container ul li a {
   font: normal 400 18px/18px "Nunito", sans-serif;
   line-height: 34px;
@@ -219,25 +209,20 @@ header,
 .logo-users .user a:hover::before {
   display: none;
 }
-
 .logo-users .user a img {
   width: 35px;
 }
-
 .logo-users .user .mega-menu {
   position: relative;
 }
-
 .logo-users .user .mega-menu:hover nav {
   opacity: 1;
 }
-
 .logo-users .user .mega-menu h5 {
   font-family: "Righteous", sans-serif;
   position: relative;
   cursor: pointer;
 }
-
 .logo-users .user .mega-menu nav {
   position: absolute;
   opacity: 0;
@@ -245,11 +230,9 @@ header,
   right: 0;
   transition: all 0.3s ease-in-out;
 }
-
 .logo-users .user .mega-menu nav ul li {
   list-style-type: none;
 }
-
 .logo-users .user .mega-menu nav ul li a {
   display: flex;
   gap: 0.5rem;
@@ -257,7 +240,6 @@ header,
   font: normal 400 14px/18px "Nunito", sans-serif;
   line-height: 34px;
 }
-
 .logo-users .user .mega-menu nav ul li a:hover::before {
   display: none;
 }
@@ -267,7 +249,6 @@ header,
   display: flex;
   align-items: center;
 }
-
 .logo-users .logo h1,
 .footer .logo h1 {
   margin-left: -1.05rem;
@@ -276,7 +257,6 @@ header,
   -webkit-background-clip: text;
   color: transparent;
 }
-
 .logo-users .logo::before,
 .footer .logo::before {
   content: url("../img/flag-logo.svg");
@@ -287,7 +267,6 @@ header,
     display: none;
   }
 }
-
 @media (max-width: 767px) {
   .navbar {
     width: 100%;
@@ -380,20 +359,19 @@ header,
     transform-origin: 0% 100%;
     transition: transform 0.4s ease-in-out;
   }
-  .nav-container input[type="checkbox"]:checked ~ .menu-items {
+  .nav-container input[type=checkbox]:checked ~ .menu-items {
     transform: translateX(0);
   }
-  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+  .nav-container input[type=checkbox]:checked ~ .hamburger-lines .line1 {
     transform: rotate(45deg);
   }
-  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+  .nav-container input[type=checkbox]:checked ~ .hamburger-lines .line2 {
     transform: scaleY(0);
   }
-  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+  .nav-container input[type=checkbox]:checked ~ .hamburger-lines .line3 {
     transform: rotate(-45deg);
   }
-  .nav-container input[type="checkbox"]:checked ~ .logo {
+  .nav-container input[type=checkbox]:checked ~ .logo {
     display: none;
   }
-}
-/*# sourceMappingURL=header.css.map */
+}/*# sourceMappingURL=header.css.map */
