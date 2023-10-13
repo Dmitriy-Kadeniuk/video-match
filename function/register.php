@@ -14,24 +14,31 @@
 
 
                 if ($mysql->query($insert_query)) {
-                    echo "Регистрация успешна.";
+                    $register_successful= "Регистрация успешна.";
+                    
                 } else {
                     $error_message = "Ошибка регистрации: " . $mysql->error;
-                    echo $error_message; // Выводим сообщение об ошибке
+                    
                 }
                 $mysql->close();
             }   
             }
             
         ?>
+
         <section id="register" class="tab-content">
         <h1>Register</h1>
+        <span>Just some details to get you in!</span>
         <form method="POST" action="" name="register">
-        <input id="register_name" type="text" name="register_name" placeholder="name" required>
-        <input id="register_email" type="email" name="register_email" placeholder="email" required>
-        <input id="register_password" type="password" name="register_password" placeholder="password" required>
+        <input id="register_name" type="text" name="register_name" placeholder="Name" required>
+        <input id="register_email" type="email" name="register_email" placeholder="Email" required>
+        <input id="register_password" type="password" name="register_password" placeholder="Password" required>
 
-            <input type="submit" value="register" name="register">
+            <input type="submit" value="Register" name="register">
         </form>
+        <ul class="tabs">
+        <h4>Already Registered?</h4><li class="tab-link active" data-tab="login">Login</li>
         
+    </ul>
+
     </section>

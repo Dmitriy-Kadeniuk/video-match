@@ -141,17 +141,24 @@ function video_match_scripts() {
 	wp_enqueue_style( 'video-match-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'video-match-style', 'rtl', 'replace' );
 	wp_enqueue_style('likes-style', get_template_directory_uri() . '/css/likes.css');
+	wp_enqueue_style('seting', get_template_directory_uri() . '/css/seting.css');
 	wp_enqueue_style('home-style', get_template_directory_uri() . '/css/home.css');
 	wp_enqueue_style('header-style', get_template_directory_uri() . '/css/header.css');
+	wp_enqueue_style('footer-style', get_template_directory_uri() . '/css/footer.css');
 	wp_enqueue_style('variables-style', get_template_directory_uri() . '/css/variables.css');
+	wp_enqueue_style('zero', get_template_directory_uri() . '/css/zero.css');
 	wp_enqueue_style('login-reg', get_template_directory_uri() . '/css/login.css');
 
 	wp_enqueue_script( 'video-match-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	wp_enqueue_script('api', get_template_directory_uri() . '/js/api.js', array(), _S_VERSION, true);
+	wp_enqueue_script('all-films', get_template_directory_uri() . '/js/all-films.js', array(), _S_VERSION, true);
 	wp_enqueue_script('login-js', get_template_directory_uri() . '/js/login.js', array(), _S_VERSION, true);
 	wp_enqueue_script('swipe-films', get_template_directory_uri() . '/js/swipe-films.js', array(), _S_VERSION, true);
 	wp_enqueue_script('rotate-img', get_template_directory_uri() . '/js/rotate-img.js', array(), _S_VERSION, true);
 	wp_enqueue_script('slider', get_template_directory_uri() . '/js/slider.js', array(), _S_VERSION, true);
+	wp_enqueue_script('popularity-films', get_template_directory_uri() . '/js/popularity-films.js', array(), _S_VERSION, true);
+	wp_enqueue_script('serials', get_template_directory_uri() . '/js/serials.js', array(), _S_VERSION, true);
+	wp_enqueue_script('tabs-slider', get_template_directory_uri() . '/js/tabs-slider.js', array(), _S_VERSION, true);
+	
 
 	wp_enqueue_script( 'video-match-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script('likes', get_template_directory_uri() . '/js/likes.js', array(), _S_VERSION, true);

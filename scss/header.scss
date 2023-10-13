@@ -1,11 +1,13 @@
 @import "variables";
 @import "zero";
 
-.menu {
+.menu-main-menu-container {
     ul {
         li {
             a {
-                font: $third-font;
+                font:
+                    normal 400 18px/18px "Nunito",
+                    sans-serif;
                 line-height: 34px;
             }
         }
@@ -17,6 +19,72 @@
     align-items: center;
     padding-top: 1rem;
     padding-bottom: 4rem;
+    .logo{
+        a {
+            background-image: none!important;
+            &:hover::before {
+                display: none;
+            }
+       
+            &:before{
+                display: none;
+            }
+            &:hover{
+                background-image: none!important;
+            }
+        }
+    }
+    .user {
+        a {
+            &:hover::before {
+                display: none;
+            }
+            img {
+                width: 35px;
+            }
+        }
+        .mega-menu {
+            position: relative;
+            &:hover nav {
+                opacity: 1;
+            }
+            h5 {
+                font-family: "Righteous", sans-serif;
+                position: relative;
+                cursor: pointer;
+            }
+            nav {
+                position: absolute;
+                opacity: 0;
+                z-index: 9;
+                right: 0;
+                transition: all 0.3s ease-in-out;
+
+                ul {
+                    li {
+                        list-style-type: none;
+
+                        a {
+                            display: flex;
+                            gap: 0.5rem;
+                            align-items: center;
+                            font:
+                                normal 400 14px/18px "Nunito",
+                                sans-serif;
+                            line-height: 34px;
+
+                            &:hover::before {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.logo-users,
+.footer {
     .logo {
         display: flex;
         align-items: center;

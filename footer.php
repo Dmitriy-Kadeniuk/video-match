@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -10,15 +11,59 @@
  */
 
 ?>
+<footer id="colophon" class="site-footer">
+	<div class="site-info">
+		<div class="footer">
+			<div id="logo" class="logo">
+				<a href="/">
+					<h1>VideoMatch</h1>
+				</a>
+			</div>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+			<div class="second-menu">
+				<?php
+
+				wp_nav_menu(
+					('menu=Second Menu')
+				);
+				?>
+			</div>
+			<div class="main-menu">
+				<?php
+
+				wp_nav_menu(
+					('menu=Main Menu')
+				);
+				?>
+			</div>
+
+
+
+			<div class="soc-icons">
+				<h6>Connect with us</h6>
+				<div class="icons">
+					<a href="#">
+						<img src="../wp-content/themes/video-match/img/soc-icons/Instagram.svg" alt="">
+					</a>
+					<a href="#">
+						<img src="../wp-content/themes/video-match/img/soc-icons/Facebook.svg" alt="">
+					</a>
+					<a href="#">
+						<img src="../wp-content/themes/video-match/img/soc-icons/Gmail.svg" alt="">
+					</a>
+
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<span>©Copyright 2023 VideoMatch.</span>
+		</div>
+	</div><!-- .site-info -->
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>

@@ -22,41 +22,32 @@ body {
 }
 
 a {
-  background-image: linear-gradient(
-    to right,
-    $second-color,
-    #54b3d6 50%,
-    $first-color 50%
-  );
-  background-size: 200% 100%;
-  background-position: -100%;
-  display: inline-block;
-  padding: 5px 0;
-  position: relative;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease-in-out;
-  &:before{
-    content: '';
-    background-image: linear-gradient(
-      to right,
-      $second-color,
-      #54b3d6 50%
-    );
-    display: block;
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 3px;
+    background-image: linear-gradient(to right, $second-color, #54b3d6 50%, $first-color 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     transition: all 0.3s ease-in-out;
-  }
-  &:hover {
-    background-position: 0;
-    &::before{
-        width: 100%;
-      }
-   }
+    &:before {
+        content: "";
+        background-image: linear-gradient(to right, $second-color, #54b3d6 50%);
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+        background-position: 0;
+        &::before {
+            width: 100%;
+        }
+    }
 }
 
 ul,
@@ -90,40 +81,56 @@ span,
 a {
     color: $third-color;
 }
-h1{
+h1 {
     font: $first-font;
 }
-h2{
+h2 {
     font: $heading-font;
+    position: relative;
+
+    &::after {
+        content: url("../img/Ellipse-heading.svg");
+        position: absolute;
+        top: -25px;
+        margin-left: 8px;
+    }
 }
-h3{
+h3 {
     font: $fifth-font;
 }
-h4{
+h4 {
     font: $fourth-font;
 }
-h5{
+h5 {
     font: $third-font;
 }
 p {
     font: $second-font;
 }
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
 #wrapper .main {
     flex: 1 1 auto;
 }
-#page{
-    max-width: 1440px;
+#page {
     margin: 0 auto;
+    height: 100%;
 }
 #wrapper {
     display: flex;
     justify-content: space-between;
     #sidebar {
-        nav{
+        nav {
             width: max-content;
-            .navbar{
+            .navbar {
                 padding: 0;
-                .container{
+                .container {
                     padding: 0;
                 }
             }
@@ -135,14 +142,28 @@ p {
         padding: 0 20px;
     }
 }
-
+header,
+#wrapper,
+#wrapper-films,
+.everywhere-container,
+.site-info {
+    max-width: 1440px;
+    margin: 0 auto;
+}
 @media (max-width: 1440px) and (min-width: 768px) {
-    #page {
+    header,
+    #wrapper,
+    #wrapper-films,
+    .everywhere-container{
         padding: 0 4rem;
     }
 }
 @media (max-width: 767px) {
-    #page {
+    header,
+    #wrapper,
+    #wrapper-films,
+    .everywhere-container,
+    .site-info {
         padding: 1.5rem;
     }
 }
