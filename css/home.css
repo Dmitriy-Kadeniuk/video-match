@@ -1,5 +1,4 @@
 /*-----  FONTS & COLORS  -----*/
-/*-----  FONTS & COLORS  -----*/
 /*--------------------------------------------*/
 *,
 *::before,
@@ -252,7 +251,6 @@ header,
 .tabs-category {
   position: relative;
 }
-<<<<<<< HEAD
 
 .all-sliders .slider,
 .tabs-category .slider {
@@ -278,24 +276,10 @@ header,
 .tabs-category .popularity-films-slider .slick-list .slick-track,
 .tabs-category .serial-slider .slick-list .slick-track,
 .tabs-category .slider-content .slick-list .slick-track {
-=======
-.all-sliders .slider {
-  margin-right: -60px;
-}
-.all-sliders .slider,
-.all-sliders .slider1,
-.all-sliders .slider2 {
-  padding-top: 2rem;
-}
-.all-sliders .slider .slick-list .slick-track,
-.all-sliders .slider1 .slick-list .slick-track,
-.all-sliders .slider2 .slick-list .slick-track {
->>>>>>> Dimas
   display: flex;
   gap: 1.5rem;
   border-radius: 10px;
 }
-<<<<<<< HEAD
 
 .all-sliders .all-films-slider .slick-list .slick-track .img-film,
 .all-sliders .popularity-films-slider .slick-list .slick-track .img-film,
@@ -305,17 +289,11 @@ header,
 .tabs-category .popularity-films-slider .slick-list .slick-track .img-film,
 .tabs-category .serial-slider .slick-list .slick-track .img-film,
 .tabs-category .slider-content .slick-list .slick-track .img-film {
-=======
-.all-sliders .slider .slick-list .slick-track .img-film,
-.all-sliders .slider1 .slick-list .slick-track .img-film,
-.all-sliders .slider2 .slick-list .slick-track .img-film {
->>>>>>> Dimas
   position: relative;
   height: 100%;
   overflow: hidden;
   border-radius: 10px;
 }
-<<<<<<< HEAD
 
 .all-sliders .all-films-slider .slick-list .slick-track .img-film .film-image,
 .all-sliders .popularity-films-slider .slick-list .slick-track .img-film .film-image,
@@ -325,11 +303,6 @@ header,
 .tabs-category .popularity-films-slider .slick-list .slick-track .img-film .film-image,
 .tabs-category .serial-slider .slick-list .slick-track .img-film .film-image,
 .tabs-category .slider-content .slick-list .slick-track .img-film .film-image {
-=======
-.all-sliders .slider .slick-list .slick-track .img-film .film-image,
-.all-sliders .slider1 .slick-list .slick-track .img-film .film-image,
-.all-sliders .slider2 .slick-list .slick-track .img-film .film-image {
->>>>>>> Dimas
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -337,7 +310,6 @@ header,
   transition: transform 0.3s;
   cursor: pointer;
 }
-<<<<<<< HEAD
 
 .all-sliders .all-films-slider .slick-list .slick-track .img-film:hover .film-image,
 .all-sliders .popularity-films-slider .slick-list .slick-track .img-film:hover .film-image,
@@ -358,16 +330,6 @@ header,
 .tabs-category .popularity-films-slider .slick-list .slick-track .img-film .description,
 .tabs-category .serial-slider .slick-list .slick-track .img-film .description,
 .tabs-category .slider-content .slick-list .slick-track .img-film .description {
-=======
-.all-sliders .slider .slick-list .slick-track .img-film:hover .film-image,
-.all-sliders .slider1 .slick-list .slick-track .img-film:hover .film-image,
-.all-sliders .slider2 .slick-list .slick-track .img-film:hover .film-image {
-  transform: scale(1.1);
-}
-.all-sliders .slider .slick-list .slick-track .img-film .description,
-.all-sliders .slider1 .slick-list .slick-track .img-film .description,
-.all-sliders .slider2 .slick-list .slick-track .img-film .description {
->>>>>>> Dimas
   position: absolute;
   z-index: 1;
   bottom: -100%;
@@ -380,7 +342,6 @@ header,
   border-radius: 0 0 10px 10px;
   transition: bottom 0.3s;
 }
-<<<<<<< HEAD
 
 .all-sliders .all-films-slider .slick-list .slick-track .img-film .description h1,
 .all-sliders .popularity-films-slider .slick-list .slick-track .img-film .description h1,
@@ -407,20 +368,6 @@ header,
 
 .all-sliders .navigation,
 .tabs-category .navigation {
-=======
-.all-sliders .slider .slick-list .slick-track .img-film .description h1,
-.all-sliders .slider1 .slick-list .slick-track .img-film .description h1,
-.all-sliders .slider2 .slick-list .slick-track .img-film .description h1 {
-  font-size: 25px;
-  line-height: 30px;
-}
-.all-sliders .slider .slick-list .slick-track .img-film:hover .description,
-.all-sliders .slider1 .slick-list .slick-track .img-film:hover .description,
-.all-sliders .slider2 .slick-list .slick-track .img-film:hover .description {
-  bottom: 0;
-}
-.all-sliders .navigation {
->>>>>>> Dimas
   position: absolute;
   top: -20px;
   right: 0;
@@ -429,25 +376,17 @@ header,
   justify-content: center;
   gap: 4rem;
 }
-<<<<<<< HEAD
 
 .all-sliders .navigation svg,
 .tabs-category .navigation svg {
-=======
-.all-sliders .navigation svg {
->>>>>>> Dimas
   cursor: pointer;
   width: 2rem;
   color: rgba(46, 84, 157, 0.5019607843);
   transition: all 0.3s ease-in-out;
 }
-<<<<<<< HEAD
 
 .all-sliders .navigation svg:hover,
 .tabs-category .navigation svg:hover {
-=======
-.all-sliders .navigation svg:hover {
->>>>>>> Dimas
   color: #053ba3;
 }
 

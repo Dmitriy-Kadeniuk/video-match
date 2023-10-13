@@ -1,5 +1,4 @@
 /*-----  FONTS & COLORS  -----*/
-/*-----  FONTS & COLORS  -----*/
 /*--------------------------------------------*/
 *,
 *::before,
@@ -189,23 +188,6 @@ footer .site-info .footer {
   grid-template-columns: 2fr 1fr 1fr 1fr;
   align-items: start;
 }
-
-footer .site-info .footer .logo a {
-  background-image: none !important;
-}
-
-footer .site-info .footer .logo a:hover::before {
-  display: none;
-}
-
-footer .site-info .footer .logo a:before {
-  display: none;
-}
-
-footer .site-info .footer .logo a:hover {
-  background-image: none !important;
-}
-
 footer .site-info .footer .main-menu ul li a, footer .site-info .footer .second-menu ul li a {
   font: normal 500 20px/18px "Nunito", sans-serif;
   font-size: 16px;

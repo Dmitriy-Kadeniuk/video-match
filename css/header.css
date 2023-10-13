@@ -1,5 +1,4 @@
 /*-----  FONTS & COLORS  -----*/
-/*-----  FONTS & COLORS  -----*/
 /*--------------------------------------------*/
 *,
 *::before,
@@ -189,7 +188,7 @@ header,
   padding-top: 1rem;
   padding-bottom: 4rem;
 }
-<<<<<<< HEAD
+
 
 .logo-users .logo a {
   background-image: none !important;
@@ -207,11 +206,10 @@ header,
   background-image: none !important;
 }
 
-=======
->>>>>>> Dimas
 .logo-users .user a:hover::before {
   display: none;
 }
+
 .logo-users .user a img {
   width: 35px;
 }
