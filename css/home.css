@@ -33,6 +33,7 @@ a {
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
 }
+
 a:before {
   content: "";
   background-image: linear-gradient(to right, #053BA3, #54b3d6 50%);
@@ -44,9 +45,11 @@ a:before {
   height: 3px;
   transition: all 0.3s ease-in-out;
 }
+
 a:hover {
   background-position: 0;
 }
+
 a:hover::before {
   width: 100%;
 }
@@ -92,6 +95,7 @@ h2 {
   font: normal 500 30px/18px "Nunito", sans-serif;
   position: relative;
 }
+
 h2::after {
   content: url("../img/Ellipse-heading.svg");
   position: absolute;
@@ -137,15 +141,19 @@ p {
   display: flex;
   justify-content: space-between;
 }
+
 #wrapper #sidebar nav {
   width: max-content;
 }
+
 #wrapper #sidebar nav .navbar {
   padding: 0;
 }
+
 #wrapper #sidebar nav .navbar .container {
   padding: 0;
 }
+
 #wrapper #primary {
   flex-grow: 1;
   padding: 0 20px;
@@ -168,6 +176,7 @@ header,
     padding: 0 4rem;
   }
 }
+
 @media (max-width: 767px) {
   header,
   #wrapper,
@@ -177,23 +186,28 @@ header,
     padding: 1.5rem;
   }
 }
+
 #primary .container #filmCarousel .carousel-inner {
   padding-bottom: 4rem;
 }
+
 #primary .container #filmCarousel .carousel-inner .carousel-item .view-films {
   display: flex;
   gap: 2rem;
 }
+
 #primary .container #filmCarousel .carousel-inner .carousel-item .view-films .film-container-slide {
   position: relative;
   width: 50%;
   border-radius: 10px;
 }
+
 #primary .container #filmCarousel .carousel-inner .carousel-item .view-films .film-container-slide .img-film img {
   object-fit: cover;
   max-height: 350px;
   border-radius: 10px;
 }
+
 #primary .container #filmCarousel .carousel-inner .carousel-item .view-films .film-container-slide .description {
   position: absolute;
   z-index: 1;
@@ -205,19 +219,24 @@ header,
   backdrop-filter: blur(2px);
   height: 100%;
 }
+
 #primary .container #filmCarousel .carousel-inner .carousel-item .view-films .film-container-slide .description h1 {
   line-height: 34px;
 }
+
 #primary .container #filmCarousel .carousel-inner .carousel-item .view-films .film-container-slide .description p {
   font-weight: 600;
 }
+
 #primary .container #filmCarousel .carousel-inner .carousel-item .view-films .film-container-slide .description span {
   font: normal 400 13px/18px "Open Sans", sans-serif;
 }
+
 #primary .container #filmCarousel .carousel-indicators {
   display: flex;
   align-items: center;
 }
+
 #primary .container #filmCarousel .carousel-indicators li {
   background-color: transparent;
   width: 7px;
@@ -228,6 +247,7 @@ header,
   transition: background-color 0.3s ease;
   border: 1px solid #fff;
 }
+
 #primary .container #filmCarousel .carousel-indicators li.active {
   background-color: #053BA3;
   border: none;
@@ -243,6 +263,7 @@ header,
   position: relative;
   min-height: 67%;
 }
+
 .all-film h2 {
   max-width: 1440px;
   margin: 0 auto;
@@ -382,7 +403,7 @@ header,
 .tabs-category .navigation svg {
   cursor: pointer;
   width: 2rem;
-  color: rgba(46, 84, 157, 0.5019607843);
+  color: #2e549d80;
   transition: all 0.3s ease-in-out;
 }
 
@@ -497,42 +518,53 @@ header,
   box-shadow: inset 2px -10px 20px 0px #000;
   width: 100%;
 }
+
 .everywhere .everywhere-container {
   display: flex;
   gap: 7rem;
   align-items: center;
 }
+
 .everywhere .everywhere-container__watch, .everywhere .everywhere-container__img {
   width: 50%;
 }
+
 .everywhere .everywhere-container__watch h3 {
   padding-bottom: 5rem;
 }
+
 .everywhere .everywhere-container__watch .description {
   display: flex;
   gap: 3rem;
   flex-direction: column;
   align-items: flex-start;
 }
+
 .everywhere .everywhere-container__watch .description h5 a {
   background-image: linear-gradient(to right, #fff, #bc0e0e 160%);
   font-weight: 400;
 }
+
 .everywhere .everywhere-container__watch .description h5 a:hover {
   background-image: linear-gradient(to right, #053ba3, #fff 50%);
 }
+
 .everywhere .everywhere-container__watch .description h5 a:hover::before {
   height: 2px;
 }
+
 .everywhere .everywhere-container__watch .description .lets-start {
   border-radius: 1.25rem;
   background: #fff;
   padding: 0.1rem 1rem;
 }
+
 .everywhere .everywhere-container__watch .description .lets-start a {
   background-image: linear-gradient(to right, #053ba3, #fff 200%);
   font-weight: 500;
 }
+
 .everywhere .everywhere-container__watch .description .lets-start a:hover::before {
   display: none;
-}/*# sourceMappingURL=home.css.map */
+}
+/*# sourceMappingURL=home.css.map */
