@@ -28,11 +28,13 @@
                     // Учетные данные верны, пользователь аутентифицирован
                     $user_data = $result->fetch_assoc();
                     $_SESSION['user_name'] = $user_name; // Сохраняем имя пользователя в сессии
-                    $_SESSION['user_id'] = $user_data['id'];
+                    $_SESSION['user_id'] = $user_data['id'];  
+               
                 } else {
                     // Учетные данные неверны, выводим сообщение об ошибке
                     $error_message = "Неверное имя пользователя или пароль.";
                 }
+                
             }
             }
 
@@ -48,7 +50,8 @@
             }else{
                 
                 echo $_SESSION['user_name'];
-                echo "<br>Вы авторизованы";
+                echo "<br>Вы авторизованы"; 
+                    // После успешной аутентификации перенаправляем на главную страницу
                 
             } ?></span>
         <h1>Login</h1>
@@ -56,7 +59,7 @@
         <form method="POST" action="" name="login">
             <input id="user_name" type="text" name="user_name" placeholder="Имя пользователя" required>
             <input id="user_password" type="password" name="user_password" placeholder="Пароль" required>
-            <input type="submit" value="login" name="login">
+            <input type="submit" value="Login" name="login">
         </form>
         <ul class="tabs">
         
