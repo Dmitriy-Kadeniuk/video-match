@@ -6,43 +6,108 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    // .movie-card {
-    //     width: 30%;
-    // }
+    .img-film {
+        position: relative;
+        // width: 35%;
+        height: 600px;
+        img {
+            border-radius: 20px 70px / 80px;
+            object-fit: cover;
+        }
+        .overview {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            i,
+            #movie-overview {
+                position: absolute;
+            }
+            i {
+                top: 30px;
+                width: max-content;
+                right: 30px;
+                font-size: 28px;
+                cursor: pointer;
+            }
+            .fa-info-circle:before {
+                color: transparent;
+                background: linear-gradient(to bottom, #fff, #90b7ff 100%);
+                -webkit-background-clip: text;
+                background-clip: text;
+            }
+            .fa-times:before {
+                color: transparent;
+                background: linear-gradient(to bottom, $fail-login, #fff 100%);
+                -webkit-background-clip: text;
+                background-clip: text;
+            }
+            #movie-overview {
+                top: 50%;
+                left: 15%;
+                transform: translate(-9%, -50%);
+                border-radius: 50% 20% / 10% 40%;
+                background: rgba(70, 54, 54, 0.46);
+                backdrop-filter: blur(7px);
+                padding: 3rem;
+                font:
+                    normal 300 16px/24px "Nunito",
+                    sans-serif;
+                letter-spacing: 1px;
+            }
+        }
+    }
+    h1 {
+        font-size: 26px;
+        padding-top: 2rem;
+    }
 }
 .navigation-swipe {
     display: flex;
-    button{
-        font-size: 32px;
-        background-color: transparent;
+    justify-content: space-evenly;
+    padding: 2rem 0;
+    #close-button,
+    #like-button {
         cursor: pointer;
-        border: 2px solid rgb(248, 62, 62);
-        border-radius: 50%;
-        padding: 1rem;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        display: flex;
-        transition: 0.5s;
-        
+        img {
+            width: 6rem;
+        }
     }
-    button:hover{
-        border: 2px solid var($first-color);
-        img{
-            color: var($first-color);
-            background-color: var($first-color);
+    #like-button {
+        img {
+            &:hover {
+                animation: pulse 0.4s infinite;
+            }
+        }
+    }
+    #close-button {
+        img {
+            transition: 0.4s ease-in-out;
+            &:hover {
+                transform: scale(0.8);
+            }
         }
     }
 }
-#movie_id{
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#movie_id {
     display: none;
 }
-.navigation-swipe{
-    justify-content: center;
-}
-.wishlist{
+
+.wishlist {
     color: $first-color;
 }
-.wishlist-movie{
+.wishlist-movie {
     font-size: 1.2rem;
 }
