@@ -3,7 +3,7 @@
 
         <?php
             // Подключение к базе данных
-            $mysql = new mysqli("localhost", "root", "root", "local");
+            $mysql = new mysqli("localhost", "root", "", "local");
             $mysql->query("SET NAMES 'UTF8'");
 
             // Переменные для хранения введенных пользователем данных
@@ -17,8 +17,8 @@
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if (isset($_POST['login'])) {
                 // Получаем данные, введенные пользователем
-                $user_name = $_POST["user_name"] ?? null;
-                $user_password = $_POST["user_password"] ?? null;
+                $user_name = $_POST["user_name"];
+                $user_password = $_POST["user_password"];
 
                 // Запрос к базе данных для проверки учетных данных
                 $query = "SELECT * FROM users WHERE name = '$user_name' AND password = '$user_password'";
@@ -29,6 +29,7 @@
                     $user_data = $result->fetch_assoc();
                     $_SESSION['user_name'] = $user_name; // Сохраняем имя пользователя в сессии
                     $_SESSION['user_id'] = $user_data['id'];  
+
                
                 } else {
                     // Учетные данные неверны, выводим сообщение об ошибке

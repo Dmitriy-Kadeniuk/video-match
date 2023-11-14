@@ -7,7 +7,7 @@
     }
 
     // Подключение к базе данных
-    $connection = mysqli_connect("localhost", "root", "root", "local");
+    $connection = mysqli_connect("localhost", "root", "", "local");
 
     // Проверка подключения
     if (!$connection) {
@@ -15,7 +15,11 @@
     }
 
     // Пользователь 1 и 2
-    $user1_id = $user_id;
+    if(isset($user_id)){
+        $user1_id = $user_id;
+    } else {
+        $user1_id = "Для просмотра нужно авторизоваться";
+    }
     $user2_id = 12;
 
     // SQL-запрос для получения муви ID для пользователя 1

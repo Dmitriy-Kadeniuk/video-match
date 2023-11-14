@@ -2,18 +2,24 @@
 <ul class="wishlist">
     <?php
     // Подключение к базе данных
-    $connection = mysqli_connect("localhost", "root", "root", "local");
+    $connection = mysqli_connect("localhost", "root", "", "local");
 
     // Проверка подключения
     if (!$connection) {
         die("Ошибка подключения к базе данных: " . mysqli_connect_error());
     }
 
-    // user_id вашего авторизованного пользователя
+// user_id вашего авторизованного пользователя
+if(isset($_SESSION['user_id'])){
     $user_id = $_SESSION['user_id'];
+} else {
+    $user_id = "0";
+    echo "<span>Что бы просмотреть информацию, ввойдите в систему</span>";
+}
 
-    // SQL-запрос для выбора всех movie_id для данного user_id
     $query = "SELECT movie_id FROM user_likes WHERE user_id = '$user_id'";
+
+
 
     // Выполнение запроса
     $result = mysqli_query($connection, $query);
