@@ -15,7 +15,7 @@
     }
 
     // Пользователь 1 и 2
-    if(isset($user_id)){
+    if (isset($user_id)) {
         $user1_id = $user_id;
     } else {
         $user1_id = "Для просмотра нужно авторизоваться";

@@ -6,7 +6,7 @@ session_start();
 ?>
 
 
-<section>
+<section class="rename_account">
         <h3>Rename account</h3>
         <form method="POST" action="" name="rename">
         <label for="">Введите новое имя пользователя</label>
