@@ -45,13 +45,32 @@
             } ?></span>
         <h1>Login</h1>
         <span>Glad you’re back!</span>
-        <form method="POST" action="" name="login">
+        <form method="POST" action="" name="login" id="login-form">
             <input id="user_name" type="text" name="user_name" placeholder="Имя пользователя" required>
             <input id="user_password" type="password" name="user_password" placeholder="Пароль" required>
-            <input type="submit" value="Login" name="login">
+            <input type="submit" value="Login" name="login" class="main-button">
         </form>
         <ul class="tabs">
         
         <h4>Don’t have an account ?</h4><li class="tab-link" data-tab="register">Register</li>
     </ul>
+
+    <script>
+$(document).ready(function() {
+    function updateUserInfo() {
+        $.ajax({
+            url: '/wp-content/themes/video-match/function/login',
+            type: 'POST',
+            dataType: 'json',
+            success: function(response) {
+                $('.user').html(response.html);
+            },
+            error: function(error) {
+                console.log('Error updating user info:', error);
+            }
+        });
+    }
+
+});
+</script>
     </section>

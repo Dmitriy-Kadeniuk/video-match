@@ -58,9 +58,9 @@
 		<div class="copyright">
 			<span>©Copyright 2023 VideoMatch.</span>
 		</div>
-	</div><!-- .site-info -->
-</footer><!-- #colophon -->
-</div><!-- #page -->
+	</div>
+</footer>
+</div>
 
 <?php wp_footer(); ?>
 

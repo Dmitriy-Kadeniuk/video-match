@@ -1,7 +1,7 @@
 <ul>
     <?php
     session_start();
-    $found_user = isset($_SESSION['found_user']) ? $_SESSION['found_user'] : "";
+    $found_user_id = isset($_SESSION['found_user']) ? $_SESSION['found_user'] : "";
 
     if (isset($_SESSION['user_id'])) {
         $user_id = $_SESSION['user_id'];
@@ -19,11 +19,13 @@
         $user1_id = "Для просмотра нужно авторизоваться";
     }
 
-    if (isset($user_2)) {
-        $user2_id = $found_user_id;
+    if (isset($_SESSION['found_user_id'])) {
+        $user2_id = $_SESSION['found_user_id'];
     } else {
         $user2_id = "Укажите юзера для поиска в настройках";
     }
+    
+    
 
     $query1 = "SELECT movie_id FROM user_likes WHERE user_id = '$user1_id'";
 

@@ -5,7 +5,7 @@
             <input id="register_name" type="text" name="register_name" placeholder="name">
             <input id="register_email" type="email" name="register_email" placeholder="email">
             <input id="register_password" type="password" name="register_password" placeholder="password">
-            <input type="submit" value="Send">
+            <input type="submit" value="Send" class="main-button">
         </form>
         <?php
             $error_message = "";
