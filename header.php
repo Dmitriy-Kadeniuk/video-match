@@ -29,7 +29,6 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<!-- Підключення бібліотеки Slick Carousel (після jQuery) -->
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 	<?php wp_head(); ?>
@@ -46,7 +45,6 @@
 				<div class="user">
 					<?php
 																if (!isset($_SESSION['user_name'])) {
-																	// Пользователь не аутентифицирован
 																	echo '<a href="/login"> <img src="../wp-content/themes/video-match/img/login/sign.svg" alt=""></a>';
 																} else {
 																	echo '<div class="mega-menu"><h5>' . $_SESSION['user_name'] 
@@ -63,7 +61,7 @@
 
 				</div>
 			</div>
-		</header><!-- #masthead -->
+		</header>
 		<div id="wrapper">
 			<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'video-match'); ?></a>
 			<aside id="sidebar">

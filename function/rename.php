@@ -20,7 +20,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["rename_user"])) {
                 $stmt->bind_param("si", $new_username, $user_id);
                 $stmt->execute();
     
-                // После успешного выполнения запроса
                 $_SESSION["name"] = $new_username;
     
                 $stmt->close();

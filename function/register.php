@@ -1,5 +1,5 @@
 <?php
-            $error_message = ""; // Инициализация переменной для сообщения об ошибке
+            $error_message = ""; 
 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 if (isset($_POST['register'])) {
@@ -7,7 +7,6 @@
                 $user_email = $_POST["register_email"] ;
                 $user_password = $_POST["register_password"] ;
 
-                // Создаем соединение с базой данных и выполняем запрос на вставку данных
                 $mysql = new mysqli("localhost", "root", "", "project-film");
                 $mysql->query("SET NAMES 'UTF8'");
                 $insert_query = "INSERT INTO users (name, password, email) VALUES ('$user_name', '$user_password', '$user_email')";
