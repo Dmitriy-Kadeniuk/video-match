@@ -7,7 +7,7 @@
         $user_id = $_SESSION['user_id'];
     }
 
-    $connection = mysqli_connect("localhost", "root", "", "local");
+    $connection = mysqli_connect("localhost", "root", "", "project-film");
 
     if (!$connection) {
         die("Ошибка подключения к базе данных: " . mysqli_connect_error());

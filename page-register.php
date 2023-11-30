@@ -16,7 +16,7 @@
                 $user_password = $_POST["register_password"];
 
                 // Создаем соединение с базой данных и выполняем запрос на вставку данных
-                $mysql = new mysqli("localhost", "root", "", "local");
+                $mysql = new mysqli("localhost", "root", "", "project-film");
                 $mysql->query("SET NAMES 'UTF8'");
                 $insert_query = "INSERT INTO users (name, password, email) VALUES ('$user_name', '$user_password', '$user_email')";
 

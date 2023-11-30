@@ -9,7 +9,7 @@ if (isset($_SESSION['user_id'])) {
     $movie_id = $_POST['movie_id'];
 
     // Создаем соединение с базой данных (если оно уже не создано)
-    $connection = mysqli_connect("localhost", "root", "", "local");
+    $connection = mysqli_connect("localhost", "root", "", "project-film");
 
     if (!$connection) {
         die("Ошибка подключения к базе данных: " . mysqli_connect_error());

@@ -2,7 +2,7 @@
 <ul class="wishlist">
     <?php
     // Подключение к базе данных
-    $connection = mysqli_connect("localhost", "root", "", "local");
+    $connection = mysqli_connect("localhost", "root", "", "project-film");
 
     // Проверка подключения
     if (!$connection) {
