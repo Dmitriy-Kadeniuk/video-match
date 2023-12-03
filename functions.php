@@ -149,6 +149,7 @@ function video_match_scripts() {
 	wp_enqueue_style('zero', get_template_directory_uri() . '/css/zero.css');
 	wp_enqueue_style('login-reg', get_template_directory_uri() . '/css/login.css');
 
+
 	wp_enqueue_script( 'video-match-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script('all-films', get_template_directory_uri() . '/js/all-films.js', array(), _S_VERSION, true);
 	wp_enqueue_script('login-js', get_template_directory_uri() . '/js/login.js', array(), _S_VERSION, true);

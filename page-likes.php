@@ -4,7 +4,7 @@ get_header();
 <main id="primary" class="site-main">
 
 
-    <form method="POST" action="" name="send-form" id="send-form">
+<form method="POST" action="" name="send-form" id="send-form">
         <div id="movie-container">
             <div class="img-film">
                 <img src="" alt="Movie Poster" id="movie-poster">
@@ -16,6 +16,7 @@ get_header();
             </div>
             <h1 id="movie-title"></h1>
         </div>
+
     </form>
 
     <div class="navigation-swipe">

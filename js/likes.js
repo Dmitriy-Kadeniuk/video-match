@@ -2,30 +2,18 @@ $(document).ready(function() {
     $("#like-button").click(function(event) {
         event.preventDefault();
 
-        // Получаем значение movie_id из элемента с id "movie_id"
-        let movieId = $("#movie_id").val();
-        console.log("movieId:", movieId); // Проверьте, что это значение не undefined или пустое
+        // Получаем movieId при каждом клике на кнопку
+        let movieId = document.getElementById('movie_id').value;
+        console.log("movieId до клика на кнопку:", movieId);
 
-        // Создаем объект данных для отправки на сервер
-        let data = {
-            movie_id: movieId
-        };
-
-        // Отправляем данные формы на сервер с использованием AJAX
-        // Тут делаеться Аякс запрос к серверу с передачей данных
         $.ajax({
             type: "POST",
-            url: "/wp-content/themes/video-match/function/likes.php", // Полный путь к вашему обработчику PHP
-            data: data,
+            url: "/wp-content/themes/video-match/function/likes.php",
+            data: { movie_id: movieId },
             success: function(response) {
-                // Обработка успешного ответа от сервера (например, обновление части страницы)
                 console.log("Фильм добавлен в избранное.");
-
-                // Вместо этой строки вы можете выполнить любое действие, которое вам нужно
-                // Например, обновить список избранных фильмов без перезагрузки страницы
             },
             error: function(error) {
-                // Обработка ошибок
                 console.error("Произошла ошибка: " + error);
             }
         });
