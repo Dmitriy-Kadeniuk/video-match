@@ -33,6 +33,7 @@ a {
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
 }
+
 a:before {
   content: "";
   background-image: linear-gradient(to right, #053BA3, #54b3d6 50%);
@@ -44,9 +45,11 @@ a:before {
   height: 3px;
   transition: all 0.3s ease-in-out;
 }
+
 a:hover {
   background-position: 0;
 }
+
 a:hover::before {
   width: 100%;
 }
@@ -92,6 +95,7 @@ h2 {
   font: normal 500 30px/18px "Nunito", sans-serif;
   position: relative;
 }
+
 h2::after {
   content: url("../img/Ellipse-heading.svg");
   position: absolute;
@@ -123,6 +127,7 @@ p {
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
+
 #wrapper .main {
   flex: 1 1 auto;
 }
@@ -136,15 +141,19 @@ p {
   display: flex;
   justify-content: space-between;
 }
+
 #wrapper #sidebar nav {
   width: max-content;
 }
+
 #wrapper #sidebar nav .navbar {
   padding: 0;
 }
+
 #wrapper #sidebar nav .navbar .container {
   padding: 0;
 }
+
 #wrapper #primary {
   flex-grow: 1;
   padding: 0 20px;
@@ -167,6 +176,7 @@ header,
     padding: 0 4rem;
   }
 }
+
 @media (max-width: 767px) {
   header,
   #wrapper,
@@ -176,6 +186,7 @@ header,
     padding: 1.5rem;
   }
 }
+
 .Seting {
   width: 100%;
   display: flex;
@@ -184,6 +195,7 @@ header,
   flex-direction: column;
   padding: 0rem 3rem;
 }
+
 .Seting section form {
   display: flex;
   flex-direction: column;
@@ -193,12 +205,15 @@ header,
 .rename_account, .section_search_users {
   padding: 0.5rem;
 }
+
 .rename_account h3, .section_search_users h3 {
   color: #fff;
 }
+
 .rename_account form label, .section_search_users form label {
   color: #fff;
 }
+
 .rename_account form input, .section_search_users form input {
   display: flex;
   color: #fff;
@@ -219,10 +234,12 @@ header,
   -o-border-radius: 12px;
   border: 1px solid #fff;
 }
+
 .rename_account form input::placeholder, .section_search_users form input::placeholder {
   color: #fff;
   text-align: start;
 }
+
 .rename_account form input[type=submit], .section_search_users form input[type=submit] {
   display: flex;
   color: #fff;
@@ -242,4 +259,5 @@ header,
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
   background: linear-gradient(91deg, #628EFF 9.91%, #8740CD 53.29%, #580475 91.56%);
-}/*# sourceMappingURL=seting.css.map */
+}
+/*# sourceMappingURL=seting.css.map */
