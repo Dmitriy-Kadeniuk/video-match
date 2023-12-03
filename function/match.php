@@ -60,7 +60,7 @@
             $api_data = json_decode($api_response, true);
 
             if (isset($api_data['title'])) {
-                echo "<li class='wishlist-movie'>" . $api_data['title'] . "</li>";
+                echo "<li class='wishlist-movie' id = ".$movie_id.">" . $api_data['title'] . "</li>";
             }
         }
 
