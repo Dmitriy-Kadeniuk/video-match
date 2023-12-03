@@ -65,6 +65,7 @@
 .navigation-swipe {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     padding: 2rem 0;
     #close-button,
     #like-button {
@@ -74,10 +75,13 @@
         }
     }
     #like-button {
-        img {
+        svg {
+            width: 5rem;
+        
             &:hover {
                 animation: pulse 0.4s infinite;
             }
+          
         }
     }
     #close-button {
