@@ -153,6 +153,7 @@ function showMovie(index) {
 
     document.getElementById('movie_id').value = movie.id;
     movieid.textContent = movie.id;
+    console.log(movie.id)
 
     filmOverview.textContent = movie.overview;
   } else {

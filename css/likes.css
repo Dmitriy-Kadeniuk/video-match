@@ -33,6 +33,7 @@ a {
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
 }
+
 a:before {
   content: "";
   background-image: linear-gradient(to right, #053BA3, #54b3d6 50%);
@@ -44,9 +45,11 @@ a:before {
   height: 3px;
   transition: all 0.3s ease-in-out;
 }
+
 a:hover {
   background-position: 0;
 }
+
 a:hover::before {
   width: 100%;
 }
@@ -92,6 +95,7 @@ h2 {
   font: normal 500 30px/18px "Nunito", sans-serif;
   position: relative;
 }
+
 h2::after {
   content: url("../img/Ellipse-heading.svg");
   position: absolute;
@@ -123,6 +127,7 @@ p {
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
+
 #wrapper .main {
   flex: 1 1 auto;
 }
@@ -136,15 +141,19 @@ p {
   display: flex;
   justify-content: space-between;
 }
+
 #wrapper #sidebar nav {
   width: max-content;
 }
+
 #wrapper #sidebar nav .navbar {
   padding: 0;
 }
+
 #wrapper #sidebar nav .navbar .container {
   padding: 0;
 }
+
 #wrapper #primary {
   flex-grow: 1;
   padding: 0 20px;
@@ -167,6 +176,7 @@ header,
     padding: 0 4rem;
   }
 }
+
 @media (max-width: 767px) {
   header,
   #wrapper,
@@ -176,30 +186,36 @@ header,
     padding: 1.5rem;
   }
 }
+
 #movie-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+
 #movie-container .img-film {
   position: relative;
   height: 600px;
 }
+
 #movie-container .img-film img {
-  border-radius: 20px 70px/80px;
+  border-radius: 20px 70px / 80px;
   object-fit: cover;
 }
+
 #movie-container .img-film .overview {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
 }
+
 #movie-container .img-film .overview i,
 #movie-container .img-film .overview #movie-overview {
   position: absolute;
 }
+
 #movie-container .img-film .overview i {
   top: 30px;
   width: max-content;
@@ -207,29 +223,33 @@ header,
   font-size: 28px;
   cursor: pointer;
 }
+
 #movie-container .img-film .overview .fa-info-circle:before {
   color: transparent;
   background: linear-gradient(to bottom, #fff, #90b7ff 100%);
   -webkit-background-clip: text;
   background-clip: text;
 }
+
 #movie-container .img-film .overview .fa-times:before {
   color: transparent;
-  background: linear-gradient(to bottom, rgb(172, 17, 6), #fff 100%);
+  background: linear-gradient(to bottom, #ac1106, #fff 100%);
   -webkit-background-clip: text;
   background-clip: text;
 }
+
 #movie-container .img-film .overview #movie-overview {
   top: 50%;
   left: 15%;
   transform: translate(-9%, -50%);
-  border-radius: 50% 20%/10% 40%;
+  border-radius: 50% 20% / 10% 40%;
   background: rgba(70, 54, 54, 0.46);
   backdrop-filter: blur(7px);
   padding: 3rem;
   font: normal 300 16px/24px "Nunito", sans-serif;
   letter-spacing: 1px;
 }
+
 #movie-container h1 {
   font-size: 26px;
   padding-top: 2rem;
@@ -241,20 +261,30 @@ header,
   align-items: center;
   padding: 2rem 0;
 }
+
 .navigation-swipe #close-button,
 .navigation-swipe #like-button {
   cursor: pointer;
+  width: 90px;
 }
+
 .navigation-swipe #close-button img,
 .navigation-swipe #like-button img {
   width: 6rem;
 }
-.navigation-swipe #like-button img:hover {
+
+.navigation-swipe #like-button svg {
+  width: 5rem;
+}
+
+.navigation-swipe #like-button svg:hover {
   animation: pulse 0.4s infinite;
 }
+
 .navigation-swipe #close-button img {
   transition: 0.4s ease-in-out;
 }
+
 .navigation-swipe #close-button img:hover {
   transform: scale(0.8);
 }
@@ -270,6 +300,7 @@ header,
     transform: scale(1);
   }
 }
+
 #movie_id {
   display: none;
 }
@@ -280,4 +311,5 @@ header,
 
 .wishlist-movie {
   font-size: 1.2rem;
-}/*# sourceMappingURL=likes.css.map */
+}
+/*# sourceMappingURL=likes.css.map */

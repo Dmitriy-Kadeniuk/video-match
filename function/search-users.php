@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$mysql = new mysqli("localhost", "root", "", "project-film");
+$mysql = new mysqli("localhost", "root", "root", "local");
 $mysql->query("SET NAMES 'UTF8'");
 
 $found_user_id = "";

@@ -2,7 +2,7 @@
         <section id="login" class="tab-content active">
 
         <?php
-            $mysql = new mysqli("localhost", "root", "", "project-film");
+            $mysql = new mysqli("localhost", "root", "root", "local");
             $mysql->query("SET NAMES 'UTF8'");
 
             $user_name = "";

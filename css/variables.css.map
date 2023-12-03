@@ -1,1 +1,9 @@
-{"version":3,"sourceRoot":"","sources":["../scss/variables.scss"],"names":[],"mappings":"AACA","file":"variables.css"}
+{
+    "version": 3,
+    "mappings": "AACA,gCAAgC",
+    "sources": [
+        "../scss/variables.scss"
+    ],
+    "names": [],
+    "file": "variables.css"
+}

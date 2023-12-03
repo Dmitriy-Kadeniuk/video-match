@@ -1,8 +1,8 @@
 <?php session_start(); ?>
 <ul class="wishlist">
     <?php
-    $connection = mysqli_connect("localhost", "root", "", "project-film");
-
+    $connection = mysqli_connect("localhost", "root", "root", "local");
+    
     if (!$connection) {
         die("Ошибка подключения к базе данных: " . mysqli_connect_error());
     }
