@@ -62,6 +62,14 @@
 					?>
 
 				</div>
+				<?php
+				if (!isset($_SESSION['user_name'])) {
+						echo '';
+					} else {
+						echo '</div>';
+					}
+						?>
+			<!-- </div> -->
 				<aside id="sidebar">
 					<!-- hamburger -->
 					<input type="checkbox" id="navi-toggle" class="checkbox" />
