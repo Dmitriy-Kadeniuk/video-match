@@ -43,6 +43,7 @@ a {
         transition: all 0.3s ease-in-out;
     }
     &:hover {
+        text-decoration: none;
         background-position: 0;
         &::before {
             width: 100%;

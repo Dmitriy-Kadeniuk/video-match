@@ -46,6 +46,7 @@ a:before {
 }
 
 a:hover {
+  text-decoration: none;
   background-position: 0;
 }
 
