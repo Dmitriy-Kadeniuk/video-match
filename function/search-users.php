@@ -1,48 +1,52 @@
-<?php 
+<?php
 session_start();
 
+$mysql = new mysqli("localhost", "root", "", "project-film");
+$mysql->query("SET NAMES 'UTF8'");
 
+$found_user_id = "";
+$found_user_name = "";
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST["search_user"])) {
+        $search_user_id = $_POST["search_user"];
+
+        $query = "SELECT * FROM users WHERE id = $search_user_id";
+        $result = $mysql->query($query);
+
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $found_user_id = $row['id'];
+            $found_user_name = $row['name'];
+            $_SESSION['found_user_id'] = $found_user_id;
+            $_SESSION['found_user_name'] = $found_user_name;
+        } else {
+            $found_user_id = 'User с таким ID не найден';
+            $found_user_name = "";
+            $_SESSION['found_user_id'] = $found_user_id;
+        }
+    }
+}
+
+if (isset($_SESSION['found_user_id'])) {
+    $found_user_id = $_SESSION['found_user_id'];
+}
+
+if (isset($_SESSION['found_user_name'])) {
+    $found_user_name = $_SESSION['found_user_name'];
+}
 ?>
 
-
-
-<section>
-        <h3>Search Users</h3>
-        <form id="search_users" method="POST" action="" name="search_users">
+<section class="section_search_users">
+    <h3>Search Users</h3>
+    <h4>User:
+        <?php echo esc_html($found_user_name); ?>
+        <?php echo esc_html($found_user_id); ?>
+    </h4>
+    <form id="search_users" method="POST" action="" name="search_users">
         <label for="">Введите ID пользователя</label>
-        <input type="text" name="search_user" placeholder="Введите ID пользователя">
-        <input type="submit" name="search_users">
-        </form>
-        <span>Найденный пользователь:</span>
-        <script>
-             // Ждем, пока страница полностью загрузится
-            $(document).ready(function() {
-                // Находим вашу форму по id
-                let form = $('#search_users');
-
-                // Обрабатываем отправку формы
-                form.on('submit', function(event) {
-                    event.preventDefault(); // Предотвращаем стандартное поведение формы
-
-                    // Отправляем данные формы на сервер с использованием Ajax
-                    $.ajax({
-                        type: 'POST', // Может быть GET или POST, в зависимости от ваших требований
-                        url: '../function/search-users.php', // Укажите URL вашего серверного обработчика
-                        data: form.serialize(), // Сериализуем данные формы
-                        success: function(response) {
-                            // Здесь вы можете обработать ответ от сервера
-                            // Например, обновить определенную часть страницы
-                            $('#result').html(response);
-                            console.log("Good");
-                        },
-                        error: function(error) {
-                            // Здесь вы можете обработать ошибку, если что-то пойдет не так
-                            console.log(error);
-                        }
-                    });
-                });
-            });
-
-        </script>
+        <input type="text" name="search_user" placeholder="Введите ID пользователя"
+            value="<?php echo $found_user_id ?>">
+        <input type="submit" name="search_users" class="main-button">
+    </form>
 </section>

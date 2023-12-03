@@ -32,7 +32,6 @@ a {
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
 }
-
 a:before {
   content: "";
   background-image: linear-gradient(to right, #053BA3, #54b3d6 50%);
@@ -44,11 +43,9 @@ a:before {
   height: 3px;
   transition: all 0.3s ease-in-out;
 }
-
 a:hover {
   background-position: 0;
 }
-
 a:hover::before {
   width: 100%;
 }
@@ -94,7 +91,6 @@ h2 {
   font: normal 500 30px/18px "Nunito", sans-serif;
   position: relative;
 }
-
 h2::after {
   content: url("../img/Ellipse-heading.svg");
   position: absolute;
@@ -126,7 +122,6 @@ p {
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
-
 #wrapper .main {
   flex: 1 1 auto;
 }
@@ -140,19 +135,15 @@ p {
   display: flex;
   justify-content: space-between;
 }
-
 #wrapper #sidebar nav {
   width: max-content;
 }
-
 #wrapper #sidebar nav .navbar {
   padding: 0;
 }
-
 #wrapper #sidebar nav .navbar .container {
   padding: 0;
 }
-
 #wrapper #primary {
   flex-grow: 1;
   padding: 0 20px;
@@ -175,7 +166,6 @@ header,
     padding: 0 4rem;
   }
 }
-
 @media (max-width: 767px) {
   header,
   #wrapper,
@@ -184,5 +174,4 @@ header,
   .site-info {
     padding: 1.5rem;
   }
-}
-/*# sourceMappingURL=zero.css.map */
+}/*# sourceMappingURL=zero.css.map */

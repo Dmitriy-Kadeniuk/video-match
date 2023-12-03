@@ -9,7 +9,7 @@ get_header();
     
   <?php get_template_part('function/wishlist'); ?>
   </div>
-</main><!-- #main -->
+</main>
 
 <?php
 get_sidebar();
