@@ -134,10 +134,10 @@ const fetchMovies = async () => {
     movieCounter += newMovies.length;
   }console.log(allMovies)
 
-  // Відсортувати фільми за полем "popularity"
+
   allMovies.sort((a, b) => b.popularity - a.popularity);
-  movies = allMovies; // Зберігаємо фільми в глобальній змінній
-  showMovie(0); // Відобразити перший фільм
+  movies = allMovies;
+  showMovie(0);
 };
 
 fetchMovies().catch(function (error) {
@@ -157,7 +157,6 @@ function showMovie(index) {
 
     filmOverview.textContent = movie.overview;
   } else {
-    // Якщо досягнута кінцева карточка фільму
     moviePoster.src = '';
     movieTitle.textContent = 'Кінець фільмів';
     filmOverview.textContent = '';
@@ -165,19 +164,42 @@ function showMovie(index) {
 }
 
 prevButton.addEventListener('click', function () {
-  // Генеруємо випадковий індекс для обраного фільму
   const randomIndex = Math.floor(Math.random() * movies.length);
 
   // Переключаємо на випадковий фільм
   showMovie(randomIndex);
 });
 
+function likeMovie(){
+  let movieid = document.getElementById("movie_id").value;
+  console.log("movieId:", movieid);
+
+
+  let data = {
+      movie_id: movieid
+  };
+
+  $.ajax({
+      type: "POST",
+      url: "/wp-content/themes/video-match/function/likes.php",
+      data: data,
+      success: function(response) {
+          console.log("Фильм добавлен в избранное.");
+      },
+      error: function(error) {
+          console.error("Произошла ошибка: " + error);
+      }
+  });
+};
 nextButton.addEventListener('click', function () {
+
+  likeMovie();
   const randomIndex1 = Math.floor(Math.random() * movies.length);
 
   // Переключаємо на випадковий фільм
   showMovie(randomIndex1);
 });
+
 
 let isInfoVisible = false;
 
