@@ -38,6 +38,7 @@
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
 		<header id="masthead" class="site-header">
+		<?php echo do_shortcode('[gtranslate]');?>
 			<div class="logo-users">
 				<div id="logo" class="logo">
 					<a href="/">

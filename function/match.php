@@ -60,7 +60,20 @@
             $api_data = json_decode($api_response, true);
 
             if (isset($api_data['title'])) {
-                echo "<li class='wishlist-movie' id = ".$movie_id.">" . $api_data['title'] . "</li>";
+                echo "<div class='wishlist-movie' id='$movie_id'>";
+                    echo "<div class='img-film'>";
+                    $poster_path = isset($api_data['poster_path']) ? $api_data['poster_path'] : '';
+                    echo "<img class='film-image' src='https://image.tmdb.org/t/p/w500{$poster_path}' alt='Movie Poster'>";
+
+                    echo "<div class='description'>";
+                    echo "<h1>{$api_data['title']}</h1>";
+
+                    $release_date = isset($api_data['release_date']) ? date('Y', strtotime($api_data['release_date'])) : '';
+                    echo "<h5>{$release_date}</h5>";
+                    echo "</div>";
+
+                    echo "</div>";
+                    echo "</div>";
             }
         }
 
