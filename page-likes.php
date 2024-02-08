@@ -50,6 +50,7 @@ get_header();
         </div>
         <div class="match">
             <?php get_template_part('function/match'); ?>
+            <button class="btn"><a href="/match">more</a></button>
         </div>
     </div>
 

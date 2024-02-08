@@ -9,13 +9,25 @@
     }
     .match {
         width: 40%;
-        ul {
+        .wishlist {
             display: grid;
             gap: 1.5rem;
             grid-template-columns: repeat(2, 1fr);
-            grid-auto-rows: minmax(350px, auto); /* Фіксована висота рядків */
-    max-height: calc(2 * (350px + 1.5rem)); /* Максимальна висота двох рядків */
-    overflow: hidden;
+            grid-auto-rows: minmax(366px, auto); /* Фіксована висота рядків */
+            max-height: calc(2 * (370px + 1.5rem)); /* Максимальна висота двох рядків */
+            overflow: hidden;
+        }
+        h2{
+            &::after{
+                display: none!important;
+                content: ''!important;
+            }
+        }
+        .btn{
+            border-radius: 10px;
+            border: 1px solid #90b7ff;
+            background-color: transparent;
+           
         }
     }
     #movie-container {

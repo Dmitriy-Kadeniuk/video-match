@@ -3,11 +3,13 @@ get_header();
 ?>
 
 <main>
-    <?php get_template_part('function/match'); ?>
+    <div class="container">
+        <?php get_template_part('function/match'); ?>
+    </div>
     </div>
 </main>
 
-<?php 
+<?php
 get_sidebar();
 get_footer();
 ?>

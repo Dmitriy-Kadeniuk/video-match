@@ -24,8 +24,8 @@
     } else {
         $user2_id = "Укажите юзера для поиска в настройках";
     }
-    
-    
+
+
 
     $query1 = "SELECT movie_id FROM user_likes WHERE user_id = '$user1_id'";
 
@@ -48,8 +48,8 @@
 
         $common_movies = array_intersect($user1_movies, $user2_movies);
 
-        echo "Спільні фільми у користувачів $user1_id та $user2_id: ";
-        echo "<ul>";
+        echo "<h2>Common movies between users $user1_id and $user2_id: </h2>";
+        echo "<div class='wishlist'>";
 
         // foreach ($common_movies as $movie_id) {
         //     $api_key = "19cc2d55ec287216302aaf07144d9835";
@@ -69,23 +69,28 @@
             $api_key = "19cc2d55ec287216302aaf07144d9835";
             $api_url = "https://api.themoviedb.org/3/movie/$movie_id?api_key=$api_key";
             $moviePosterUrl = "https://image.tmdb.org/t/p/w500/";
-            
+
             $api_response = file_get_contents($api_url);
-            
+
             $api_data = json_decode($api_response, true);
-            
+
             if (isset($api_data['title']) && isset($api_data['poster_path'])) {
                 $movieTitle = $api_data['title'];
                 $posterPath = $api_data['poster_path'];
-                echo "<li class='wishlist-movie' id='$movie_id'>";
-                echo "<img src='$moviePosterUrl$posterPath' alt='$movieTitle' title='$movieTitle'>";
-                echo "<span>$movieTitle</span>";
-                echo "</li>";
+                $releaseYear = date('Y', strtotime($api_data['release_date']));
+                echo "<div class='wishlist-movie' id='$movie_id'>";
+                echo "<div class='img-film'>";
+                echo "<img class='film-image' src='$moviePosterUrl$posterPath' alt='$movieTitle' title='$movieTitle'>";
+                echo "<div class='description'>";
+                echo "<h1>$movieTitle</h1>";
+                echo "<h5>$releaseYear</h5>";
+                echo "</div>";
+                echo "</div>";
+                echo "</div>";
             }
         }
 
-        echo "</ul>";
-
+        echo "</div>";
     } else {
         echo "Ошибка при выполнении запросов: " . mysqli_error($connection);
     }
