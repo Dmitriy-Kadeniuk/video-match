@@ -102,9 +102,15 @@ h2 {
 }
 h3 {
     font: $fifth-font;
+    @media (max-width: 767px) {
+        font-size: 16px!important;
+    }
 }
 h4 {
     font: $fourth-font;
+    @media (max-width: 767px) {
+        font-size: 14px!important;
+    }
 }
 h5 {
     font: $third-font;
