@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*-----  FONTS & COLORS  -----*/
 /*-----  FONTS & COLORS  -----*/
 /*--------------------------------------------*/
@@ -114,6 +115,12 @@ h3 {
   font: normal 500 25px/18px "Nunito", sans-serif;
 }
 
+@media (max-width: 767px) {
+  h3 {
+    font-size: 16px !important;
+  }
+}
+
 h4 {
   font: normal 500 20px/18px "Nunito", sans-serif;
 }
@@ -200,36 +207,60 @@ header,
   }
 }
 
-#movie-container {
+.page-likes {
+  display: flex;
+  gap: 2rem;
+}
+
+.page-likes .send-like {
+  width: 68%;
+}
+
+.page-likes .match {
+  width: 40%;
+}
+
+.page-likes .match ul {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(350px, auto);
+  /* Фіксована висота рядків */
+  max-height: calc(2 * (350px + 1.5rem));
+  /* Максимальна висота двох рядків */
+  overflow: hidden;
+}
+
+.page-likes #movie-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-#movie-container .img-film {
+.page-likes #movie-container .img-film {
   position: relative;
   height: 600px;
 }
 
-#movie-container .img-film img {
+.page-likes #movie-container .img-film img {
   border-radius: 20px 70px / 80px;
   object-fit: cover;
 }
 
-#movie-container .img-film .overview {
+.page-likes #movie-container .img-film .overview {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
 }
 
-#movie-container .img-film .overview i,
-#movie-container .img-film .overview #movie-overview {
+.page-likes #movie-container .img-film .overview i,
+.page-likes #movie-container .img-film .overview #movie-overview {
   position: absolute;
 }
 
-#movie-container .img-film .overview i {
+.page-likes #movie-container .img-film .overview i {
   top: 30px;
   width: max-content;
   right: 30px;
@@ -237,21 +268,21 @@ header,
   cursor: pointer;
 }
 
-#movie-container .img-film .overview .fa-info-circle:before {
+.page-likes #movie-container .img-film .overview .fa-info-circle:before {
   color: transparent;
   background: linear-gradient(to bottom, #fff, #90b7ff 100%);
   -webkit-background-clip: text;
   background-clip: text;
 }
 
-#movie-container .img-film .overview .fa-times:before {
+.page-likes #movie-container .img-film .overview .fa-times:before {
   color: transparent;
   background: linear-gradient(to bottom, #ac1106, #fff 100%);
   -webkit-background-clip: text;
   background-clip: text;
 }
 
-#movie-container .img-film .overview #movie-overview {
+.page-likes #movie-container .img-film .overview #movie-overview {
   top: 50%;
   left: 15%;
   transform: translate(-9%, -50%);
@@ -263,42 +294,42 @@ header,
   letter-spacing: 1px;
 }
 
-#movie-container h1 {
+.page-likes #movie-container h1 {
   font-size: 26px;
   padding-top: 2rem;
 }
 
-.navigation-swipe {
+.page-likes .navigation-swipe {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding: 2rem 0;
 }
 
-.navigation-swipe #close-button,
-.navigation-swipe #like-button {
+.page-likes .navigation-swipe #close-button,
+.page-likes .navigation-swipe #like-button {
   cursor: pointer;
   width: 90px;
 }
 
-.navigation-swipe #close-button img,
-.navigation-swipe #like-button img {
+.page-likes .navigation-swipe #close-button img,
+.page-likes .navigation-swipe #like-button img {
   width: 6rem;
 }
 
-.navigation-swipe #like-button svg {
+.page-likes .navigation-swipe #like-button svg {
   width: 5rem;
 }
 
-.navigation-swipe #like-button svg:hover {
+.page-likes .navigation-swipe #like-button svg:hover {
   animation: pulse 0.4s infinite;
 }
 
-.navigation-swipe #close-button img {
+.page-likes .navigation-swipe #close-button img {
   transition: 0.4s ease-in-out;
 }
 
-.navigation-swipe #close-button img:hover {
+.page-likes .navigation-swipe #close-button img:hover {
   transform: scale(0.8);
 }
 
@@ -314,15 +345,15 @@ header,
   }
 }
 
-#movie_id {
+.page-likes #movie_id {
   display: none;
 }
 
-.wishlist {
+.page-likes .wishlist {
   color: #d3d3d3;
 }
 
-.wishlist-movie {
+.page-likes .wishlist-movie {
   font-size: 1.2rem;
 }
 /*# sourceMappingURL=likes.css.map */

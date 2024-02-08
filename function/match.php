@@ -1,4 +1,4 @@
-<ul>
+<div class="movie-match">
     <?php
     session_start();
     $found_user_id = isset($_SESSION['found_user']) ? $_SESSION['found_user'] : "";
@@ -51,16 +51,36 @@
         echo "Спільні фільми у користувачів $user1_id та $user2_id: ";
         echo "<ul>";
 
-        foreach ($common_movies as $movie_id) {
+        // foreach ($common_movies as $movie_id) {
+        //     $api_key = "19cc2d55ec287216302aaf07144d9835";
+        //     $api_url = "https://api.themoviedb.org/3/movie/$movie_id?api_key=$api_key";
+
+        //     $api_response = file_get_contents($api_url);
+
+        //     $api_data = json_decode($api_response, true);
+
+        //     if (isset($api_data['title'])) {
+        //         echo "<li class='wishlist-movie' id = ".$movie_id.">" . $api_data['title'] . "</li>";
+        //     }
+        // }
+        $common_movies_reversed = array_reverse($common_movies);
+
+        foreach ($common_movies_reversed as $movie_id) {
             $api_key = "19cc2d55ec287216302aaf07144d9835";
             $api_url = "https://api.themoviedb.org/3/movie/$movie_id?api_key=$api_key";
-
+            $moviePosterUrl = "https://image.tmdb.org/t/p/w500/";
+            
             $api_response = file_get_contents($api_url);
-
+            
             $api_data = json_decode($api_response, true);
-
-            if (isset($api_data['title'])) {
-                echo "<li class='wishlist-movie' id = ".$movie_id.">" . $api_data['title'] . "</li>";
+            
+            if (isset($api_data['title']) && isset($api_data['poster_path'])) {
+                $movieTitle = $api_data['title'];
+                $posterPath = $api_data['poster_path'];
+                echo "<li class='wishlist-movie' id='$movie_id'>";
+                echo "<img src='$moviePosterUrl$posterPath' alt='$movieTitle' title='$movieTitle'>";
+                echo "<span>$movieTitle</span>";
+                echo "</li>";
             }
         }
 
@@ -72,4 +92,4 @@
 
     mysqli_close($connection);
     ?>
-</ul>
+</div>
