@@ -31,6 +31,7 @@
     @media (max-width: 767px) {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        padding: 0;
     }
     .logo {
         a {
@@ -99,7 +100,7 @@
             display: none;
             &.mobile {
                 display: block;
-                top: 5vh;
+                top: 6rem;
                 left: 8vw;
                 position: absolute;
             }
@@ -149,8 +150,8 @@
     height: 2.5rem;
     width: 3rem;
     border-radius: 50%;
-    position: fixed;
-    top: 5vh;
+    position: absolute;
+    top: 6rem;
     right: 5vw;
     z-index: 2000;
     text-align: center;

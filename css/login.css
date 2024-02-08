@@ -47,6 +47,7 @@ a:before {
 }
 
 a:hover {
+  text-decoration: none;
   background-position: 0;
 }
 
@@ -101,6 +102,12 @@ h2::after {
   position: absolute;
   top: -25px;
   margin-left: 8px;
+}
+
+@media (max-width: 420px) {
+  h2 {
+    font-size: 22px;
+  }
 }
 
 h3 {

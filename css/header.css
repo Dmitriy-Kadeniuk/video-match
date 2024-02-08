@@ -104,6 +104,12 @@ h2::after {
   margin-left: 8px;
 }
 
+@media (max-width: 420px) {
+  h2 {
+    font-size: 22px;
+  }
+}
+
 h3 {
   font: normal 500 25px/18px "Nunito", sans-serif;
 }
@@ -294,6 +300,12 @@ h2::after {
   margin-left: 8px;
 }
 
+@media (max-width: 420px) {
+  h2 {
+    font-size: 22px;
+  }
+}
+
 h3 {
   font: normal 500 25px/18px "Nunito", sans-serif;
 }
@@ -423,6 +435,7 @@ header,
   .logo-users {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
   }
 }
 
@@ -495,7 +508,7 @@ header,
   }
   .logo-users .user.mobile {
     display: block;
-    top: 5vh;
+    top: 6rem;
     left: 8vw;
     position: absolute;
   }
@@ -543,8 +556,8 @@ header,
   height: 2.5rem;
   width: 3rem;
   border-radius: 50%;
-  position: fixed;
-  top: 5vh;
+  position: absolute;
+  top: 6rem;
   right: 5vw;
   z-index: 2000;
   text-align: center;
