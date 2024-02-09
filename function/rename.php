@@ -2,7 +2,7 @@
 session_start();
 
 
-$mysql = new mysqli("localhost", "root", "", "project-film");
+$mysql = new mysqli("localhost", "root", "", "film-match");
 $mysql->query("SET NAMES 'UTF8'");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["rename_user"])) {

@@ -4,7 +4,7 @@
     <div class="wishlist">
 
         <?php
-        $connection = mysqli_connect("localhost", "root", "", "project-film");
+        $connection = mysqli_connect("localhost", "root", "", "film-match");
 
         if (!$connection) {
             die("Ошибка подключения к базе данных: " . mysqli_connect_error());

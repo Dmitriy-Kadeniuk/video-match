@@ -7,7 +7,7 @@ if (isset($_SESSION['user_id'])) {
     if (isset($_POST['movie_id'])) {
         $movie_id = $_POST['movie_id'];
 
-        $connection = mysqli_connect("localhost", "root", "", "project-film");
+        $connection = mysqli_connect("localhost", "root", "", "film-match");
 
         if (!$connection) {
             die("Ошибка подключения к базе данных: " . mysqli_connect_error());
