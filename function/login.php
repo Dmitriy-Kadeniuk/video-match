@@ -2,7 +2,7 @@
         <section id="login" class="tab-content active">
 
         <?php
-            $mysql = new mysqli("localhost", "root", "root", "local");
+            $mysql = new mysqli("MySQL-8.2", "root", "", "local");
             $mysql->query("SET NAMES 'UTF8'");
 
             $user_name = "";
@@ -20,9 +20,7 @@
                 if ($result->num_rows > 0) {
                     $user_data = $result->fetch_assoc();
                     $_SESSION['user_name'] = $user_name;
-                    $_SESSION['user_id'] = $user_data['id'];  
-
-               
+                    $_SESSION['user_id'] = $user_data['id'];            
                 } else {
                     $error_message = "Неверное имя пользователя или пароль.";
                 }

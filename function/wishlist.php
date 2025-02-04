@@ -4,7 +4,7 @@
     <div class="wishlist">
 
         <?php
-        $connection = mysqli_connect("localhost", "root", "root", "local");
+        $connection = mysqli_connect("MySQL-8.2", "root", "", "local");
 
         if (!$connection) {
             die("Ошибка подключения к базе данных: " . mysqli_connect_error());
