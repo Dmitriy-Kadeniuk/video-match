@@ -1,5 +1,5 @@
-<?php session_start(); ?>
-<?php get_header(); 
+<?php session_start();
+ get_header(); 
 ?>
 <main class="register">
 
@@ -14,8 +14,10 @@
             <li class="tab-link active" data-tab="login">Login</li>
             <li class="tab-link" data-tab="register">Register</li>
         </ul>
-        <?php get_template_part('function/login'); ?>
-        <?php get_template_part('function/register'); ?>
+        <?php 
+        include get_template_directory() . '/function/login.php';
+        include get_template_directory() . '/function/register.php';        
+        ?>
         <img src="../wp-content/themes/video-match/img/login/Ellipse 2.svg" alt="">
     </section>
 
